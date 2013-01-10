@@ -1,0 +1,2268 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'express' ]
+2 info using npm@1.1.70
+3 info using node@v0.8.16
+4 verbose read json /Users/bennycohen/Projects/node/klikVote/package.json
+5 warn package.json application-name@0.0.1 No README.md file found!
+6 verbose from cache /Users/bennycohen/Projects/node/klikVote/package.json
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'express@3.0.3', null ]
+9 silly cache add name=undefined spec="express@3.0.3" args=["express@3.0.3",null]
+10 verbose parsed url { pathname: 'express@3.0.3',
+10 verbose parsed url   path: 'express@3.0.3',
+10 verbose parsed url   href: 'express@3.0.3' }
+11 silly cache add name="express" spec="3.0.3" args=["express","3.0.3"]
+12 verbose parsed url { pathname: '3.0.3', path: '3.0.3', href: '3.0.3' }
+13 verbose addNamed [ 'express', '3.0.3' ]
+14 verbose addNamed [ '3.0.3', '3.0.3' ]
+15 silly lockFile 96ff5894-express-3-0-3 express@3.0.3
+16 verbose lock express@3.0.3 /Users/bennycohen/.npm/96ff5894-express-3-0-3.lock
+17 verbose url raw express/3.0.3
+18 verbose url resolving [ 'https://registry.npmjs.org/', './express/3.0.3' ]
+19 verbose url resolved https://registry.npmjs.org/express/3.0.3
+20 info trying registry request attempt 1 at 00:12:25
+21 http GET https://registry.npmjs.org/express/3.0.3
+22 http 200 https://registry.npmjs.org/express/3.0.3
+23 silly registry.get cb [ 200,
+23 silly registry.get   { vary: 'Accept',
+23 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+23 silly registry.get     etag: '"48FUGFYP731T9XUBXNMR6BKZM"',
+23 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:06 GMT',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     'content-length': '7521' } ]
+24 silly lockFile fb22d04a-js-org-express-express-3-0-3-tgz https://registry.npmjs.org/express/-/express-3.0.3.tgz
+25 verbose lock https://registry.npmjs.org/express/-/express-3.0.3.tgz /Users/bennycohen/.npm/fb22d04a-js-org-express-express-3-0-3-tgz.lock
+26 verbose addRemoteTarball [ 'https://registry.npmjs.org/express/-/express-3.0.3.tgz',
+26 verbose addRemoteTarball   '007c7590b1ab31219e6d8d71f86ad5086204868c' ]
+27 info retry fetch attempt 1 at 00:12:29
+28 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855949314-0.20803172909654677/tmp.tgz
+29 http GET https://registry.npmjs.org/express/-/express-3.0.3.tgz
+30 http 200 https://registry.npmjs.org/express/-/express-3.0.3.tgz
+31 silly shasum updated bytes 34550
+32 info shasum 007c7590b1ab31219e6d8d71f86ad5086204868c
+32 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855949314-0.20803172909654677/tmp.tgz
+33 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855949314-0.20803172909654677/tmp.tgz
+34 silly lockFile 924300a2-9314-0-20803172909654677-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855949314-0.20803172909654677/package
+35 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855949314-0.20803172909654677/package /Users/bennycohen/.npm/924300a2-9314-0-20803172909654677-package.lock
+36 silly gunzTarPerm modes [ '755', '644' ]
+37 silly gunzTarPerm extractEntry package.json
+38 silly gunzTarPerm extractEntry .npmignore
+39 silly gunzTarPerm extractEntry LICENSE
+40 silly gunzTarPerm extractEntry client.js
+41 silly gunzTarPerm extractEntry index.js
+42 silly gunzTarPerm extractEntry test.js
+43 silly gunzTarPerm extractEntry .travis.yml
+44 silly gunzTarPerm extractEntry History.md
+45 silly gunzTarPerm extractEntry Makefile
+46 silly gunzTarPerm extractEntry bin/express
+47 silly gunzTarPerm extractEntry Readme.md
+48 silly gunzTarPerm extractEntry lib/application.js
+49 silly gunzTarPerm extractEntry lib/express.js
+50 silly gunzTarPerm extractEntry lib/middleware.js
+51 silly gunzTarPerm extractEntry lib/request.js
+52 silly gunzTarPerm extractEntry lib/response.js
+53 silly gunzTarPerm extractEntry lib/utils.js
+54 silly gunzTarPerm extractEntry lib/view.js
+55 silly gunzTarPerm extractEntry lib/router/index.js
+56 silly gunzTarPerm extractEntry lib/router/route.js
+57 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855949314-0.20803172909654677/package/package.json
+58 silly lockFile 924300a2-9314-0-20803172909654677-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855949314-0.20803172909654677/package
+59 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855949314-0.20803172909654677/package/package.json
+60 verbose tar pack [ '/Users/bennycohen/.npm/express/3.0.3/package.tgz',
+60 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855949314-0.20803172909654677/package' ]
+61 verbose tarball /Users/bennycohen/.npm/express/3.0.3/package.tgz
+62 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855949314-0.20803172909654677/package
+63 silly lockFile a983f623-en-npm-express-3-0-3-package-tgz /Users/bennycohen/.npm/express/3.0.3/package.tgz
+64 verbose lock /Users/bennycohen/.npm/express/3.0.3/package.tgz /Users/bennycohen/.npm/a983f623-en-npm-express-3-0-3-package-tgz.lock
+65 silly lockFile a983f623-en-npm-express-3-0-3-package-tgz /Users/bennycohen/.npm/express/3.0.3/package.tgz
+66 silly lockFile 07eac1e9-ycohen-npm-express-3-0-3-package /Users/bennycohen/.npm/express/3.0.3/package
+67 verbose lock /Users/bennycohen/.npm/express/3.0.3/package /Users/bennycohen/.npm/07eac1e9-ycohen-npm-express-3-0-3-package.lock
+68 silly lockFile 07eac1e9-ycohen-npm-express-3-0-3-package /Users/bennycohen/.npm/express/3.0.3/package
+69 verbose tar unpack /Users/bennycohen/.npm/express/3.0.3/package.tgz
+70 silly lockFile 07eac1e9-ycohen-npm-express-3-0-3-package /Users/bennycohen/.npm/express/3.0.3/package
+71 verbose lock /Users/bennycohen/.npm/express/3.0.3/package /Users/bennycohen/.npm/07eac1e9-ycohen-npm-express-3-0-3-package.lock
+72 silly gunzTarPerm modes [ '755', '644' ]
+73 silly gunzTarPerm extractEntry package.json
+74 silly gunzTarPerm extractEntry .npmignore
+75 silly gunzTarPerm extractEntry LICENSE
+76 silly gunzTarPerm extractEntry client.js
+77 silly gunzTarPerm extractEntry index.js
+78 silly gunzTarPerm extractEntry test.js
+79 silly gunzTarPerm extractEntry .travis.yml
+80 silly gunzTarPerm extractEntry History.md
+81 silly gunzTarPerm extractEntry Makefile
+82 silly gunzTarPerm extractEntry bin/express
+83 silly gunzTarPerm extractEntry Readme.md
+84 silly gunzTarPerm extractEntry lib/application.js
+85 silly gunzTarPerm extractEntry lib/express.js
+86 silly gunzTarPerm extractEntry lib/middleware.js
+87 silly gunzTarPerm extractEntry lib/request.js
+88 silly gunzTarPerm extractEntry lib/response.js
+89 silly gunzTarPerm extractEntry lib/utils.js
+90 silly gunzTarPerm extractEntry lib/view.js
+91 silly gunzTarPerm extractEntry lib/router/index.js
+92 silly gunzTarPerm extractEntry lib/router/route.js
+93 verbose read json /Users/bennycohen/.npm/express/3.0.3/package/package.json
+94 silly lockFile 07eac1e9-ycohen-npm-express-3-0-3-package /Users/bennycohen/.npm/express/3.0.3/package
+95 silly shasum updated bytes 34550
+96 info shasum 007c7590b1ab31219e6d8d71f86ad5086204868c
+96 info shasum /Users/bennycohen/.npm/express/3.0.3/package.tgz
+97 verbose from cache /Users/bennycohen/.npm/express/3.0.3/package/package.json
+98 verbose chmod /Users/bennycohen/.npm/express/3.0.3/package.tgz 644
+99 verbose chown /Users/bennycohen/.npm/express/3.0.3/package.tgz [ 501, 20 ]
+100 silly lockFile fb22d04a-js-org-express-express-3-0-3-tgz https://registry.npmjs.org/express/-/express-3.0.3.tgz
+101 silly lockFile 96ff5894-express-3-0-3 express@3.0.3
+102 silly resolved [ { name: 'express',
+102 silly resolved     description: 'Sinatra inspired web development framework',
+102 silly resolved     version: '3.0.3',
+102 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+102 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+102 silly resolved     dependencies:
+102 silly resolved      { connect: '2.7.0',
+102 silly resolved        commander: '0.6.1',
+102 silly resolved        'range-parser': '0.0.4',
+102 silly resolved        mkdirp: '0.3.3',
+102 silly resolved        cookie: '0.0.5',
+102 silly resolved        crc: '0.2.0',
+102 silly resolved        fresh: '0.1.0',
+102 silly resolved        methods: '0.0.1',
+102 silly resolved        send: '0.1.0',
+102 silly resolved        'cookie-signature': '0.0.1',
+102 silly resolved        debug: '*' },
+102 silly resolved     devDependencies:
+102 silly resolved      { ejs: '*',
+102 silly resolved        mocha: '*',
+102 silly resolved        jade: '*',
+102 silly resolved        hjs: '*',
+102 silly resolved        stylus: '*',
+102 silly resolved        should: '*',
+102 silly resolved        'connect-redis': '*',
+102 silly resolved        'github-flavored-markdown': '*',
+102 silly resolved        supertest: '0.0.1' },
+102 silly resolved     keywords:
+102 silly resolved      [ 'express',
+102 silly resolved        'framework',
+102 silly resolved        'sinatra',
+102 silly resolved        'web',
+102 silly resolved        'rest',
+102 silly resolved        'restful',
+102 silly resolved        'router',
+102 silly resolved        'app',
+102 silly resolved        'api' ],
+102 silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/express' },
+102 silly resolved     main: 'index',
+102 silly resolved     bin: { express: './bin/express' },
+102 silly resolved     scripts: { prepublish: 'npm prune', test: 'make test' },
+102 silly resolved     engines: { node: '*' },
+102 silly resolved     readme: '![express logo](http://f.cl.ly/items/0V2S1n0K1i3y1c122g04/Screen%20Shot%202012-04-11%20at%209.59.42%20AM.png)\n\n  Fast, unopinionated, minimalist web framework for [node](http://nodejs.org). [![Build Status](https://secure.travis-ci.org/visionmedia/express.png)](http://travis-ci.org/visionmedia/express)\n\n```js\nvar express = require(\'express\');\nvar app = express();\n\napp.get(\'/\', function(req, res){\n  res.send(\'Hello World\');\n});\n\napp.listen(3000);\n```\n\n## Installation\n\n    $ npm install -g express\n\n## Quick Start\n\n The quickest way to get started with express is to utilize the executable `express(1)` to generate an application as shown below:\n\n Create the app:\n\n    $ npm install -g express\n    $ express /tmp/foo && cd /tmp/foo\n\n Install dependencies:\n\n    $ npm install\n\n Start the server:\n\n    $ node app\n\n## Features\n\n  * Built on [Connect](http://github.com/senchalabs/connect)\n  * Robust routing\n  * HTTP helpers (redirection, caching, etc)\n  * View system supporting 14+ template engines\n  * Content negotiation\n  * Focus on high performance\n  * Environment based configuration\n  * Executable for generating applications quickly\n  * High test coverage\n\n## Philosophy\n\n  The Express philosophy is to provide small, robust tooling for HTTP servers. Making\n  it a great solution for single page applications, web sites, hybrids, or public\n  HTTP APIs.\n  \n  Built on Connect you can use _only_ what you need, and nothing more, applications\n  can be as big or as small as you like, even a single file. Express does\n  not force you to use any specific ORM or template engine. With support for over\n  14 template engines via [Consolidate.js](http://github.com/visionmedia/consolidate.js)\n  you can quickly craft your perfect framework.\n\n## More Information\n\n  * Join #express on freenode\n  * [Google Group](http://groups.google.com/group/express-js) for discussion\n  * Follow [tjholowaychuk](http://twitter.com/tjholowaychuk) on twitter for updates\n  * Visit the [Wiki](http://github.com/visionmedia/express/wiki)\n  * [日本語ドキュメンテーション](http://hideyukisaito.com/doc/expressjs/) by [hideyukisaito](https://github.com/hideyukisaito)\n  * [Русскоязычная документация](http://express-js.ru/)\n\n## Viewing Examples\n\nClone the Express repo, then install the dev dependencies to install all the example / test suite deps:\n\n    $ git clone git://github.com/visionmedia/express.git --depth 1\n    $ cd express\n    $ npm install\n\nthen run whichever tests you want:\n\n    $ node examples/content-negotiation\n\n## Running Tests\n\nTo run the test suite first invoke the following command within the repo, installing the development dependencies:\n\n    $ npm install\n\nthen run the tests:\n\n    $ make test\n\n## Contributors\n\n```\nproject: express\ncommits: 3559\nactive : 468 days\nfiles  : 237\nauthors: \n 1891\tTj Holowaychuk          53.1%\n 1285\tvisionmedia             36.1%\n  182\tTJ Holowaychuk          5.1%\n   54\tAaron Heckmann          1.5%\n   34\tcsausdev                1.0%\n   26\tciaranj                 0.7%\n   21\tRobert Sköld            0.6%\n    6\tGuillermo Rauch         0.2%\n    3\tDav Glass               0.1%\n    3\tNick Poulden            0.1%\n    2\tRandy Merrill           0.1%\n    2\tBenny Wong              0.1%\n    2\tHunter Loftis           0.1%\n    2\tJake Gordon             0.1%\n    2\tBrian McKinney          0.1%\n    2\tRoman Shtylman          0.1%\n    2\tBen Weaver              0.1%\n    2\tDave Hoover             0.1%\n    2\tEivind Fjeldstad        0.1%\n    2\tDaniel Shaw             0.1%\n    1\tMatt Colyer             0.0%\n    1\tPau Ramon               0.0%\n    1\tPero Pejovic            0.0%\n    1\tPeter Rekdal Sunde      0.0%\n    1\tRaynos                  0.0%\n    1\tTeng Siong Ong          0.0%\n    1\tViktor Kelemen          0.0%\n    1\tctide                   0.0%\n    1\t8bitDesigner            0.0%\n    1\tisaacs                  0.0%\n    1\tmgutz                   0.0%\n    1\tpikeas                  0.0%\n    1\tshuwatto                0.0%\n    1\ttstrimple               0.0%\n    1\tewoudj                  0.0%\n    1\tAdam Sanderson          0.0%\n    1\tAndrii Kostenko         0.0%\n    1\tAndy Hiew               0.0%\n    1\tArpad Borsos            0.0%\n    1\tAshwin Purohit          0.0%\n    1\tBenjen                  0.0%\n    1\tDarren Torpey           0.0%\n    1\tGreg Ritter             0.0%\n    1\tGregory Ritter          0.0%\n    1\tJames Herdman           0.0%\n    1\tJim Snodgrass           0.0%\n    1\tJoe McCann              0.0%\n    1\tJonathan Dumaine        0.0%\n    1\tJonathan Palardy        0.0%\n    1\tJonathan Zacsh          0.0%\n    1\tJustin Lilly            0.0%\n    1\tKen Sato                0.0%\n    1\tMaciej Małecki          0.0%\n    1\tMasahiro Hayashi        0.0%\n```\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2009-2012 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+102 silly resolved     readmeFilename: 'Readme.md',
+102 silly resolved     _id: 'express@3.0.3',
+102 silly resolved     dist: { shasum: '007c7590b1ab31219e6d8d71f86ad5086204868c' },
+102 silly resolved     _from: 'express@3.0.3' } ]
+103 info install express@3.0.3 into /Users/bennycohen/Projects/node/klikVote
+104 info installOne express@3.0.3
+105 verbose from cache /Users/bennycohen/.npm/express/3.0.3/package/package.json
+106 info /Users/bennycohen/Projects/node/klikVote/node_modules/express unbuild
+107 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/package.json
+108 verbose tar unpack /Users/bennycohen/.npm/express/3.0.3/package.tgz
+109 silly lockFile ce2703a0-de-klikVote-node-modules-express /Users/bennycohen/Projects/node/klikVote/node_modules/express
+110 verbose lock /Users/bennycohen/Projects/node/klikVote/node_modules/express /Users/bennycohen/.npm/ce2703a0-de-klikVote-node-modules-express.lock
+111 silly gunzTarPerm modes [ '755', '644' ]
+112 silly gunzTarPerm extractEntry package.json
+113 silly gunzTarPerm extractEntry .npmignore
+114 silly gunzTarPerm extractEntry LICENSE
+115 silly gunzTarPerm extractEntry client.js
+116 silly gunzTarPerm extractEntry index.js
+117 silly gunzTarPerm extractEntry test.js
+118 silly gunzTarPerm extractEntry .travis.yml
+119 silly gunzTarPerm extractEntry History.md
+120 silly gunzTarPerm extractEntry Makefile
+121 silly gunzTarPerm extractEntry bin/express
+122 silly gunzTarPerm extractEntry Readme.md
+123 silly gunzTarPerm extractEntry lib/application.js
+124 silly gunzTarPerm extractEntry lib/express.js
+125 silly gunzTarPerm extractEntry lib/middleware.js
+126 silly gunzTarPerm extractEntry lib/request.js
+127 silly gunzTarPerm extractEntry lib/response.js
+128 silly gunzTarPerm extractEntry lib/utils.js
+129 silly gunzTarPerm extractEntry lib/view.js
+130 silly gunzTarPerm extractEntry lib/router/index.js
+131 silly gunzTarPerm extractEntry lib/router/route.js
+132 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/package.json
+133 silly lockFile ce2703a0-de-klikVote-node-modules-express /Users/bennycohen/Projects/node/klikVote/node_modules/express
+134 info preinstall express@3.0.3
+135 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/package.json
+136 verbose readDependencies using package.json deps
+137 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/package.json
+138 verbose readDependencies using package.json deps
+139 verbose cache add [ 'connect@2.7.0', null ]
+140 silly cache add name=undefined spec="connect@2.7.0" args=["connect@2.7.0",null]
+141 verbose parsed url { pathname: 'connect@2.7.0',
+141 verbose parsed url   path: 'connect@2.7.0',
+141 verbose parsed url   href: 'connect@2.7.0' }
+142 silly cache add name="connect" spec="2.7.0" args=["connect","2.7.0"]
+143 verbose parsed url { pathname: '2.7.0', path: '2.7.0', href: '2.7.0' }
+144 verbose addNamed [ 'connect', '2.7.0' ]
+145 verbose addNamed [ '2.7.0', '2.7.0' ]
+146 silly lockFile 2429b342-connect-2-7-0 connect@2.7.0
+147 verbose lock connect@2.7.0 /Users/bennycohen/.npm/2429b342-connect-2-7-0.lock
+148 verbose cache add [ 'commander@0.6.1', null ]
+149 silly cache add name=undefined spec="commander@0.6.1" args=["commander@0.6.1",null]
+150 verbose parsed url { pathname: 'commander@0.6.1',
+150 verbose parsed url   path: 'commander@0.6.1',
+150 verbose parsed url   href: 'commander@0.6.1' }
+151 silly cache add name="commander" spec="0.6.1" args=["commander","0.6.1"]
+152 verbose parsed url { pathname: '0.6.1', path: '0.6.1', href: '0.6.1' }
+153 verbose addNamed [ 'commander', '0.6.1' ]
+154 verbose addNamed [ '0.6.1', '0.6.1' ]
+155 silly lockFile fa16a2ce-commander-0-6-1 commander@0.6.1
+156 verbose lock commander@0.6.1 /Users/bennycohen/.npm/fa16a2ce-commander-0-6-1.lock
+157 verbose cache add [ 'range-parser@0.0.4', null ]
+158 silly cache add name=undefined spec="range-parser@0.0.4" args=["range-parser@0.0.4",null]
+159 verbose parsed url { pathname: 'range-parser@0.0.4',
+159 verbose parsed url   path: 'range-parser@0.0.4',
+159 verbose parsed url   href: 'range-parser@0.0.4' }
+160 silly cache add name="range-parser" spec="0.0.4" args=["range-parser","0.0.4"]
+161 verbose parsed url { pathname: '0.0.4', path: '0.0.4', href: '0.0.4' }
+162 verbose addNamed [ 'range-parser', '0.0.4' ]
+163 verbose addNamed [ '0.0.4', '0.0.4' ]
+164 silly lockFile 0760c556-range-parser-0-0-4 range-parser@0.0.4
+165 verbose lock range-parser@0.0.4 /Users/bennycohen/.npm/0760c556-range-parser-0-0-4.lock
+166 verbose cache add [ 'mkdirp@0.3.3', null ]
+167 silly cache add name=undefined spec="mkdirp@0.3.3" args=["mkdirp@0.3.3",null]
+168 verbose parsed url { pathname: 'mkdirp@0.3.3',
+168 verbose parsed url   path: 'mkdirp@0.3.3',
+168 verbose parsed url   href: 'mkdirp@0.3.3' }
+169 silly cache add name="mkdirp" spec="0.3.3" args=["mkdirp","0.3.3"]
+170 verbose parsed url { pathname: '0.3.3', path: '0.3.3', href: '0.3.3' }
+171 verbose addNamed [ 'mkdirp', '0.3.3' ]
+172 verbose addNamed [ '0.3.3', '0.3.3' ]
+173 silly lockFile 453bb99b-mkdirp-0-3-3 mkdirp@0.3.3
+174 verbose lock mkdirp@0.3.3 /Users/bennycohen/.npm/453bb99b-mkdirp-0-3-3.lock
+175 verbose cache add [ 'cookie@0.0.5', null ]
+176 silly cache add name=undefined spec="cookie@0.0.5" args=["cookie@0.0.5",null]
+177 verbose parsed url { pathname: 'cookie@0.0.5',
+177 verbose parsed url   path: 'cookie@0.0.5',
+177 verbose parsed url   href: 'cookie@0.0.5' }
+178 silly cache add name="cookie" spec="0.0.5" args=["cookie","0.0.5"]
+179 verbose parsed url { pathname: '0.0.5', path: '0.0.5', href: '0.0.5' }
+180 verbose addNamed [ 'cookie', '0.0.5' ]
+181 verbose addNamed [ '0.0.5', '0.0.5' ]
+182 silly lockFile fe08ced7-cookie-0-0-5 cookie@0.0.5
+183 verbose lock cookie@0.0.5 /Users/bennycohen/.npm/fe08ced7-cookie-0-0-5.lock
+184 verbose cache add [ 'crc@0.2.0', null ]
+185 silly cache add name=undefined spec="crc@0.2.0" args=["crc@0.2.0",null]
+186 verbose parsed url { pathname: 'crc@0.2.0', path: 'crc@0.2.0', href: 'crc@0.2.0' }
+187 silly cache add name="crc" spec="0.2.0" args=["crc","0.2.0"]
+188 verbose parsed url { pathname: '0.2.0', path: '0.2.0', href: '0.2.0' }
+189 verbose addNamed [ 'crc', '0.2.0' ]
+190 verbose addNamed [ '0.2.0', '0.2.0' ]
+191 silly lockFile 3e4de13a-crc-0-2-0 crc@0.2.0
+192 verbose lock crc@0.2.0 /Users/bennycohen/.npm/3e4de13a-crc-0-2-0.lock
+193 verbose cache add [ 'fresh@0.1.0', null ]
+194 silly cache add name=undefined spec="fresh@0.1.0" args=["fresh@0.1.0",null]
+195 verbose parsed url { pathname: 'fresh@0.1.0',
+195 verbose parsed url   path: 'fresh@0.1.0',
+195 verbose parsed url   href: 'fresh@0.1.0' }
+196 silly cache add name="fresh" spec="0.1.0" args=["fresh","0.1.0"]
+197 verbose parsed url { pathname: '0.1.0', path: '0.1.0', href: '0.1.0' }
+198 verbose addNamed [ 'fresh', '0.1.0' ]
+199 verbose addNamed [ '0.1.0', '0.1.0' ]
+200 silly lockFile 3dea7da8-fresh-0-1-0 fresh@0.1.0
+201 verbose lock fresh@0.1.0 /Users/bennycohen/.npm/3dea7da8-fresh-0-1-0.lock
+202 verbose cache add [ 'methods@0.0.1', null ]
+203 silly cache add name=undefined spec="methods@0.0.1" args=["methods@0.0.1",null]
+204 verbose parsed url { pathname: 'methods@0.0.1',
+204 verbose parsed url   path: 'methods@0.0.1',
+204 verbose parsed url   href: 'methods@0.0.1' }
+205 silly cache add name="methods" spec="0.0.1" args=["methods","0.0.1"]
+206 verbose parsed url { pathname: '0.0.1', path: '0.0.1', href: '0.0.1' }
+207 verbose addNamed [ 'methods', '0.0.1' ]
+208 verbose addNamed [ '0.0.1', '0.0.1' ]
+209 silly lockFile 209c2920-methods-0-0-1 methods@0.0.1
+210 verbose lock methods@0.0.1 /Users/bennycohen/.npm/209c2920-methods-0-0-1.lock
+211 verbose cache add [ 'send@0.1.0', null ]
+212 silly cache add name=undefined spec="send@0.1.0" args=["send@0.1.0",null]
+213 verbose parsed url { pathname: 'send@0.1.0',
+213 verbose parsed url   path: 'send@0.1.0',
+213 verbose parsed url   href: 'send@0.1.0' }
+214 silly cache add name="send" spec="0.1.0" args=["send","0.1.0"]
+215 verbose parsed url { pathname: '0.1.0', path: '0.1.0', href: '0.1.0' }
+216 verbose addNamed [ 'send', '0.1.0' ]
+217 verbose addNamed [ '0.1.0', '0.1.0' ]
+218 silly lockFile ef2886cd-send-0-1-0 send@0.1.0
+219 verbose lock send@0.1.0 /Users/bennycohen/.npm/ef2886cd-send-0-1-0.lock
+220 verbose cache add [ 'cookie-signature@0.0.1', null ]
+221 silly cache add name=undefined spec="cookie-signature@0.0.1" args=["cookie-signature@0.0.1",null]
+222 verbose parsed url { pathname: 'cookie-signature@0.0.1',
+222 verbose parsed url   path: 'cookie-signature@0.0.1',
+222 verbose parsed url   href: 'cookie-signature@0.0.1' }
+223 silly cache add name="cookie-signature" spec="0.0.1" args=["cookie-signature","0.0.1"]
+224 verbose parsed url { pathname: '0.0.1', path: '0.0.1', href: '0.0.1' }
+225 verbose addNamed [ 'cookie-signature', '0.0.1' ]
+226 verbose addNamed [ '0.0.1', '0.0.1' ]
+227 silly lockFile f4fbff07-cookie-signature-0-0-1 cookie-signature@0.0.1
+228 verbose lock cookie-signature@0.0.1 /Users/bennycohen/.npm/f4fbff07-cookie-signature-0-0-1.lock
+229 verbose cache add [ 'debug@*', null ]
+230 silly cache add name=undefined spec="debug@*" args=["debug@*",null]
+231 verbose parsed url { pathname: 'debug@*', path: 'debug@*', href: 'debug@*' }
+232 silly cache add name="debug" spec="*" args=["debug","*"]
+233 verbose parsed url { pathname: '*', path: '*', href: '*' }
+234 verbose addNamed [ 'debug', '*' ]
+235 verbose addNamed [ null, '' ]
+236 silly lockFile 3ac45eff-debug debug@*
+237 verbose lock debug@* /Users/bennycohen/.npm/3ac45eff-debug.lock
+238 verbose url raw connect/2.7.0
+239 verbose url resolving [ 'https://registry.npmjs.org/', './connect/2.7.0' ]
+240 verbose url resolved https://registry.npmjs.org/connect/2.7.0
+241 info trying registry request attempt 1 at 00:12:32
+242 http GET https://registry.npmjs.org/connect/2.7.0
+243 silly addNameRange { name: 'debug', range: '', hasData: false }
+244 verbose url raw commander/0.6.1
+245 verbose url resolving [ 'https://registry.npmjs.org/', './commander/0.6.1' ]
+246 verbose url resolved https://registry.npmjs.org/commander/0.6.1
+247 info trying registry request attempt 1 at 00:12:32
+248 verbose etag "59UGOBY870YNPGXJNNGBOVQBO"
+249 http GET https://registry.npmjs.org/commander/0.6.1
+250 verbose url raw range-parser/0.0.4
+251 verbose url resolving [ 'https://registry.npmjs.org/', './range-parser/0.0.4' ]
+252 verbose url resolved https://registry.npmjs.org/range-parser/0.0.4
+253 info trying registry request attempt 1 at 00:12:32
+254 verbose etag "7X110V5WTRF1C4PDEMNM4JSUN"
+255 http GET https://registry.npmjs.org/range-parser/0.0.4
+256 verbose url raw crc/0.2.0
+257 verbose url resolving [ 'https://registry.npmjs.org/', './crc/0.2.0' ]
+258 verbose url resolved https://registry.npmjs.org/crc/0.2.0
+259 info trying registry request attempt 1 at 00:12:32
+260 verbose etag "C0BGMK5C4Y2J8KRM83QOTUY4U"
+261 http GET https://registry.npmjs.org/crc/0.2.0
+262 verbose url raw cookie-signature/0.0.1
+263 verbose url resolving [ 'https://registry.npmjs.org/', './cookie-signature/0.0.1' ]
+264 verbose url resolved https://registry.npmjs.org/cookie-signature/0.0.1
+265 info trying registry request attempt 1 at 00:12:32
+266 verbose etag "DYBEPD0KKKOEQ0CN084I0KGAE"
+267 http GET https://registry.npmjs.org/cookie-signature/0.0.1
+268 verbose url raw cookie/0.0.5
+269 verbose url resolving [ 'https://registry.npmjs.org/', './cookie/0.0.5' ]
+270 verbose url resolved https://registry.npmjs.org/cookie/0.0.5
+271 info trying registry request attempt 1 at 00:12:32
+272 verbose etag "ANC2JFZR4WAZ37PL1NHVC03U3"
+273 http GET https://registry.npmjs.org/cookie/0.0.5
+274 verbose url raw send/0.1.0
+275 verbose url resolving [ 'https://registry.npmjs.org/', './send/0.1.0' ]
+276 verbose url resolved https://registry.npmjs.org/send/0.1.0
+277 info trying registry request attempt 1 at 00:12:32
+278 verbose etag "EAY4GFY2SVUQPESD8JYYMOKQ7"
+279 http GET https://registry.npmjs.org/send/0.1.0
+280 verbose url raw fresh/0.1.0
+281 verbose url resolving [ 'https://registry.npmjs.org/', './fresh/0.1.0' ]
+282 verbose url resolved https://registry.npmjs.org/fresh/0.1.0
+283 info trying registry request attempt 1 at 00:12:32
+284 verbose etag "77B6VRU58E4IE6KUOEJU987WG"
+285 http GET https://registry.npmjs.org/fresh/0.1.0
+286 verbose url raw debug
+287 verbose url resolving [ 'https://registry.npmjs.org/', './debug' ]
+288 verbose url resolved https://registry.npmjs.org/debug
+289 info trying registry request attempt 1 at 00:12:32
+290 verbose etag "59FK4FRE43E3SJ92QJ5AIU6IS"
+291 http GET https://registry.npmjs.org/debug
+292 verbose url raw mkdirp/0.3.3
+293 verbose url resolving [ 'https://registry.npmjs.org/', './mkdirp/0.3.3' ]
+294 verbose url resolved https://registry.npmjs.org/mkdirp/0.3.3
+295 info trying registry request attempt 1 at 00:12:32
+296 verbose etag "4VY93YHIIJ11G0NNP12CLD9IC"
+297 http GET https://registry.npmjs.org/mkdirp/0.3.3
+298 verbose url raw methods/0.0.1
+299 verbose url resolving [ 'https://registry.npmjs.org/', './methods/0.0.1' ]
+300 verbose url resolved https://registry.npmjs.org/methods/0.0.1
+301 info trying registry request attempt 1 at 00:12:32
+302 verbose etag "46UESBCD54QD061PN10YE6OTI"
+303 http GET https://registry.npmjs.org/methods/0.0.1
+304 http 200 https://registry.npmjs.org/cookie-signature/0.0.1
+305 silly registry.get cb [ 200,
+305 silly registry.get   { vary: 'Accept',
+305 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+305 silly registry.get     etag: '"D7HZOW1WU8EE6OC594E2NF3NU"',
+305 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:11 GMT',
+305 silly registry.get     'content-type': 'application/json',
+305 silly registry.get     'content-length': '527' } ]
+306 silly lockFile fff727c9-ature-cookie-signature-0-0-1-tgz https://registry.npmjs.org/cookie-signature/-/cookie-signature-0.0.1.tgz
+307 verbose lock https://registry.npmjs.org/cookie-signature/-/cookie-signature-0.0.1.tgz /Users/bennycohen/.npm/fff727c9-ature-cookie-signature-0-0-1-tgz.lock
+308 verbose addRemoteTarball [ 'https://registry.npmjs.org/cookie-signature/-/cookie-signature-0.0.1.tgz',
+308 verbose addRemoteTarball   '13d3603b5cf63befbf85a8801e37aa900db46985' ]
+309 info retry fetch attempt 1 at 00:12:34
+310 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954060-0.2233662528451532/tmp.tgz
+311 http GET https://registry.npmjs.org/cookie-signature/-/cookie-signature-0.0.1.tgz
+312 http 200 https://registry.npmjs.org/range-parser/0.0.4
+313 silly registry.get cb [ 200,
+313 silly registry.get   { vary: 'Accept',
+313 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+313 silly registry.get     etag: '"AKBE8DZX1QIIFDPDNZED2IPJ9"',
+313 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:11 GMT',
+313 silly registry.get     'content-type': 'application/json',
+313 silly registry.get     'content-length': '728' } ]
+314 silly lockFile edd85cc6-ge-parser-range-parser-0-0-4-tgz https://registry.npmjs.org/range-parser/-/range-parser-0.0.4.tgz
+315 verbose lock https://registry.npmjs.org/range-parser/-/range-parser-0.0.4.tgz /Users/bennycohen/.npm/edd85cc6-ge-parser-range-parser-0-0-4-tgz.lock
+316 verbose addRemoteTarball [ 'https://registry.npmjs.org/range-parser/-/range-parser-0.0.4.tgz',
+316 verbose addRemoteTarball   'c0427ffef51c10acba0782a46c9602e744ff620b' ]
+317 info retry fetch attempt 1 at 00:12:34
+318 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954082-0.7811786779202521/tmp.tgz
+319 http GET https://registry.npmjs.org/range-parser/-/range-parser-0.0.4.tgz
+320 http 200 https://registry.npmjs.org/crc/0.2.0
+321 silly registry.get cb [ 200,
+321 silly registry.get   { vary: 'Accept',
+321 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+321 silly registry.get     etag: '"8VB59Q7NIQON07Q184BJHVN14"',
+321 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:11 GMT',
+321 silly registry.get     'content-type': 'application/json',
+321 silly registry.get     'content-length': '770' } ]
+322 silly lockFile abf86be0-stry-npmjs-org-crc-crc-0-2-0-tgz https://registry.npmjs.org/crc/-/crc-0.2.0.tgz
+323 verbose lock https://registry.npmjs.org/crc/-/crc-0.2.0.tgz /Users/bennycohen/.npm/abf86be0-stry-npmjs-org-crc-crc-0-2-0-tgz.lock
+324 verbose addRemoteTarball [ 'https://registry.npmjs.org/crc/-/crc-0.2.0.tgz',
+324 verbose addRemoteTarball   'f4486b9bf0a12df83c3fca14e31e030fdabd9454' ]
+325 info retry fetch attempt 1 at 00:12:34
+326 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954106-0.5600220509804785/tmp.tgz
+327 http GET https://registry.npmjs.org/crc/-/crc-0.2.0.tgz
+328 http 200 https://registry.npmjs.org/connect/2.7.0
+329 silly registry.get cb [ 200,
+329 silly registry.get   { vary: 'Accept',
+329 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+329 silly registry.get     etag: '"43GUFGBX34MTX2WVXQJ1PD22I"',
+329 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:11 GMT',
+329 silly registry.get     'content-type': 'application/json',
+329 silly registry.get     'content-length': '6132' } ]
+330 http 200 https://registry.npmjs.org/commander/0.6.1
+331 silly registry.get cb [ 200,
+331 silly registry.get   { vary: 'Accept',
+331 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+331 silly registry.get     etag: '"E21GOH696BQRAEWRDIZILF5U9"',
+331 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:11 GMT',
+331 silly registry.get     'content-type': 'application/json',
+331 silly registry.get     'content-length': '7887' } ]
+332 silly lockFile 378c912a-rg-commander-commander-0-6-1-tgz https://registry.npmjs.org/commander/-/commander-0.6.1.tgz
+333 verbose lock https://registry.npmjs.org/commander/-/commander-0.6.1.tgz /Users/bennycohen/.npm/378c912a-rg-commander-commander-0-6-1-tgz.lock
+334 silly lockFile b8cab846-js-org-connect-connect-2-7-0-tgz https://registry.npmjs.org/connect/-/connect-2.7.0.tgz
+335 verbose lock https://registry.npmjs.org/connect/-/connect-2.7.0.tgz /Users/bennycohen/.npm/b8cab846-js-org-connect-connect-2-7-0-tgz.lock
+336 verbose addRemoteTarball [ 'https://registry.npmjs.org/commander/-/commander-0.6.1.tgz',
+336 verbose addRemoteTarball   'fa68a14f6a945d54dbbe50d8cdb3320e9e3b1a06' ]
+337 verbose addRemoteTarball [ 'https://registry.npmjs.org/connect/-/connect-2.7.0.tgz',
+337 verbose addRemoteTarball   '52f5626d823c0848a87410f80de0ace2aa52ad95' ]
+338 info retry fetch attempt 1 at 00:12:34
+339 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954255-0.1349812289699912/tmp.tgz
+340 info retry fetch attempt 1 at 00:12:34
+341 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954257-0.14402132597751915/tmp.tgz
+342 http GET https://registry.npmjs.org/commander/-/commander-0.6.1.tgz
+343 http GET https://registry.npmjs.org/connect/-/connect-2.7.0.tgz
+344 http 200 https://registry.npmjs.org/fresh/0.1.0
+345 silly registry.get cb [ 200,
+345 silly registry.get   { vary: 'Accept',
+345 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+345 silly registry.get     etag: '"BO3Y8STBKV90Y3IKZ4W2MCLLV"',
+345 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:11 GMT',
+345 silly registry.get     'content-type': 'application/json',
+345 silly registry.get     'content-length': '699' } ]
+346 silly lockFile 0e5f2eb8--npmjs-org-fresh-fresh-0-1-0-tgz https://registry.npmjs.org/fresh/-/fresh-0.1.0.tgz
+347 verbose lock https://registry.npmjs.org/fresh/-/fresh-0.1.0.tgz /Users/bennycohen/.npm/0e5f2eb8--npmjs-org-fresh-fresh-0-1-0-tgz.lock
+348 verbose addRemoteTarball [ 'https://registry.npmjs.org/fresh/-/fresh-0.1.0.tgz',
+348 verbose addRemoteTarball   '03e4b0178424e4c2d5d19a54d8814cdc97934850' ]
+349 info retry fetch attempt 1 at 00:12:34
+350 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954339-0.22862391313537955/tmp.tgz
+351 http GET https://registry.npmjs.org/fresh/-/fresh-0.1.0.tgz
+352 http 200 https://registry.npmjs.org/cookie/0.0.5
+353 silly registry.get cb [ 200,
+353 silly registry.get   { vary: 'Accept',
+353 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+353 silly registry.get     etag: '"CGWLTFZV1RT7WUUDFMQSL0IXP"',
+353 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:11 GMT',
+353 silly registry.get     'content-type': 'application/json',
+353 silly registry.get     'content-length': '1797' } ]
+354 silly lockFile 65da37ca-pmjs-org-cookie-cookie-0-0-5-tgz https://registry.npmjs.org/cookie/-/cookie-0.0.5.tgz
+355 verbose lock https://registry.npmjs.org/cookie/-/cookie-0.0.5.tgz /Users/bennycohen/.npm/65da37ca-pmjs-org-cookie-cookie-0-0-5-tgz.lock
+356 verbose addRemoteTarball [ 'https://registry.npmjs.org/cookie/-/cookie-0.0.5.tgz',
+356 verbose addRemoteTarball   'f9acf9db57eb7568c9fcc596256b7bb22e307c81' ]
+357 info retry fetch attempt 1 at 00:12:34
+358 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954478-0.58822639612481/tmp.tgz
+359 http GET https://registry.npmjs.org/cookie/-/cookie-0.0.5.tgz
+360 http 200 https://registry.npmjs.org/mkdirp/0.3.3
+361 silly registry.get cb [ 200,
+361 silly registry.get   { vary: 'Accept',
+361 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+361 silly registry.get     etag: '"AHKPZ9B5R2AVAN24CLVUD937X"',
+361 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:11 GMT',
+361 silly registry.get     'content-type': 'application/json',
+361 silly registry.get     'content-length': '855' } ]
+362 silly lockFile 56e05e36-pmjs-org-mkdirp-mkdirp-0-3-3-tgz https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.3.tgz
+363 verbose lock https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.3.tgz /Users/bennycohen/.npm/56e05e36-pmjs-org-mkdirp-mkdirp-0-3-3-tgz.lock
+364 verbose addRemoteTarball [ 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.3.tgz',
+364 verbose addRemoteTarball   '595e251c1370c3a68bab2136d0e348b8105adf13' ]
+365 info retry fetch attempt 1 at 00:12:34
+366 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954498-0.15359658421948552/tmp.tgz
+367 http GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.3.tgz
+368 http 200 https://registry.npmjs.org/send/0.1.0
+369 silly registry.get cb [ 200,
+369 silly registry.get   { vary: 'Accept',
+369 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+369 silly registry.get     etag: '"46HIWDP2EYYWQ5D4BDFXE81LN"',
+369 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:11 GMT',
+369 silly registry.get     'content-type': 'application/json',
+369 silly registry.get     'content-length': '4391' } ]
+370 silly lockFile c7198075-ry-npmjs-org-send-send-0-1-0-tgz https://registry.npmjs.org/send/-/send-0.1.0.tgz
+371 verbose lock https://registry.npmjs.org/send/-/send-0.1.0.tgz /Users/bennycohen/.npm/c7198075-ry-npmjs-org-send-send-0-1-0-tgz.lock
+372 verbose addRemoteTarball [ 'https://registry.npmjs.org/send/-/send-0.1.0.tgz',
+372 verbose addRemoteTarball   'cfb08ebd3cec9b7fc1a37d9ff9e875a971cf4640' ]
+373 info retry fetch attempt 1 at 00:12:34
+374 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954541-0.8987330924719572/tmp.tgz
+375 http GET https://registry.npmjs.org/send/-/send-0.1.0.tgz
+376 http 200 https://registry.npmjs.org/methods/0.0.1
+377 silly registry.get cb [ 200,
+377 silly registry.get   { vary: 'Accept',
+377 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+377 silly registry.get     etag: '"9WQCTURRUKLOS53F2GVAOU321"',
+377 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:11 GMT',
+377 silly registry.get     'content-type': 'application/json',
+377 silly registry.get     'content-length': '496' } ]
+378 silly lockFile 0b9c0212-js-org-methods-methods-0-0-1-tgz https://registry.npmjs.org/methods/-/methods-0.0.1.tgz
+379 verbose lock https://registry.npmjs.org/methods/-/methods-0.0.1.tgz /Users/bennycohen/.npm/0b9c0212-js-org-methods-methods-0-0-1-tgz.lock
+380 verbose addRemoteTarball [ 'https://registry.npmjs.org/methods/-/methods-0.0.1.tgz',
+380 verbose addRemoteTarball   '277c90f8bef39709645a8371c51c3b6c648e068c' ]
+381 info retry fetch attempt 1 at 00:12:34
+382 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954589-0.8086210219189525/tmp.tgz
+383 http GET https://registry.npmjs.org/methods/-/methods-0.0.1.tgz
+384 http 200 https://registry.npmjs.org/debug
+385 silly registry.get cb [ 200,
+385 silly registry.get   { vary: 'Accept',
+385 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+385 silly registry.get     etag: '"8QY9BGEVR320YZ0NL2H8QHM39"',
+385 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:11 GMT',
+385 silly registry.get     'content-type': 'application/json',
+385 silly registry.get     'content-length': '9372' } ]
+386 silly addNameRange number 2 { name: 'debug', range: '', hasData: true }
+387 silly addNameRange versions [ 'debug',
+387 silly addNameRange   [ '0.0.1',
+387 silly addNameRange     '0.1.0',
+387 silly addNameRange     '0.2.0',
+387 silly addNameRange     '0.3.0',
+387 silly addNameRange     '0.4.0',
+387 silly addNameRange     '0.4.1',
+387 silly addNameRange     '0.5.0',
+387 silly addNameRange     '0.6.0',
+387 silly addNameRange     '0.7.0' ] ]
+388 verbose addNamed [ 'debug', '0.7.0' ]
+389 verbose addNamed [ '0.7.0', '0.7.0' ]
+390 silly lockFile a3c3658f-debug-0-7-0 debug@0.7.0
+391 verbose lock debug@0.7.0 /Users/bennycohen/.npm/a3c3658f-debug-0-7-0.lock
+392 verbose read json /Users/bennycohen/.npm/debug/0.7.0/package/package.json
+393 http 200 https://registry.npmjs.org/range-parser/-/range-parser-0.0.4.tgz
+394 http 200 https://registry.npmjs.org/cookie-signature/-/cookie-signature-0.0.1.tgz
+395 silly lockFile a3c3658f-debug-0-7-0 debug@0.7.0
+396 silly lockFile 3ac45eff-debug debug@*
+397 http 200 https://registry.npmjs.org/crc/-/crc-0.2.0.tgz
+398 http 200 https://registry.npmjs.org/commander/-/commander-0.6.1.tgz
+399 http 200 https://registry.npmjs.org/connect/-/connect-2.7.0.tgz
+400 silly shasum updated bytes 1748
+401 info shasum 13d3603b5cf63befbf85a8801e37aa900db46985
+401 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954060-0.2233662528451532/tmp.tgz
+402 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954060-0.2233662528451532/tmp.tgz
+403 silly lockFile a25d8193-54060-0-2233662528451532-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954060-0.2233662528451532/package
+404 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954060-0.2233662528451532/package /Users/bennycohen/.npm/a25d8193-54060-0-2233662528451532-package.lock
+405 silly gunzTarPerm modes [ '755', '644' ]
+406 silly gunzTarPerm extractEntry package.json
+407 silly gunzTarPerm extractEntry .npmignore
+408 silly gunzTarPerm extractEntry index.js
+409 silly gunzTarPerm extractEntry History.md
+410 silly gunzTarPerm extractEntry Makefile
+411 silly gunzTarPerm extractEntry Readme.md
+412 silly shasum updated bytes 1283
+413 info shasum c0427ffef51c10acba0782a46c9602e744ff620b
+413 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954082-0.7811786779202521/tmp.tgz
+414 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954082-0.7811786779202521/tmp.tgz
+415 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954060-0.2233662528451532/package/package.json
+416 silly lockFile a25d8193-54060-0-2233662528451532-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954060-0.2233662528451532/package
+417 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954060-0.2233662528451532/package/package.json
+418 silly lockFile f43072a1-54082-0-7811786779202521-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954082-0.7811786779202521/package
+419 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954082-0.7811786779202521/package /Users/bennycohen/.npm/f43072a1-54082-0-7811786779202521-package.lock
+420 silly gunzTarPerm modes [ '755', '644' ]
+421 verbose tar pack [ '/Users/bennycohen/.npm/cookie-signature/0.0.1/package.tgz',
+421 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954060-0.2233662528451532/package' ]
+422 verbose tarball /Users/bennycohen/.npm/cookie-signature/0.0.1/package.tgz
+423 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954060-0.2233662528451532/package
+424 silly lockFile d93175a2-okie-signature-0-0-1-package-tgz /Users/bennycohen/.npm/cookie-signature/0.0.1/package.tgz
+425 verbose lock /Users/bennycohen/.npm/cookie-signature/0.0.1/package.tgz /Users/bennycohen/.npm/d93175a2-okie-signature-0-0-1-package-tgz.lock
+426 silly gunzTarPerm extractEntry package.json
+427 silly gunzTarPerm extractEntry .npmignore
+428 silly gunzTarPerm extractEntry index.js
+429 silly gunzTarPerm extractEntry History.md
+430 silly gunzTarPerm extractEntry Makefile
+431 silly gunzTarPerm extractEntry Readme.md
+432 silly shasum updated bytes 10240
+433 info shasum f4486b9bf0a12df83c3fca14e31e030fdabd9454
+433 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954106-0.5600220509804785/tmp.tgz
+434 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954106-0.5600220509804785/tmp.tgz
+435 silly lockFile d93175a2-okie-signature-0-0-1-package-tgz /Users/bennycohen/.npm/cookie-signature/0.0.1/package.tgz
+436 silly lockFile cfc714b3-m-cookie-signature-0-0-1-package /Users/bennycohen/.npm/cookie-signature/0.0.1/package
+437 verbose lock /Users/bennycohen/.npm/cookie-signature/0.0.1/package /Users/bennycohen/.npm/cfc714b3-m-cookie-signature-0-0-1-package.lock
+438 silly lockFile a36d10ff-54106-0-5600220509804785-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954106-0.5600220509804785/package
+439 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954106-0.5600220509804785/package /Users/bennycohen/.npm/a36d10ff-54106-0-5600220509804785-package.lock
+440 silly gunzTarPerm modes [ '755', '644' ]
+441 silly lockFile cfc714b3-m-cookie-signature-0-0-1-package /Users/bennycohen/.npm/cookie-signature/0.0.1/package
+442 verbose tar unpack /Users/bennycohen/.npm/cookie-signature/0.0.1/package.tgz
+443 silly gunzTarPerm extractEntry .gitignore
+444 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954082-0.7811786779202521/package/package.json
+445 silly gunzTarPerm extractEntry .gitmodules
+446 silly gunzTarPerm extractEntry Makefile
+447 silly gunzTarPerm extractEntry package.json
+448 silly gunzTarPerm extractEntry README.md
+449 silly lockFile f43072a1-54082-0-7811786779202521-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954082-0.7811786779202521/package
+450 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954082-0.7811786779202521/package/package.json
+451 silly gunzTarPerm extractEntry lib/crc.js
+452 silly gunzTarPerm extractEntry test/crc.js
+453 silly lockFile cfc714b3-m-cookie-signature-0-0-1-package /Users/bennycohen/.npm/cookie-signature/0.0.1/package
+454 verbose lock /Users/bennycohen/.npm/cookie-signature/0.0.1/package /Users/bennycohen/.npm/cfc714b3-m-cookie-signature-0-0-1-package.lock
+455 silly gunzTarPerm modes [ '755', '644' ]
+456 verbose tar pack [ '/Users/bennycohen/.npm/range-parser/0.0.4/package.tgz',
+456 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954082-0.7811786779202521/package' ]
+457 verbose tarball /Users/bennycohen/.npm/range-parser/0.0.4/package.tgz
+458 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954082-0.7811786779202521/package
+459 silly lockFile 9d282fbf-m-range-parser-0-0-4-package-tgz /Users/bennycohen/.npm/range-parser/0.0.4/package.tgz
+460 verbose lock /Users/bennycohen/.npm/range-parser/0.0.4/package.tgz /Users/bennycohen/.npm/9d282fbf-m-range-parser-0-0-4-package-tgz.lock
+461 silly gunzTarPerm extractEntry package.json
+462 silly gunzTarPerm extractEntry .npmignore
+463 silly gunzTarPerm extractEntry index.js
+464 silly gunzTarPerm extractEntry History.md
+465 silly gunzTarPerm extractEntry Makefile
+466 silly gunzTarPerm extractEntry Readme.md
+467 silly lockFile 9d282fbf-m-range-parser-0-0-4-package-tgz /Users/bennycohen/.npm/range-parser/0.0.4/package.tgz
+468 silly lockFile 68e60c43-n-npm-range-parser-0-0-4-package /Users/bennycohen/.npm/range-parser/0.0.4/package
+469 verbose lock /Users/bennycohen/.npm/range-parser/0.0.4/package /Users/bennycohen/.npm/68e60c43-n-npm-range-parser-0-0-4-package.lock
+470 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954106-0.5600220509804785/package/package.json
+471 silly lockFile a36d10ff-54106-0-5600220509804785-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954106-0.5600220509804785/package
+472 silly lockFile 68e60c43-n-npm-range-parser-0-0-4-package /Users/bennycohen/.npm/range-parser/0.0.4/package
+473 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954106-0.5600220509804785/package/package.json
+474 verbose tar unpack /Users/bennycohen/.npm/range-parser/0.0.4/package.tgz
+475 silly lockFile 68e60c43-n-npm-range-parser-0-0-4-package /Users/bennycohen/.npm/range-parser/0.0.4/package
+476 verbose lock /Users/bennycohen/.npm/range-parser/0.0.4/package /Users/bennycohen/.npm/68e60c43-n-npm-range-parser-0-0-4-package.lock
+477 verbose tar pack [ '/Users/bennycohen/.npm/crc/0.2.0/package.tgz',
+477 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954106-0.5600220509804785/package' ]
+478 verbose tarball /Users/bennycohen/.npm/crc/0.2.0/package.tgz
+479 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954106-0.5600220509804785/package
+480 silly lockFile 8034e40c-ycohen-npm-crc-0-2-0-package-tgz /Users/bennycohen/.npm/crc/0.2.0/package.tgz
+481 verbose lock /Users/bennycohen/.npm/crc/0.2.0/package.tgz /Users/bennycohen/.npm/8034e40c-ycohen-npm-crc-0-2-0-package-tgz.lock
+482 silly gunzTarPerm modes [ '755', '644' ]
+483 verbose read json /Users/bennycohen/.npm/cookie-signature/0.0.1/package/package.json
+484 silly gunzTarPerm extractEntry package.json
+485 silly gunzTarPerm extractEntry .npmignore
+486 silly gunzTarPerm extractEntry index.js
+487 silly lockFile cfc714b3-m-cookie-signature-0-0-1-package /Users/bennycohen/.npm/cookie-signature/0.0.1/package
+488 silly shasum updated bytes 1748
+489 info shasum 13d3603b5cf63befbf85a8801e37aa900db46985
+489 info shasum /Users/bennycohen/.npm/cookie-signature/0.0.1/package.tgz
+490 verbose from cache /Users/bennycohen/.npm/cookie-signature/0.0.1/package/package.json
+491 silly gunzTarPerm extractEntry History.md
+492 silly gunzTarPerm extractEntry Makefile
+493 silly gunzTarPerm extractEntry Readme.md
+494 verbose read json /Users/bennycohen/.npm/range-parser/0.0.4/package/package.json
+495 silly lockFile 68e60c43-n-npm-range-parser-0-0-4-package /Users/bennycohen/.npm/range-parser/0.0.4/package
+496 silly shasum updated bytes 1283
+497 info shasum c0427ffef51c10acba0782a46c9602e744ff620b
+497 info shasum /Users/bennycohen/.npm/range-parser/0.0.4/package.tgz
+498 verbose from cache /Users/bennycohen/.npm/range-parser/0.0.4/package/package.json
+499 verbose chmod /Users/bennycohen/.npm/cookie-signature/0.0.1/package.tgz 644
+500 verbose chown /Users/bennycohen/.npm/cookie-signature/0.0.1/package.tgz [ 501, 20 ]
+501 verbose chmod /Users/bennycohen/.npm/range-parser/0.0.4/package.tgz 644
+502 verbose chown /Users/bennycohen/.npm/range-parser/0.0.4/package.tgz [ 501, 20 ]
+503 silly lockFile fff727c9-ature-cookie-signature-0-0-1-tgz https://registry.npmjs.org/cookie-signature/-/cookie-signature-0.0.1.tgz
+504 silly lockFile edd85cc6-ge-parser-range-parser-0-0-4-tgz https://registry.npmjs.org/range-parser/-/range-parser-0.0.4.tgz
+505 silly lockFile f4fbff07-cookie-signature-0-0-1 cookie-signature@0.0.1
+506 silly lockFile 0760c556-range-parser-0-0-4 range-parser@0.0.4
+507 silly lockFile 8034e40c-ycohen-npm-crc-0-2-0-package-tgz /Users/bennycohen/.npm/crc/0.2.0/package.tgz
+508 silly lockFile 2b95b632-bennycohen-npm-crc-0-2-0-package /Users/bennycohen/.npm/crc/0.2.0/package
+509 verbose lock /Users/bennycohen/.npm/crc/0.2.0/package /Users/bennycohen/.npm/2b95b632-bennycohen-npm-crc-0-2-0-package.lock
+510 silly lockFile 2b95b632-bennycohen-npm-crc-0-2-0-package /Users/bennycohen/.npm/crc/0.2.0/package
+511 verbose tar unpack /Users/bennycohen/.npm/crc/0.2.0/package.tgz
+512 silly lockFile 2b95b632-bennycohen-npm-crc-0-2-0-package /Users/bennycohen/.npm/crc/0.2.0/package
+513 verbose lock /Users/bennycohen/.npm/crc/0.2.0/package /Users/bennycohen/.npm/2b95b632-bennycohen-npm-crc-0-2-0-package.lock
+514 silly gunzTarPerm modes [ '755', '644' ]
+515 silly gunzTarPerm extractEntry package.json
+516 silly gunzTarPerm extractEntry .npmignore
+517 silly gunzTarPerm extractEntry README.md
+518 silly gunzTarPerm extractEntry .gitmodules
+519 silly gunzTarPerm extractEntry lib/crc.js
+520 silly gunzTarPerm extractEntry Makefile
+521 silly gunzTarPerm extractEntry test/crc.js
+522 verbose read json /Users/bennycohen/.npm/crc/0.2.0/package/package.json
+523 silly lockFile 2b95b632-bennycohen-npm-crc-0-2-0-package /Users/bennycohen/.npm/crc/0.2.0/package
+524 silly shasum updated bytes 7556
+525 info shasum 98a197fcb0bf58e355eb769fca106ae9b4f3b827
+525 info shasum /Users/bennycohen/.npm/crc/0.2.0/package.tgz
+526 verbose from cache /Users/bennycohen/.npm/crc/0.2.0/package/package.json
+527 verbose chmod /Users/bennycohen/.npm/crc/0.2.0/package.tgz 644
+528 verbose chown /Users/bennycohen/.npm/crc/0.2.0/package.tgz [ 501, 20 ]
+529 silly lockFile abf86be0-stry-npmjs-org-crc-crc-0-2-0-tgz https://registry.npmjs.org/crc/-/crc-0.2.0.tgz
+530 silly lockFile 3e4de13a-crc-0-2-0 crc@0.2.0
+531 silly shasum updated bytes 9774
+532 info shasum fa68a14f6a945d54dbbe50d8cdb3320e9e3b1a06
+532 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954255-0.1349812289699912/tmp.tgz
+533 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954255-0.1349812289699912/tmp.tgz
+534 silly lockFile b6788e74-54255-0-1349812289699912-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954255-0.1349812289699912/package
+535 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954255-0.1349812289699912/package /Users/bennycohen/.npm/b6788e74-54255-0-1349812289699912-package.lock
+536 silly gunzTarPerm modes [ '755', '644' ]
+537 silly gunzTarPerm extractEntry .npmignore
+538 silly gunzTarPerm extractEntry .travis.yml
+539 silly gunzTarPerm extractEntry History.md
+540 silly gunzTarPerm extractEntry index.js
+541 silly gunzTarPerm extractEntry lib/
+542 silly gunzTarPerm extractEntry lib/commander.js
+543 silly gunzTarPerm extractEntry Makefile
+544 silly gunzTarPerm extractEntry package.json
+545 silly gunzTarPerm extractEntry Readme.md
+546 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954255-0.1349812289699912/package/package.json
+547 silly lockFile b6788e74-54255-0-1349812289699912-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954255-0.1349812289699912/package
+548 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954255-0.1349812289699912/package/package.json
+549 verbose tar pack [ '/Users/bennycohen/.npm/commander/0.6.1/package.tgz',
+549 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954255-0.1349812289699912/package' ]
+550 verbose tarball /Users/bennycohen/.npm/commander/0.6.1/package.tgz
+551 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954255-0.1349812289699912/package
+552 silly lockFile a51d8013--npm-commander-0-6-1-package-tgz /Users/bennycohen/.npm/commander/0.6.1/package.tgz
+553 verbose lock /Users/bennycohen/.npm/commander/0.6.1/package.tgz /Users/bennycohen/.npm/a51d8013--npm-commander-0-6-1-package-tgz.lock
+554 silly lockFile a51d8013--npm-commander-0-6-1-package-tgz /Users/bennycohen/.npm/commander/0.6.1/package.tgz
+555 silly lockFile f0360a5e-ohen-npm-commander-0-6-1-package /Users/bennycohen/.npm/commander/0.6.1/package
+556 verbose lock /Users/bennycohen/.npm/commander/0.6.1/package /Users/bennycohen/.npm/f0360a5e-ohen-npm-commander-0-6-1-package.lock
+557 silly lockFile f0360a5e-ohen-npm-commander-0-6-1-package /Users/bennycohen/.npm/commander/0.6.1/package
+558 verbose tar unpack /Users/bennycohen/.npm/commander/0.6.1/package.tgz
+559 silly lockFile f0360a5e-ohen-npm-commander-0-6-1-package /Users/bennycohen/.npm/commander/0.6.1/package
+560 verbose lock /Users/bennycohen/.npm/commander/0.6.1/package /Users/bennycohen/.npm/f0360a5e-ohen-npm-commander-0-6-1-package.lock
+561 http 200 https://registry.npmjs.org/cookie/-/cookie-0.0.5.tgz
+562 http 200 https://registry.npmjs.org/fresh/-/fresh-0.1.0.tgz
+563 silly gunzTarPerm modes [ '755', '644' ]
+564 silly shasum updated bytes 1087
+565 info shasum 03e4b0178424e4c2d5d19a54d8814cdc97934850
+565 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954339-0.22862391313537955/tmp.tgz
+566 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954339-0.22862391313537955/tmp.tgz
+567 silly gunzTarPerm extractEntry package.json
+568 silly lockFile b32b76e8-4339-0-22862391313537955-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954339-0.22862391313537955/package
+569 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954339-0.22862391313537955/package /Users/bennycohen/.npm/b32b76e8-4339-0-22862391313537955-package.lock
+570 silly gunzTarPerm modes [ '755', '644' ]
+571 silly gunzTarPerm extractEntry .npmignore
+572 silly gunzTarPerm extractEntry index.js
+573 silly gunzTarPerm extractEntry package.json
+574 silly gunzTarPerm extractEntry .travis.yml
+575 silly gunzTarPerm extractEntry History.md
+576 silly gunzTarPerm extractEntry .npmignore
+577 silly gunzTarPerm extractEntry index.js
+578 silly gunzTarPerm extractEntry lib/commander.js
+579 silly gunzTarPerm extractEntry Makefile
+580 silly gunzTarPerm extractEntry Makefile
+581 silly gunzTarPerm extractEntry Readme.md
+582 silly gunzTarPerm extractEntry Readme.md
+583 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954339-0.22862391313537955/package/package.json
+584 silly lockFile b32b76e8-4339-0-22862391313537955-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954339-0.22862391313537955/package
+585 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954339-0.22862391313537955/package/package.json
+586 verbose tar pack [ '/Users/bennycohen/.npm/fresh/0.1.0/package.tgz',
+586 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954339-0.22862391313537955/package' ]
+587 verbose tarball /Users/bennycohen/.npm/fresh/0.1.0/package.tgz
+588 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954339-0.22862391313537955/package
+589 silly lockFile 74343d57-ohen-npm-fresh-0-1-0-package-tgz /Users/bennycohen/.npm/fresh/0.1.0/package.tgz
+590 verbose lock /Users/bennycohen/.npm/fresh/0.1.0/package.tgz /Users/bennycohen/.npm/74343d57-ohen-npm-fresh-0-1-0-package-tgz.lock
+591 verbose read json /Users/bennycohen/.npm/commander/0.6.1/package/package.json
+592 silly lockFile f0360a5e-ohen-npm-commander-0-6-1-package /Users/bennycohen/.npm/commander/0.6.1/package
+593 silly shasum updated bytes 9732
+594 info shasum 23256d7136c633295062196d996b0fdd21153baf
+594 info shasum /Users/bennycohen/.npm/commander/0.6.1/package.tgz
+595 verbose from cache /Users/bennycohen/.npm/commander/0.6.1/package/package.json
+596 silly lockFile 74343d57-ohen-npm-fresh-0-1-0-package-tgz /Users/bennycohen/.npm/fresh/0.1.0/package.tgz
+597 silly lockFile 21dca34f-nnycohen-npm-fresh-0-1-0-package /Users/bennycohen/.npm/fresh/0.1.0/package
+598 verbose lock /Users/bennycohen/.npm/fresh/0.1.0/package /Users/bennycohen/.npm/21dca34f-nnycohen-npm-fresh-0-1-0-package.lock
+599 verbose chmod /Users/bennycohen/.npm/commander/0.6.1/package.tgz 644
+600 verbose chown /Users/bennycohen/.npm/commander/0.6.1/package.tgz [ 501, 20 ]
+601 silly lockFile 378c912a-rg-commander-commander-0-6-1-tgz https://registry.npmjs.org/commander/-/commander-0.6.1.tgz
+602 silly lockFile fa16a2ce-commander-0-6-1 commander@0.6.1
+603 silly lockFile 21dca34f-nnycohen-npm-fresh-0-1-0-package /Users/bennycohen/.npm/fresh/0.1.0/package
+604 verbose tar unpack /Users/bennycohen/.npm/fresh/0.1.0/package.tgz
+605 silly lockFile 21dca34f-nnycohen-npm-fresh-0-1-0-package /Users/bennycohen/.npm/fresh/0.1.0/package
+606 verbose lock /Users/bennycohen/.npm/fresh/0.1.0/package /Users/bennycohen/.npm/21dca34f-nnycohen-npm-fresh-0-1-0-package.lock
+607 silly gunzTarPerm modes [ '755', '644' ]
+608 silly gunzTarPerm extractEntry package.json
+609 silly gunzTarPerm extractEntry .npmignore
+610 silly gunzTarPerm extractEntry index.js
+611 silly gunzTarPerm extractEntry Makefile
+612 silly gunzTarPerm extractEntry Readme.md
+613 verbose read json /Users/bennycohen/.npm/fresh/0.1.0/package/package.json
+614 silly lockFile 21dca34f-nnycohen-npm-fresh-0-1-0-package /Users/bennycohen/.npm/fresh/0.1.0/package
+615 silly shasum updated bytes 1087
+616 info shasum 03e4b0178424e4c2d5d19a54d8814cdc97934850
+616 info shasum /Users/bennycohen/.npm/fresh/0.1.0/package.tgz
+617 verbose from cache /Users/bennycohen/.npm/fresh/0.1.0/package/package.json
+618 verbose chmod /Users/bennycohen/.npm/fresh/0.1.0/package.tgz 644
+619 verbose chown /Users/bennycohen/.npm/fresh/0.1.0/package.tgz [ 501, 20 ]
+620 silly lockFile 0e5f2eb8--npmjs-org-fresh-fresh-0-1-0-tgz https://registry.npmjs.org/fresh/-/fresh-0.1.0.tgz
+621 silly lockFile 3dea7da8-fresh-0-1-0 fresh@0.1.0
+622 http 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.3.tgz
+623 http 200 https://registry.npmjs.org/send/-/send-0.1.0.tgz
+624 http 200 https://registry.npmjs.org/methods/-/methods-0.0.1.tgz
+625 silly shasum updated bytes 2309
+626 info shasum f9acf9db57eb7568c9fcc596256b7bb22e307c81
+626 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954478-0.58822639612481/tmp.tgz
+627 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954478-0.58822639612481/tmp.tgz
+628 silly lockFile 23debccd-5954478-0-58822639612481-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954478-0.58822639612481/package
+629 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954478-0.58822639612481/package /Users/bennycohen/.npm/23debccd-5954478-0-58822639612481-package.lock
+630 silly gunzTarPerm modes [ '755', '644' ]
+631 silly gunzTarPerm extractEntry package.json
+632 silly gunzTarPerm extractEntry .npmignore
+633 silly gunzTarPerm extractEntry README.md
+634 silly gunzTarPerm extractEntry index.js
+635 silly gunzTarPerm extractEntry .travis.yml
+636 silly gunzTarPerm extractEntry test/serialize.js
+637 silly gunzTarPerm extractEntry test/parse.js
+638 silly gunzTarPerm extractEntry test/mocha.opts
+639 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954478-0.58822639612481/package/package.json
+640 silly lockFile 23debccd-5954478-0-58822639612481-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954478-0.58822639612481/package
+641 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954478-0.58822639612481/package/package.json
+642 verbose tar pack [ '/Users/bennycohen/.npm/cookie/0.0.5/package.tgz',
+642 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954478-0.58822639612481/package' ]
+643 verbose tarball /Users/bennycohen/.npm/cookie/0.0.5/package.tgz
+644 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954478-0.58822639612481/package
+645 silly lockFile bee2f708-hen-npm-cookie-0-0-5-package-tgz /Users/bennycohen/.npm/cookie/0.0.5/package.tgz
+646 verbose lock /Users/bennycohen/.npm/cookie/0.0.5/package.tgz /Users/bennycohen/.npm/bee2f708-hen-npm-cookie-0-0-5-package-tgz.lock
+647 silly lockFile bee2f708-hen-npm-cookie-0-0-5-package-tgz /Users/bennycohen/.npm/cookie/0.0.5/package.tgz
+648 silly lockFile 2624eed8-nycohen-npm-cookie-0-0-5-package /Users/bennycohen/.npm/cookie/0.0.5/package
+649 verbose lock /Users/bennycohen/.npm/cookie/0.0.5/package /Users/bennycohen/.npm/2624eed8-nycohen-npm-cookie-0-0-5-package.lock
+650 silly lockFile 2624eed8-nycohen-npm-cookie-0-0-5-package /Users/bennycohen/.npm/cookie/0.0.5/package
+651 verbose tar unpack /Users/bennycohen/.npm/cookie/0.0.5/package.tgz
+652 silly lockFile 2624eed8-nycohen-npm-cookie-0-0-5-package /Users/bennycohen/.npm/cookie/0.0.5/package
+653 verbose lock /Users/bennycohen/.npm/cookie/0.0.5/package /Users/bennycohen/.npm/2624eed8-nycohen-npm-cookie-0-0-5-package.lock
+654 silly gunzTarPerm modes [ '755', '644' ]
+655 silly gunzTarPerm extractEntry package.json
+656 silly gunzTarPerm extractEntry .npmignore
+657 silly gunzTarPerm extractEntry README.md
+658 silly gunzTarPerm extractEntry index.js
+659 silly gunzTarPerm extractEntry .travis.yml
+660 silly gunzTarPerm extractEntry test/parse.js
+661 silly gunzTarPerm extractEntry test/serialize.js
+662 silly gunzTarPerm extractEntry test/mocha.opts
+663 verbose read json /Users/bennycohen/.npm/cookie/0.0.5/package/package.json
+664 silly lockFile 2624eed8-nycohen-npm-cookie-0-0-5-package /Users/bennycohen/.npm/cookie/0.0.5/package
+665 silly shasum updated bytes 2312
+666 info shasum 59c210f0e43888d4afcd7e3f030e501028a14f0b
+666 info shasum /Users/bennycohen/.npm/cookie/0.0.5/package.tgz
+667 verbose from cache /Users/bennycohen/.npm/cookie/0.0.5/package/package.json
+668 verbose chmod /Users/bennycohen/.npm/cookie/0.0.5/package.tgz 644
+669 verbose chown /Users/bennycohen/.npm/cookie/0.0.5/package.tgz [ 501, 20 ]
+670 silly lockFile 65da37ca-pmjs-org-cookie-cookie-0-0-5-tgz https://registry.npmjs.org/cookie/-/cookie-0.0.5.tgz
+671 silly lockFile fe08ced7-cookie-0-0-5 cookie@0.0.5
+672 silly shasum updated bytes 4655
+673 info shasum 595e251c1370c3a68bab2136d0e348b8105adf13
+673 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954498-0.15359658421948552/tmp.tgz
+674 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954498-0.15359658421948552/tmp.tgz
+675 silly lockFile 8037c0d7-4498-0-15359658421948552-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954498-0.15359658421948552/package
+676 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954498-0.15359658421948552/package /Users/bennycohen/.npm/8037c0d7-4498-0-15359658421948552-package.lock
+677 silly gunzTarPerm modes [ '755', '644' ]
+678 silly gunzTarPerm extractEntry package.json
+679 silly gunzTarPerm extractEntry .npmignore
+680 silly gunzTarPerm extractEntry LICENSE
+681 silly gunzTarPerm extractEntry index.js
+682 silly gunzTarPerm extractEntry examples/pow.js
+683 silly gunzTarPerm extractEntry examples/pow.js.orig
+684 silly gunzTarPerm extractEntry examples/pow.js.rej
+685 silly gunzTarPerm extractEntry test/perm.js
+686 silly gunzTarPerm extractEntry test/perm_sync.js
+687 silly gunzTarPerm extractEntry test/race.js
+688 silly gunzTarPerm extractEntry test/rel.js
+689 silly gunzTarPerm extractEntry test/return.js
+690 silly gunzTarPerm extractEntry test/clobber.js
+691 silly gunzTarPerm extractEntry test/root.js
+692 silly gunzTarPerm extractEntry test/umask.js
+693 silly gunzTarPerm extractEntry test/sync.js
+694 silly gunzTarPerm extractEntry test/chmod.js
+695 silly gunzTarPerm extractEntry test/umask_sync.js
+696 silly gunzTarPerm extractEntry test/return_sync.js
+697 silly gunzTarPerm extractEntry test/mkdirp.js
+698 silly gunzTarPerm extractEntry .travis.yml
+699 silly gunzTarPerm extractEntry .gitignore.rej
+700 silly gunzTarPerm extractEntry .gitignore.orig
+701 silly gunzTarPerm extractEntry README.markdown
+702 silly shasum updated bytes 5657
+703 info shasum cfb08ebd3cec9b7fc1a37d9ff9e875a971cf4640
+703 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954541-0.8987330924719572/tmp.tgz
+704 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954541-0.8987330924719572/tmp.tgz
+705 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954498-0.15359658421948552/package/package.json
+706 silly lockFile 8037c0d7-4498-0-15359658421948552-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954498-0.15359658421948552/package
+707 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954498-0.15359658421948552/package/package.json
+708 silly lockFile 25a33016-54541-0-8987330924719572-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954541-0.8987330924719572/package
+709 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954541-0.8987330924719572/package /Users/bennycohen/.npm/25a33016-54541-0-8987330924719572-package.lock
+710 silly gunzTarPerm modes [ '755', '644' ]
+711 verbose tar pack [ '/Users/bennycohen/.npm/mkdirp/0.3.3/package.tgz',
+711 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954498-0.15359658421948552/package' ]
+712 verbose tarball /Users/bennycohen/.npm/mkdirp/0.3.3/package.tgz
+713 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954498-0.15359658421948552/package
+714 silly lockFile 3c88391d-hen-npm-mkdirp-0-3-3-package-tgz /Users/bennycohen/.npm/mkdirp/0.3.3/package.tgz
+715 verbose lock /Users/bennycohen/.npm/mkdirp/0.3.3/package.tgz /Users/bennycohen/.npm/3c88391d-hen-npm-mkdirp-0-3-3-package-tgz.lock
+716 silly gunzTarPerm extractEntry package.json
+717 silly gunzTarPerm extractEntry .npmignore
+718 silly gunzTarPerm extractEntry index.js
+719 silly gunzTarPerm extractEntry History.md
+720 silly gunzTarPerm extractEntry lib/send.js
+721 silly gunzTarPerm extractEntry lib/utils.js
+722 silly gunzTarPerm extractEntry Makefile
+723 silly gunzTarPerm extractEntry Readme.md
+724 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954541-0.8987330924719572/package/package.json
+725 silly lockFile 25a33016-54541-0-8987330924719572-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954541-0.8987330924719572/package
+726 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954541-0.8987330924719572/package/package.json
+727 verbose tar pack [ '/Users/bennycohen/.npm/send/0.1.0/package.tgz',
+727 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954541-0.8987330924719572/package' ]
+728 verbose tarball /Users/bennycohen/.npm/send/0.1.0/package.tgz
+729 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954541-0.8987330924719572/package
+730 silly lockFile 7dd882d6-cohen-npm-send-0-1-0-package-tgz /Users/bennycohen/.npm/send/0.1.0/package.tgz
+731 verbose lock /Users/bennycohen/.npm/send/0.1.0/package.tgz /Users/bennycohen/.npm/7dd882d6-cohen-npm-send-0-1-0-package-tgz.lock
+732 silly lockFile 3c88391d-hen-npm-mkdirp-0-3-3-package-tgz /Users/bennycohen/.npm/mkdirp/0.3.3/package.tgz
+733 silly lockFile be894e61-nycohen-npm-mkdirp-0-3-3-package /Users/bennycohen/.npm/mkdirp/0.3.3/package
+734 verbose lock /Users/bennycohen/.npm/mkdirp/0.3.3/package /Users/bennycohen/.npm/be894e61-nycohen-npm-mkdirp-0-3-3-package.lock
+735 silly lockFile 7dd882d6-cohen-npm-send-0-1-0-package-tgz /Users/bennycohen/.npm/send/0.1.0/package.tgz
+736 silly shasum updated bytes 469
+737 silly shasum updated bytes 40960
+738 info shasum 277c90f8bef39709645a8371c51c3b6c648e068c
+738 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954589-0.8086210219189525/tmp.tgz
+739 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954589-0.8086210219189525/tmp.tgz
+740 silly shasum updated bytes 34318
+741 info shasum 52f5626d823c0848a87410f80de0ace2aa52ad95
+741 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954257-0.14402132597751915/tmp.tgz
+742 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954257-0.14402132597751915/tmp.tgz
+743 silly lockFile 7e145889-ennycohen-npm-send-0-1-0-package /Users/bennycohen/.npm/send/0.1.0/package
+744 verbose lock /Users/bennycohen/.npm/send/0.1.0/package /Users/bennycohen/.npm/7e145889-ennycohen-npm-send-0-1-0-package.lock
+745 silly lockFile 76a19924-54589-0-8086210219189525-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954589-0.8086210219189525/package
+746 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954589-0.8086210219189525/package /Users/bennycohen/.npm/76a19924-54589-0-8086210219189525-package.lock
+747 silly lockFile 324bb4bf-4257-0-14402132597751915-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954257-0.14402132597751915/package
+748 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954257-0.14402132597751915/package /Users/bennycohen/.npm/324bb4bf-4257-0-14402132597751915-package.lock
+749 silly lockFile be894e61-nycohen-npm-mkdirp-0-3-3-package /Users/bennycohen/.npm/mkdirp/0.3.3/package
+750 silly gunzTarPerm modes [ '755', '644' ]
+751 silly gunzTarPerm modes [ '755', '644' ]
+752 verbose tar unpack /Users/bennycohen/.npm/mkdirp/0.3.3/package.tgz
+753 silly lockFile 7e145889-ennycohen-npm-send-0-1-0-package /Users/bennycohen/.npm/send/0.1.0/package
+754 silly gunzTarPerm extractEntry package.json
+755 silly gunzTarPerm extractEntry package.json
+756 verbose tar unpack /Users/bennycohen/.npm/send/0.1.0/package.tgz
+757 silly lockFile be894e61-nycohen-npm-mkdirp-0-3-3-package /Users/bennycohen/.npm/mkdirp/0.3.3/package
+758 verbose lock /Users/bennycohen/.npm/mkdirp/0.3.3/package /Users/bennycohen/.npm/be894e61-nycohen-npm-mkdirp-0-3-3-package.lock
+759 silly lockFile 7e145889-ennycohen-npm-send-0-1-0-package /Users/bennycohen/.npm/send/0.1.0/package
+760 verbose lock /Users/bennycohen/.npm/send/0.1.0/package /Users/bennycohen/.npm/7e145889-ennycohen-npm-send-0-1-0-package.lock
+761 silly gunzTarPerm extractEntry index.js
+762 silly gunzTarPerm extractEntry .npmignore
+763 silly gunzTarPerm extractEntry LICENSE
+764 silly gunzTarPerm modes [ '755', '644' ]
+765 silly gunzTarPerm modes [ '755', '644' ]
+766 silly gunzTarPerm extractEntry package.json
+767 silly gunzTarPerm extractEntry package.json
+768 silly gunzTarPerm extractEntry index.js
+769 silly gunzTarPerm extractEntry test.js
+770 silly gunzTarPerm extractEntry .npmignore
+771 silly gunzTarPerm extractEntry LICENSE
+772 silly gunzTarPerm extractEntry .npmignore
+773 silly gunzTarPerm extractEntry index.js
+774 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954589-0.8086210219189525/package/package.json
+775 silly gunzTarPerm extractEntry .travis.yml
+776 silly gunzTarPerm extractEntry lib/cache.js
+777 warn package.json methods@0.0.1 No README.md file found!
+778 silly lockFile 76a19924-54589-0-8086210219189525-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954589-0.8086210219189525/package
+779 silly gunzTarPerm extractEntry index.js
+780 silly gunzTarPerm extractEntry .gitignore.orig
+781 silly gunzTarPerm extractEntry History.md
+782 silly gunzTarPerm extractEntry lib/send.js
+783 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954589-0.8086210219189525/package/package.json
+784 silly gunzTarPerm extractEntry lib/connect.js
+785 silly gunzTarPerm extractEntry lib/index.js
+786 silly gunzTarPerm extractEntry .gitignore.rej
+787 silly gunzTarPerm extractEntry .travis.yml
+788 silly gunzTarPerm extractEntry lib/utils.js
+789 silly gunzTarPerm extractEntry Makefile
+790 silly gunzTarPerm extractEntry lib/patch.js
+791 silly gunzTarPerm extractEntry lib/proto.js
+792 silly gunzTarPerm extractEntry Readme.md
+793 silly gunzTarPerm extractEntry examples/pow.js
+794 silly gunzTarPerm extractEntry examples/pow.js.orig
+795 silly gunzTarPerm extractEntry examples/pow.js.rej
+796 silly gunzTarPerm extractEntry lib/utils.js
+797 silly gunzTarPerm extractEntry lib/middleware/basicAuth.js
+798 silly gunzTarPerm extractEntry README.markdown
+799 silly gunzTarPerm extractEntry test/chmod.js
+800 silly gunzTarPerm extractEntry lib/middleware/errorHandler.js
+801 silly gunzTarPerm extractEntry lib/middleware/favicon.js
+802 silly gunzTarPerm extractEntry test/perm.js
+803 silly gunzTarPerm extractEntry test/perm_sync.js
+804 silly gunzTarPerm extractEntry lib/middleware/json.js
+805 silly gunzTarPerm extractEntry lib/middleware/limit.js
+806 silly gunzTarPerm extractEntry test/race.js
+807 silly gunzTarPerm extractEntry test/mkdirp.js
+808 verbose tar pack [ '/Users/bennycohen/.npm/methods/0.0.1/package.tgz',
+808 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954589-0.8086210219189525/package' ]
+809 verbose tarball /Users/bennycohen/.npm/methods/0.0.1/package.tgz
+810 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954589-0.8086210219189525/package
+811 silly lockFile d1b74f39-en-npm-methods-0-0-1-package-tgz /Users/bennycohen/.npm/methods/0.0.1/package.tgz
+812 verbose lock /Users/bennycohen/.npm/methods/0.0.1/package.tgz /Users/bennycohen/.npm/d1b74f39-en-npm-methods-0-0-1-package-tgz.lock
+813 silly gunzTarPerm extractEntry test/return.js
+814 silly gunzTarPerm extractEntry test/return_sync.js
+815 silly gunzTarPerm extractEntry lib/middleware/directory.js
+816 silly gunzTarPerm extractEntry lib/middleware/methodOverride.js
+817 silly gunzTarPerm extractEntry test/root.js
+818 silly gunzTarPerm extractEntry test/sync.js
+819 silly gunzTarPerm extractEntry lib/middleware/multipart.js
+820 silly gunzTarPerm extractEntry lib/middleware/query.js
+821 silly gunzTarPerm extractEntry test/umask.js
+822 silly gunzTarPerm extractEntry test/clobber.js
+823 silly lockFile d1b74f39-en-npm-methods-0-0-1-package-tgz /Users/bennycohen/.npm/methods/0.0.1/package.tgz
+824 silly gunzTarPerm extractEntry lib/middleware/responseTime.js
+825 silly gunzTarPerm extractEntry lib/middleware/urlencoded.js
+826 silly lockFile b9831f86-ycohen-npm-methods-0-0-1-package /Users/bennycohen/.npm/methods/0.0.1/package
+827 verbose lock /Users/bennycohen/.npm/methods/0.0.1/package /Users/bennycohen/.npm/b9831f86-ycohen-npm-methods-0-0-1-package.lock
+828 verbose read json /Users/bennycohen/.npm/send/0.1.0/package/package.json
+829 silly gunzTarPerm extractEntry test/umask_sync.js
+830 silly gunzTarPerm extractEntry test/rel.js
+831 silly gunzTarPerm extractEntry lib/middleware/csrf.js
+832 silly lockFile b9831f86-ycohen-npm-methods-0-0-1-package /Users/bennycohen/.npm/methods/0.0.1/package
+833 silly gunzTarPerm extractEntry lib/middleware/session.js
+834 verbose tar unpack /Users/bennycohen/.npm/methods/0.0.1/package.tgz
+835 silly lockFile b9831f86-ycohen-npm-methods-0-0-1-package /Users/bennycohen/.npm/methods/0.0.1/package
+836 verbose lock /Users/bennycohen/.npm/methods/0.0.1/package /Users/bennycohen/.npm/b9831f86-ycohen-npm-methods-0-0-1-package.lock
+837 silly lockFile 7e145889-ennycohen-npm-send-0-1-0-package /Users/bennycohen/.npm/send/0.1.0/package
+838 silly gunzTarPerm modes [ '755', '644' ]
+839 silly shasum updated bytes 5657
+840 info shasum cfb08ebd3cec9b7fc1a37d9ff9e875a971cf4640
+840 info shasum /Users/bennycohen/.npm/send/0.1.0/package.tgz
+841 verbose from cache /Users/bennycohen/.npm/send/0.1.0/package/package.json
+842 verbose chmod /Users/bennycohen/.npm/send/0.1.0/package.tgz 644
+843 verbose chown /Users/bennycohen/.npm/send/0.1.0/package.tgz [ 501, 20 ]
+844 silly lockFile c7198075-ry-npmjs-org-send-send-0-1-0-tgz https://registry.npmjs.org/send/-/send-0.1.0.tgz
+845 silly gunzTarPerm extractEntry lib/middleware/cookieSession.js
+846 silly gunzTarPerm extractEntry lib/middleware/static.js
+847 silly gunzTarPerm extractEntry package.json
+848 silly lockFile ef2886cd-send-0-1-0 send@0.1.0
+849 silly gunzTarPerm extractEntry lib/middleware/cookieParser.js
+850 silly gunzTarPerm extractEntry index.js
+851 silly gunzTarPerm extractEntry lib/middleware/staticCache.js
+852 silly gunzTarPerm extractEntry lib/middleware/compress.js
+853 verbose read json /Users/bennycohen/.npm/methods/0.0.1/package/package.json
+854 silly gunzTarPerm extractEntry lib/middleware/timeout.js
+855 silly gunzTarPerm extractEntry lib/middleware/bodyParser.js
+856 silly lockFile b9831f86-ycohen-npm-methods-0-0-1-package /Users/bennycohen/.npm/methods/0.0.1/package
+857 silly gunzTarPerm extractEntry lib/middleware/vhost.js
+858 silly shasum updated bytes 469
+859 info shasum 277c90f8bef39709645a8371c51c3b6c648e068c
+859 info shasum /Users/bennycohen/.npm/methods/0.0.1/package.tgz
+860 verbose from cache /Users/bennycohen/.npm/methods/0.0.1/package/package.json
+861 verbose chmod /Users/bennycohen/.npm/methods/0.0.1/package.tgz 644
+862 verbose chown /Users/bennycohen/.npm/methods/0.0.1/package.tgz [ 501, 20 ]
+863 silly lockFile 0b9c0212-js-org-methods-methods-0-0-1-tgz https://registry.npmjs.org/methods/-/methods-0.0.1.tgz
+864 silly lockFile 209c2920-methods-0-0-1 methods@0.0.1
+865 silly gunzTarPerm extractEntry lib/middleware/logger.js
+866 silly gunzTarPerm extractEntry lib/middleware/session/cookie.js
+867 silly gunzTarPerm extractEntry lib/middleware/session/memory.js
+868 silly gunzTarPerm extractEntry lib/middleware/session/session.js
+869 silly gunzTarPerm extractEntry lib/middleware/session/store.js
+870 silly gunzTarPerm extractEntry lib/public/directory.html
+871 silly gunzTarPerm extractEntry lib/public/error.html
+872 silly gunzTarPerm extractEntry lib/public/favicon.ico
+873 silly gunzTarPerm extractEntry lib/public/icons/page_white_edit.png
+874 silly gunzTarPerm extractEntry lib/public/icons/page.png
+875 silly gunzTarPerm extractEntry lib/public/icons/page_attach.png
+876 silly gunzTarPerm extractEntry lib/public/icons/page_code.png
+877 silly gunzTarPerm extractEntry lib/public/icons/page_copy.png
+878 silly gunzTarPerm extractEntry lib/public/icons/page_delete.png
+879 silly gunzTarPerm extractEntry lib/public/icons/page_edit.png
+880 silly gunzTarPerm extractEntry lib/public/icons/page_error.png
+881 silly gunzTarPerm extractEntry lib/public/icons/page_excel.png
+882 silly gunzTarPerm extractEntry lib/public/icons/page_find.png
+883 silly gunzTarPerm extractEntry lib/public/icons/page_gear.png
+884 verbose read json /Users/bennycohen/.npm/mkdirp/0.3.3/package/package.json
+885 silly gunzTarPerm extractEntry lib/public/icons/page_go.png
+886 silly gunzTarPerm extractEntry lib/public/icons/page_green.png
+887 silly lockFile be894e61-nycohen-npm-mkdirp-0-3-3-package /Users/bennycohen/.npm/mkdirp/0.3.3/package
+888 silly shasum updated bytes 4584
+889 info shasum 55f3d469ed6dac2b15ba71a69ca9d2bdd166cb01
+889 info shasum /Users/bennycohen/.npm/mkdirp/0.3.3/package.tgz
+890 verbose from cache /Users/bennycohen/.npm/mkdirp/0.3.3/package/package.json
+891 verbose chmod /Users/bennycohen/.npm/mkdirp/0.3.3/package.tgz 644
+892 verbose chown /Users/bennycohen/.npm/mkdirp/0.3.3/package.tgz [ 501, 20 ]
+893 silly lockFile 56e05e36-pmjs-org-mkdirp-mkdirp-0-3-3-tgz https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.3.tgz
+894 silly gunzTarPerm extractEntry lib/public/icons/page_key.png
+895 silly gunzTarPerm extractEntry lib/public/icons/page_lightning.png
+896 silly lockFile 453bb99b-mkdirp-0-3-3 mkdirp@0.3.3
+897 silly gunzTarPerm extractEntry lib/public/icons/page_link.png
+898 silly gunzTarPerm extractEntry lib/public/icons/page_paintbrush.png
+899 silly gunzTarPerm extractEntry lib/public/icons/page_paste.png
+900 silly gunzTarPerm extractEntry lib/public/icons/page_red.png
+901 silly gunzTarPerm extractEntry lib/public/icons/page_refresh.png
+902 silly gunzTarPerm extractEntry lib/public/icons/page_save.png
+903 silly gunzTarPerm extractEntry lib/public/icons/page_white.png
+904 silly gunzTarPerm extractEntry lib/public/icons/page_white_acrobat.png
+905 silly gunzTarPerm extractEntry lib/public/icons/page_white_actionscript.png
+906 silly gunzTarPerm extractEntry lib/public/icons/page_white_add.png
+907 silly gunzTarPerm extractEntry lib/public/icons/page_white_c.png
+908 silly gunzTarPerm extractEntry lib/public/icons/page_white_camera.png
+909 silly gunzTarPerm extractEntry lib/public/icons/page_white_cd.png
+910 silly gunzTarPerm extractEntry lib/public/icons/page_white_code.png
+911 silly gunzTarPerm extractEntry lib/public/icons/page_white_code_red.png
+912 silly gunzTarPerm extractEntry lib/public/icons/page_white_coldfusion.png
+913 silly gunzTarPerm extractEntry lib/public/icons/page_white_compressed.png
+914 silly gunzTarPerm extractEntry lib/public/icons/page_white_copy.png
+915 silly gunzTarPerm extractEntry lib/public/icons/page_white_cplusplus.png
+916 silly gunzTarPerm extractEntry lib/public/icons/page_white_csharp.png
+917 silly gunzTarPerm extractEntry lib/public/icons/page_white_cup.png
+918 silly gunzTarPerm extractEntry lib/public/icons/page_white_database.png
+919 silly gunzTarPerm extractEntry lib/public/icons/page_white_delete.png
+920 silly gunzTarPerm extractEntry lib/public/icons/page_white_dvd.png
+921 silly gunzTarPerm extractEntry lib/public/icons/page_add.png
+922 silly gunzTarPerm extractEntry lib/public/icons/page_white_error.png
+923 silly gunzTarPerm extractEntry lib/public/icons/page_white_excel.png
+924 silly gunzTarPerm extractEntry lib/public/icons/page_white_find.png
+925 silly gunzTarPerm extractEntry lib/public/icons/page_white_flash.png
+926 silly gunzTarPerm extractEntry lib/public/icons/page_white_freehand.png
+927 silly gunzTarPerm extractEntry lib/public/icons/page_white_gear.png
+928 silly gunzTarPerm extractEntry lib/public/icons/page_white_get.png
+929 silly gunzTarPerm extractEntry lib/public/icons/page_white_go.png
+930 silly gunzTarPerm extractEntry lib/public/icons/page_white_h.png
+931 silly gunzTarPerm extractEntry lib/public/icons/page_white_horizontal.png
+932 silly gunzTarPerm extractEntry lib/public/icons/page_white_key.png
+933 silly gunzTarPerm extractEntry lib/public/icons/page_white_lightning.png
+934 silly gunzTarPerm extractEntry lib/public/icons/page_white_link.png
+935 silly gunzTarPerm extractEntry lib/public/icons/page_white_magnify.png
+936 silly gunzTarPerm extractEntry lib/public/icons/page_white_medal.png
+937 silly gunzTarPerm extractEntry lib/public/icons/page_white_office.png
+938 silly gunzTarPerm extractEntry lib/public/icons/page_white_paint.png
+939 silly gunzTarPerm extractEntry lib/public/icons/page_white_paintbrush.png
+940 silly gunzTarPerm extractEntry lib/public/icons/page_white_paste.png
+941 silly gunzTarPerm extractEntry lib/public/icons/page_white_php.png
+942 silly gunzTarPerm extractEntry lib/public/icons/page_white_picture.png
+943 silly gunzTarPerm extractEntry lib/public/icons/page_white_powerpoint.png
+944 silly gunzTarPerm extractEntry lib/public/icons/page_white_put.png
+945 silly gunzTarPerm extractEntry lib/public/icons/page_white_ruby.png
+946 silly gunzTarPerm extractEntry lib/public/icons/page_white_stack.png
+947 silly gunzTarPerm extractEntry lib/public/icons/page_white_star.png
+948 silly gunzTarPerm extractEntry lib/public/icons/page_white_swoosh.png
+949 silly gunzTarPerm extractEntry lib/public/icons/page_white_text.png
+950 silly gunzTarPerm extractEntry lib/public/icons/page_white_text_width.png
+951 silly gunzTarPerm extractEntry lib/public/icons/page_white_tux.png
+952 silly gunzTarPerm extractEntry lib/public/icons/page_white_vector.png
+953 silly gunzTarPerm extractEntry lib/public/icons/page_white_visualstudio.png
+954 silly gunzTarPerm extractEntry lib/public/icons/page_white_width.png
+955 silly gunzTarPerm extractEntry lib/public/icons/page_white_word.png
+956 silly gunzTarPerm extractEntry lib/public/icons/page_white_world.png
+957 silly gunzTarPerm extractEntry lib/public/icons/page_white_wrench.png
+958 silly gunzTarPerm extractEntry lib/public/icons/page_white_zip.png
+959 silly gunzTarPerm extractEntry lib/public/icons/page_word.png
+960 silly gunzTarPerm extractEntry lib/public/icons/page_world.png
+961 silly gunzTarPerm extractEntry lib/public/style.css
+962 silly gunzTarPerm extractEntry Readme.md
+963 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954257-0.14402132597751915/package/package.json
+964 silly lockFile 324bb4bf-4257-0-14402132597751915-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954257-0.14402132597751915/package
+965 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954257-0.14402132597751915/package/package.json
+966 verbose tar pack [ '/Users/bennycohen/.npm/connect/2.7.0/package.tgz',
+966 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954257-0.14402132597751915/package' ]
+967 verbose tarball /Users/bennycohen/.npm/connect/2.7.0/package.tgz
+968 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855954257-0.14402132597751915/package
+969 silly lockFile 02e274ef-en-npm-connect-2-7-0-package-tgz /Users/bennycohen/.npm/connect/2.7.0/package.tgz
+970 verbose lock /Users/bennycohen/.npm/connect/2.7.0/package.tgz /Users/bennycohen/.npm/02e274ef-en-npm-connect-2-7-0-package-tgz.lock
+971 silly lockFile 02e274ef-en-npm-connect-2-7-0-package-tgz /Users/bennycohen/.npm/connect/2.7.0/package.tgz
+972 silly lockFile 80178021-ycohen-npm-connect-2-7-0-package /Users/bennycohen/.npm/connect/2.7.0/package
+973 verbose lock /Users/bennycohen/.npm/connect/2.7.0/package /Users/bennycohen/.npm/80178021-ycohen-npm-connect-2-7-0-package.lock
+974 silly lockFile 80178021-ycohen-npm-connect-2-7-0-package /Users/bennycohen/.npm/connect/2.7.0/package
+975 verbose tar unpack /Users/bennycohen/.npm/connect/2.7.0/package.tgz
+976 silly lockFile 80178021-ycohen-npm-connect-2-7-0-package /Users/bennycohen/.npm/connect/2.7.0/package
+977 verbose lock /Users/bennycohen/.npm/connect/2.7.0/package /Users/bennycohen/.npm/80178021-ycohen-npm-connect-2-7-0-package.lock
+978 silly gunzTarPerm modes [ '755', '644' ]
+979 silly gunzTarPerm extractEntry package.json
+980 silly gunzTarPerm extractEntry .npmignore
+981 silly gunzTarPerm extractEntry LICENSE
+982 silly gunzTarPerm extractEntry index.js
+983 silly gunzTarPerm extractEntry test.js
+984 silly gunzTarPerm extractEntry .travis.yml
+985 silly gunzTarPerm extractEntry lib/cache.js
+986 silly gunzTarPerm extractEntry lib/connect.js
+987 silly gunzTarPerm extractEntry lib/index.js
+988 silly gunzTarPerm extractEntry lib/patch.js
+989 silly gunzTarPerm extractEntry lib/proto.js
+990 silly gunzTarPerm extractEntry lib/utils.js
+991 silly gunzTarPerm extractEntry lib/middleware/basicAuth.js
+992 silly gunzTarPerm extractEntry lib/middleware/errorHandler.js
+993 silly gunzTarPerm extractEntry lib/middleware/favicon.js
+994 silly gunzTarPerm extractEntry lib/middleware/json.js
+995 silly gunzTarPerm extractEntry lib/middleware/limit.js
+996 silly gunzTarPerm extractEntry lib/middleware/directory.js
+997 silly gunzTarPerm extractEntry lib/middleware/methodOverride.js
+998 silly gunzTarPerm extractEntry lib/middleware/multipart.js
+999 silly gunzTarPerm extractEntry lib/middleware/query.js
+1000 silly gunzTarPerm extractEntry lib/middleware/responseTime.js
+1001 silly gunzTarPerm extractEntry lib/middleware/urlencoded.js
+1002 silly gunzTarPerm extractEntry lib/middleware/csrf.js
+1003 silly gunzTarPerm extractEntry lib/middleware/session.js
+1004 silly gunzTarPerm extractEntry lib/middleware/cookieSession.js
+1005 silly gunzTarPerm extractEntry lib/middleware/static.js
+1006 silly gunzTarPerm extractEntry lib/middleware/cookieParser.js
+1007 silly gunzTarPerm extractEntry lib/middleware/staticCache.js
+1008 silly gunzTarPerm extractEntry lib/middleware/compress.js
+1009 silly gunzTarPerm extractEntry lib/middleware/timeout.js
+1010 silly gunzTarPerm extractEntry lib/middleware/bodyParser.js
+1011 silly gunzTarPerm extractEntry lib/middleware/vhost.js
+1012 silly gunzTarPerm extractEntry lib/middleware/logger.js
+1013 silly gunzTarPerm extractEntry lib/middleware/session/cookie.js
+1014 silly gunzTarPerm extractEntry lib/middleware/session/memory.js
+1015 silly gunzTarPerm extractEntry lib/middleware/session/session.js
+1016 silly gunzTarPerm extractEntry lib/middleware/session/store.js
+1017 silly gunzTarPerm extractEntry lib/public/directory.html
+1018 silly gunzTarPerm extractEntry lib/public/error.html
+1019 silly gunzTarPerm extractEntry lib/public/favicon.ico
+1020 silly gunzTarPerm extractEntry lib/public/icons/page_white_edit.png
+1021 silly gunzTarPerm extractEntry lib/public/icons/page.png
+1022 silly gunzTarPerm extractEntry lib/public/icons/page_attach.png
+1023 silly gunzTarPerm extractEntry lib/public/icons/page_code.png
+1024 silly gunzTarPerm extractEntry lib/public/icons/page_copy.png
+1025 silly gunzTarPerm extractEntry lib/public/icons/page_delete.png
+1026 silly gunzTarPerm extractEntry lib/public/icons/page_edit.png
+1027 silly gunzTarPerm extractEntry lib/public/icons/page_error.png
+1028 silly gunzTarPerm extractEntry lib/public/icons/page_excel.png
+1029 silly gunzTarPerm extractEntry lib/public/icons/page_find.png
+1030 silly gunzTarPerm extractEntry lib/public/icons/page_gear.png
+1031 silly gunzTarPerm extractEntry lib/public/icons/page_go.png
+1032 silly gunzTarPerm extractEntry lib/public/icons/page_green.png
+1033 silly gunzTarPerm extractEntry lib/public/icons/page_key.png
+1034 silly gunzTarPerm extractEntry lib/public/icons/page_lightning.png
+1035 silly gunzTarPerm extractEntry lib/public/icons/page_link.png
+1036 silly gunzTarPerm extractEntry lib/public/icons/page_paintbrush.png
+1037 silly gunzTarPerm extractEntry lib/public/icons/page_paste.png
+1038 silly gunzTarPerm extractEntry lib/public/icons/page_red.png
+1039 silly gunzTarPerm extractEntry lib/public/icons/page_refresh.png
+1040 silly gunzTarPerm extractEntry lib/public/icons/page_save.png
+1041 silly gunzTarPerm extractEntry lib/public/icons/page_white.png
+1042 silly gunzTarPerm extractEntry lib/public/icons/page_white_acrobat.png
+1043 silly gunzTarPerm extractEntry lib/public/icons/page_white_actionscript.png
+1044 silly gunzTarPerm extractEntry lib/public/icons/page_white_add.png
+1045 silly gunzTarPerm extractEntry lib/public/icons/page_white_c.png
+1046 silly gunzTarPerm extractEntry lib/public/icons/page_white_camera.png
+1047 silly gunzTarPerm extractEntry lib/public/icons/page_white_cd.png
+1048 silly gunzTarPerm extractEntry lib/public/icons/page_white_code.png
+1049 silly gunzTarPerm extractEntry lib/public/icons/page_white_code_red.png
+1050 silly gunzTarPerm extractEntry lib/public/icons/page_white_coldfusion.png
+1051 silly gunzTarPerm extractEntry lib/public/icons/page_white_compressed.png
+1052 silly gunzTarPerm extractEntry lib/public/icons/page_white_copy.png
+1053 silly gunzTarPerm extractEntry lib/public/icons/page_white_cplusplus.png
+1054 silly gunzTarPerm extractEntry lib/public/icons/page_white_csharp.png
+1055 silly gunzTarPerm extractEntry lib/public/icons/page_white_cup.png
+1056 silly gunzTarPerm extractEntry lib/public/icons/page_white_database.png
+1057 silly gunzTarPerm extractEntry lib/public/icons/page_white_delete.png
+1058 silly gunzTarPerm extractEntry lib/public/icons/page_white_dvd.png
+1059 silly gunzTarPerm extractEntry lib/public/icons/page_add.png
+1060 silly gunzTarPerm extractEntry lib/public/icons/page_white_error.png
+1061 silly gunzTarPerm extractEntry lib/public/icons/page_white_excel.png
+1062 silly gunzTarPerm extractEntry lib/public/icons/page_white_find.png
+1063 silly gunzTarPerm extractEntry lib/public/icons/page_white_flash.png
+1064 silly gunzTarPerm extractEntry lib/public/icons/page_white_freehand.png
+1065 silly gunzTarPerm extractEntry lib/public/icons/page_white_gear.png
+1066 silly gunzTarPerm extractEntry lib/public/icons/page_white_get.png
+1067 silly gunzTarPerm extractEntry lib/public/icons/page_white_go.png
+1068 silly gunzTarPerm extractEntry lib/public/icons/page_white_h.png
+1069 silly gunzTarPerm extractEntry lib/public/icons/page_white_horizontal.png
+1070 silly gunzTarPerm extractEntry lib/public/icons/page_white_key.png
+1071 silly gunzTarPerm extractEntry lib/public/icons/page_white_lightning.png
+1072 silly gunzTarPerm extractEntry lib/public/icons/page_white_link.png
+1073 silly gunzTarPerm extractEntry lib/public/icons/page_white_magnify.png
+1074 silly gunzTarPerm extractEntry lib/public/icons/page_white_medal.png
+1075 silly gunzTarPerm extractEntry lib/public/icons/page_white_office.png
+1076 silly gunzTarPerm extractEntry lib/public/icons/page_white_paint.png
+1077 silly gunzTarPerm extractEntry lib/public/icons/page_white_paintbrush.png
+1078 silly gunzTarPerm extractEntry lib/public/icons/page_white_paste.png
+1079 silly gunzTarPerm extractEntry lib/public/icons/page_white_php.png
+1080 silly gunzTarPerm extractEntry lib/public/icons/page_white_picture.png
+1081 silly gunzTarPerm extractEntry lib/public/icons/page_white_powerpoint.png
+1082 silly gunzTarPerm extractEntry lib/public/icons/page_white_put.png
+1083 silly gunzTarPerm extractEntry lib/public/icons/page_white_ruby.png
+1084 silly gunzTarPerm extractEntry lib/public/icons/page_white_stack.png
+1085 silly gunzTarPerm extractEntry lib/public/icons/page_white_star.png
+1086 silly gunzTarPerm extractEntry lib/public/icons/page_white_swoosh.png
+1087 silly gunzTarPerm extractEntry lib/public/icons/page_white_text.png
+1088 silly gunzTarPerm extractEntry lib/public/icons/page_white_text_width.png
+1089 silly gunzTarPerm extractEntry lib/public/icons/page_white_tux.png
+1090 silly gunzTarPerm extractEntry lib/public/icons/page_white_vector.png
+1091 silly gunzTarPerm extractEntry lib/public/icons/page_white_visualstudio.png
+1092 silly gunzTarPerm extractEntry lib/public/icons/page_white_width.png
+1093 silly gunzTarPerm extractEntry lib/public/icons/page_white_word.png
+1094 silly gunzTarPerm extractEntry lib/public/icons/page_white_world.png
+1095 silly gunzTarPerm extractEntry lib/public/icons/page_white_wrench.png
+1096 silly gunzTarPerm extractEntry lib/public/icons/page_white_zip.png
+1097 silly gunzTarPerm extractEntry lib/public/icons/page_word.png
+1098 silly gunzTarPerm extractEntry lib/public/icons/page_world.png
+1099 silly gunzTarPerm extractEntry lib/public/style.css
+1100 silly gunzTarPerm extractEntry Readme.md
+1101 verbose read json /Users/bennycohen/.npm/connect/2.7.0/package/package.json
+1102 silly lockFile 80178021-ycohen-npm-connect-2-7-0-package /Users/bennycohen/.npm/connect/2.7.0/package
+1103 silly shasum updated bytes 40960
+1104 silly shasum updated bytes 34318
+1105 info shasum 52f5626d823c0848a87410f80de0ace2aa52ad95
+1105 info shasum /Users/bennycohen/.npm/connect/2.7.0/package.tgz
+1106 verbose from cache /Users/bennycohen/.npm/connect/2.7.0/package/package.json
+1107 verbose chmod /Users/bennycohen/.npm/connect/2.7.0/package.tgz 644
+1108 verbose chown /Users/bennycohen/.npm/connect/2.7.0/package.tgz [ 501, 20 ]
+1109 silly lockFile b8cab846-js-org-connect-connect-2-7-0-tgz https://registry.npmjs.org/connect/-/connect-2.7.0.tgz
+1110 silly lockFile 2429b342-connect-2-7-0 connect@2.7.0
+1111 silly resolved [ { name: 'debug',
+1111 silly resolved     version: '0.7.0',
+1111 silly resolved     description: 'small debugging utility',
+1111 silly resolved     keywords: [ 'debug', 'log', 'debugger' ],
+1111 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+1111 silly resolved     dependencies: {},
+1111 silly resolved     devDependencies: { mocha: '*' },
+1111 silly resolved     main: 'index',
+1111 silly resolved     browserify: 'debug.component.js',
+1111 silly resolved     engines: { node: '*' },
+1111 silly resolved     component: { scripts: [Object] },
+1111 silly resolved     readme: '\n# debug\n\n  tiny node.js debugging utility.\n\n## Installation\n\n```\n$ npm install debug\n```\n\n## Example\n\n  This module is modelled after node core\'s debugging technique, allowing you to enable one or more topic-specific debugging functions, for example core does the following within many modules:\n\n```js\nvar debug;\nif (process.env.NODE_DEBUG && /cluster/.test(process.env.NODE_DEBUG)) {\n  debug = function(x) {\n    var prefix = process.pid + \',\' +\n        (process.env.NODE_WORKER_ID ? \'Worker\' : \'Master\');\n    console.error(prefix, x);\n  };\n} else {\n  debug = function() { };\n}\n```\n\n This concept is extremely simple but it works well. With `debug` you simply invoke the exported function to generate your debug function, passing it a name which will determine if a noop function is returned, or a decorated `console.error`, so all of the `console` format string goodies you\'re used to work fine. A unique color is selected per-function for visibility.\n \nExample _app.js_:\n\n```js\nvar debug = require(\'debug\')(\'http\')\n  , http = require(\'http\')\n  , name = \'My App\';\n\n// fake app\n\ndebug(\'booting %s\', name);\n\nhttp.createServer(function(req, res){\n  debug(req.method + \' \' + req.url);\n  res.end(\'hello\\n\');\n}).listen(3000, function(){\n  debug(\'listening\');\n});\n\n// fake worker of some kind\n\nrequire(\'./worker\');\n```\n\nExample _worker.js_:\n\n```js\nvar debug = require(\'debug\')(\'worker\');\n\nsetInterval(function(){\n  debug(\'doing some work\');\n}, 1000);\n```\n\n The __DEBUG__ environment variable is then used to enable these based on space or comma-delimited names. Here are some examples:\n\n  ![debug http and worker](http://f.cl.ly/items/18471z1H402O24072r1J/Screenshot.png)\n\n  ![debug worker](http://f.cl.ly/items/1X413v1a3M0d3C2c1E0i/Screenshot.png)\n\n## Millisecond diff\n\n  When actively developing an application it can be useful to see when the time spent between one `debug()` call and the next. Suppose for example you invoke `debug()` before requesting a resource, and after as well, the "+NNNms" will show you how much time was spent between calls.\n\n  ![](http://f.cl.ly/items/2i3h1d3t121M2Z1A3Q0N/Screenshot.png)\n\n  When stdout is not a TTY, `Date#toUTCString()` is used, making it more useful for logging the debug information as shown below:\n  \n  ![](http://f.cl.ly/items/112H3i0e0o0P0a2Q2r11/Screenshot.png)\n\n## Conventions\n\n If you\'re using this in one or more of your libraries, you _should_ use the name of your library so that developers may toggle debugging as desired without guessing names. If you have more than one debuggers you _should_ prefix them with your library name and use ":" to separate features. For example "bodyParser" from Connect would then be "connect:bodyParser". \n\n## Wildcards\n\n  The "*" character may be used as a wildcard. Suppose for example your library has debuggers named "connect:bodyParser", "connect:compress", "connect:session", instead of listing all three with `DEBUG=connect:bodyParser,connect.compress,connect:session`, you may simply do `DEBUG=connect:*`, or to run everything using this module simply use `DEBUG=*`.\n\n  You can also exclude specific debuggers by prefixing them with a "-" character.  For example, `DEBUG=* -connect:*` would include all debuggers except those starting with "connect:".\n\n## Browser support\n\n Debug works in the browser as well, currently persisted by `localStorage`. For example if you have `worker:a` and `worker:b` as shown below, and wish to debug both type `debug.enable(\'worker:*\')` in the console and refresh the page, this will remain until you disable with `debug.disable()`. \n\n```js\na = debug(\'worker:a\');\nb = debug(\'worker:b\');\n\nsetInterval(function(){\n  a(\'doing some work\');\n}, 1000);\n\nsetInterval(function(){\n  a(\'doing some work\');\n}, 1200);\n```\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+1111 silly resolved     readmeFilename: 'Readme.md',
+1111 silly resolved     _id: 'debug@0.7.0',
+1111 silly resolved     _from: 'debug@*' },
+1111 silly resolved   { name: 'cookie-signature',
+1111 silly resolved     version: '0.0.1',
+1111 silly resolved     description: 'Sign and unsign cookies',
+1111 silly resolved     keywords: [ 'cookie', 'sign', 'unsign' ],
+1111 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@learnboost.com' },
+1111 silly resolved     dependencies: {},
+1111 silly resolved     devDependencies: { mocha: '*', should: '*' },
+1111 silly resolved     main: 'index',
+1111 silly resolved     readme: '\n# cookie-signature\n\n  Sign and unsign cookies.\n\n## Example\n\n```js\nvar cookie = require(\'cookie-signature\');\n\nvar val = cookie.sign(\'hello\', \'tobiiscool\');\nval.should.equal(\'hello.DGDUkGlIkCzPz+C0B064FNgHdEjox7ch8tOBGslZ5QI\');\n\nvar val = cookie.sign(\'hello\', \'tobiiscool\');\ncookie.unsign(val, \'tobiiscool\').should.equal(\'hello\');\ncookie.unsign(val, \'luna\').should.be.false;\n```\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2012 LearnBoost &lt;tj@learnboost.com&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+1111 silly resolved     readmeFilename: 'Readme.md',
+1111 silly resolved     _id: 'cookie-signature@0.0.1',
+1111 silly resolved     dist: { shasum: '13d3603b5cf63befbf85a8801e37aa900db46985' },
+1111 silly resolved     _from: 'cookie-signature@0.0.1' },
+1111 silly resolved   { name: 'range-parser',
+1111 silly resolved     author:
+1111 silly resolved      { name: 'TJ Holowaychuk',
+1111 silly resolved        email: 'tj@vision-media.ca',
+1111 silly resolved        url: 'http://tjholowaychuk.com' },
+1111 silly resolved     description: 'Range header field string parser',
+1111 silly resolved     version: '0.0.4',
+1111 silly resolved     main: 'index.js',
+1111 silly resolved     dependencies: {},
+1111 silly resolved     devDependencies: { mocha: '*', should: '*' },
+1111 silly resolved     readme: '\n# node-range-parser\n\n  Range header field parser.\n\n## Example:\n\n```js\nassert(-1 == parse(200, \'bytes=500-20\'));\nassert(-2 == parse(200, \'bytes=malformed\'));\nparse(200, \'bytes=0-499\').should.eql(arr(\'bytes\', [{ start: 0, end: 199 }]));\nparse(1000, \'bytes=0-499\').should.eql(arr(\'bytes\', [{ start: 0, end: 499 }]));\nparse(1000, \'bytes=40-80\').should.eql(arr(\'bytes\', [{ start: 40, end: 80 }]));\nparse(1000, \'bytes=-500\').should.eql(arr(\'bytes\', [{ start: 500, end: 999 }]));\nparse(1000, \'bytes=-400\').should.eql(arr(\'bytes\', [{ start: 600, end: 999 }]));\nparse(1000, \'bytes=500-\').should.eql(arr(\'bytes\', [{ start: 500, end: 999 }]));\nparse(1000, \'bytes=400-\').should.eql(arr(\'bytes\', [{ start: 400, end: 999 }]));\nparse(1000, \'bytes=0-0\').should.eql(arr(\'bytes\', [{ start: 0, end: 0 }]));\nparse(1000, \'bytes=-1\').should.eql(arr(\'bytes\', [{ start: 999, end: 999 }]));\nparse(1000, \'items=0-5\').should.eql(arr(\'items\', [{ start: 0, end: 5 }]));\nparse(1000, \'bytes=40-80,-1\').should.eql(arr(\'bytes\', [{ start: 40, end: 80 }, { start: 999, end: 999 }]));\n```\n\n## Installation\n\n```\n$ npm install range-parser\n```',
+1111 silly resolved     readmeFilename: 'Readme.md',
+1111 silly resolved     _id: 'range-parser@0.0.4',
+1111 silly resolved     dist: { shasum: 'c0427ffef51c10acba0782a46c9602e744ff620b' },
+1111 silly resolved     _from: 'range-parser@0.0.4' },
+1111 silly resolved   { name: 'crc',
+1111 silly resolved     version: '0.2.0',
+1111 silly resolved     description: 'CRC JavaScript implementation',
+1111 silly resolved     author: { name: 'Alex Gorbatchev', email: 'alex.gorbatchev@gmail.com' },
+1111 silly resolved     contributors: [],
+1111 silly resolved     main: './lib/crc.js',
+1111 silly resolved     scripts: {},
+1111 silly resolved     directories: {},
+1111 silly resolved     devDependencies: { mocha: '*', should: '*' },
+1111 silly resolved     repository:
+1111 silly resolved      { type: 'git',
+1111 silly resolved        url: 'git://github.com/alexgorbatchev/node-crc.git' },
+1111 silly resolved     readme: '# JavaScript CRC 8, 16 and 32.\n\nThis is a basic port/copy of the JavaScript CRC implementation. The module works with any CommonJS system supporting `module.exports` notation as well as in the browser. When loaded in the browser, all functions end up under the `window.crc` "namespace".\n\nOriginal code is taken from http://www.digsys.se/JavaScript/CRC.aspx \n\n## Functions\n\nThe following functions are implemented:\n\n    crc8(String)\t#=> Number\n    crcArc(String)\t#=> Number\n    crc16(String)\t#=> Number\n    fcs16(String)\t#=> Number\n    crc32(String)\t#=> Number\n    hex8(Number)\t#=> String\n    hex16(Number)\t#=> String\n    hex32(Number)\t#=> String\n\n## Installation\n\n\tgit clone git://github.com/alexgorbatchev/node-crc.git\n\nor\n\n    npm install crc\n\n## Running tests\n\n    $ npm install\n    $ make test',
+1111 silly resolved     readmeFilename: 'README.md',
+1111 silly resolved     _id: 'crc@0.2.0',
+1111 silly resolved     dist: { shasum: '98a197fcb0bf58e355eb769fca106ae9b4f3b827' },
+1111 silly resolved     _from: 'crc@0.2.0' },
+1111 silly resolved   { name: 'commander',
+1111 silly resolved     version: '0.6.1',
+1111 silly resolved     description: 'the complete solution for node.js command-line programs',
+1111 silly resolved     keywords: [ 'command', 'option', 'parser', 'prompt', 'stdin' ],
+1111 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+1111 silly resolved     repository:
+1111 silly resolved      { type: 'git',
+1111 silly resolved        url: 'https://github.com/visionmedia/commander.js.git' },
+1111 silly resolved     dependencies: {},
+1111 silly resolved     devDependencies: { should: '>= 0.0.1' },
+1111 silly resolved     scripts: { test: 'make test' },
+1111 silly resolved     main: 'index',
+1111 silly resolved     engines: { node: '>= 0.4.x' },
+1111 silly resolved     readme: '# Commander.js\n\n  The complete solution for [node.js](http://nodejs.org) command-line interfaces, inspired by Ruby\'s [commander](https://github.com/visionmedia/commander).\n\n [![Build Status](https://secure.travis-ci.org/visionmedia/commander.js.png)](http://travis-ci.org/visionmedia/commander.js)\n\n## Installation\n\n    $ npm install commander\n\n## Option parsing\n\n Options with commander are defined with the `.option()` method, also serving as documentation for the options. The example below parses args and options from `process.argv`, leaving remaining args as the `program.args` array which were not consumed by options.\n\n```js\n#!/usr/bin/env node\n\n/**\n * Module dependencies.\n */\n\nvar program = require(\'commander\');\n\nprogram\n  .version(\'0.0.1\')\n  .option(\'-p, --peppers\', \'Add peppers\')\n  .option(\'-P, --pineapple\', \'Add pineapple\')\n  .option(\'-b, --bbq\', \'Add bbq sauce\')\n  .option(\'-c, --cheese [type]\', \'Add the specified type of cheese [marble]\', \'marble\')\n  .parse(process.argv);\n\nconsole.log(\'you ordered a pizza with:\');\nif (program.peppers) console.log(\'  - peppers\');\nif (program.pineapple) console.log(\'  - pineappe\');\nif (program.bbq) console.log(\'  - bbq\');\nconsole.log(\'  - %s cheese\', program.cheese);\n```\n\n Short flags may be passed as a single arg, for example `-abc` is equivalent to `-a -b -c`. Multi-word options such as "--template-engine" are camel-cased, becoming `program.templateEngine` etc.\n\n## Automated --help\n\n The help information is auto-generated based on the information commander already knows about your program, so the following `--help` info is for free:\n\n```  \n $ ./examples/pizza --help\n\n   Usage: pizza [options]\n\n   Options:\n\n     -V, --version        output the version number\n     -p, --peppers        Add peppers\n     -P, --pineapple      Add pineappe\n     -b, --bbq            Add bbq sauce\n     -c, --cheese <type>  Add the specified type of cheese [marble]\n     -h, --help           output usage information\n\n```\n\n## Coercion\n\n```js\nfunction range(val) {\n  return val.split(\'..\').map(Number);\n}\n\nfunction list(val) {\n  return val.split(\',\');\n}\n\nprogram\n  .version(\'0.0.1\')\n  .usage(\'[options] <file ...>\')\n  .option(\'-i, --integer <n>\', \'An integer argument\', parseInt)\n  .option(\'-f, --float <n>\', \'A float argument\', parseFloat)\n  .option(\'-r, --range <a>..<b>\', \'A range\', range)\n  .option(\'-l, --list <items>\', \'A list\', list)\n  .option(\'-o, --optional [value]\', \'An optional value\')\n  .parse(process.argv);\n\nconsole.log(\' int: %j\', program.integer);\nconsole.log(\' float: %j\', program.float);\nconsole.log(\' optional: %j\', program.optional);\nprogram.range = program.range || [];\nconsole.log(\' range: %j..%j\', program.range[0], program.range[1]);\nconsole.log(\' list: %j\', program.list);\nconsole.log(\' args: %j\', program.args);\n```\n\n## Custom help\n\n You can display arbitrary `-h, --help` information\n by listening for "--help". Commander will automatically\n exit once you are done so that the remainder of your program\n does not execute causing undesired behaviours, for example\n in the following executable "stuff" will not output when\n `--help` is used.\n\n```js\n#!/usr/bin/env node\n\n/**\n * Module dependencies.\n */\n\nvar program = require(\'../\');\n\nfunction list(val) {\n  return val.split(\',\').map(Number);\n}\n\nprogram\n  .version(\'0.0.1\')\n  .option(\'-f, --foo\', \'enable some foo\')\n  .option(\'-b, --bar\', \'enable some bar\')\n  .option(\'-B, --baz\', \'enable some baz\');\n\n// must be before .parse() since\n// node\'s emit() is immediate\n\nprogram.on(\'--help\', function(){\n  console.log(\'  Examples:\');\n  console.log(\'\');\n  console.log(\'    $ custom-help --help\');\n  console.log(\'    $ custom-help -h\');\n  console.log(\'\');\n});\n\nprogram.parse(process.argv);\n\nconsole.log(\'stuff\');\n```\n\nyielding the following help output:\n\n```\n\nUsage: custom-help [options]\n\nOptions:\n\n  -h, --help     output usage information\n  -V, --version  output the version number\n  -f, --foo      enable some foo\n  -b, --bar      enable some bar\n  -B, --baz      enable some baz\n\nExamples:\n\n  $ custom-help --help\n  $ custom-help -h\n\n```\n\n## .prompt(msg, fn)\n\n Single-line prompt:\n\n```js\nprogram.prompt(\'name: \', function(name){\n  console.log(\'hi %s\', name);\n});\n```\n\n Multi-line prompt:\n\n```js\nprogram.prompt(\'description:\', function(name){\n  console.log(\'hi %s\', name);\n});\n```\n\n Coercion:\n\n```js\nprogram.prompt(\'Age: \', Number, function(age){\n  console.log(\'age: %j\', age);\n});\n```\n\n```js\nprogram.prompt(\'Birthdate: \', Date, function(date){\n  console.log(\'date: %s\', date);\n});\n```\n\n## .password(msg[, mask], fn)\n\nPrompt for password without echoing:\n\n```js\nprogram.password(\'Password: \', function(pass){\n  console.log(\'got "%s"\', pass);\n  process.stdin.destroy();\n});\n```\n\nPrompt for password with mask char "*":\n\n```js\nprogram.password(\'Password: \', \'*\', function(pass){\n  console.log(\'got "%s"\', pass);\n  process.stdin.destroy();\n});\n```\n\n## .confirm(msg, fn)\n\n Confirm with the given `msg`:\n\n```js\nprogram.confirm(\'continue? \', function(ok){\n  console.log(\' got %j\', ok);\n});\n```\n\n## .choose(list, fn)\n\n Let the user choose from a `list`:\n\n```js\nvar list = [\'tobi\', \'loki\', \'jane\', \'manny\', \'luna\'];\n\nconsole.log(\'Choose the coolest pet:\');\nprogram.choose(list, function(i){\n  console.log(\'you chose %d "%s"\', i, list[i]);\n});\n```\n\n## Links\n\n - [API documentation](http://visionmedia.github.com/commander.js/)\n - [ascii tables](https://github.com/LearnBoost/cli-table)\n - [progress bars](https://github.com/visionmedia/node-progress)\n - [more progress bars](https://github.com/substack/node-multimeter)\n - [examples](https://github.com/visionmedia/commander.js/tree/master/examples)\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+1111 silly resolved     readmeFilename: 'Readme.md',
+1111 silly resolved     _id: 'commander@0.6.1',
+1111 silly resolved     dist: { shasum: '23256d7136c633295062196d996b0fdd21153baf' },
+1111 silly resolved     _from: 'commander@0.6.1' },
+1111 silly resolved   { name: 'fresh',
+1111 silly resolved     author:
+1111 silly resolved      { name: 'TJ Holowaychuk',
+1111 silly resolved        email: 'tj@vision-media.ca',
+1111 silly resolved        url: 'http://tjholowaychuk.com' },
+1111 silly resolved     description: 'HTTP response freshness testing',
+1111 silly resolved     version: '0.1.0',
+1111 silly resolved     main: 'index.js',
+1111 silly resolved     dependencies: {},
+1111 silly resolved     devDependencies: { mocha: '*', should: '*' },
+1111 silly resolved     readme: '\n# node-fresh\n\n  HTTP response freshness testing\n\n## fresh(req, res)\n\n Check freshness of `req` and `res` headers.\n\n When the cache is "fresh" __true__ is returned,\n otherwise __false__ is returned to indicate that\n the cache is now stale.\n\n## Example:\n\n```js\nvar req = { \'if-none-match\': \'tobi\' };\nvar res = { \'etag\': \'luna\' };\nfresh(req, res);\n// => false\n\nvar req = { \'if-none-match\': \'tobi\' };\nvar res = { \'etag\': \'tobi\' };\nfresh(req, res);\n// => true\n```\n\n## Installation\n\n```\n$ npm install fresh\n```',
+1111 silly resolved     readmeFilename: 'Readme.md',
+1111 silly resolved     _id: 'fresh@0.1.0',
+1111 silly resolved     dist: { shasum: '03e4b0178424e4c2d5d19a54d8814cdc97934850' },
+1111 silly resolved     _from: 'fresh@0.1.0' },
+1111 silly resolved   { author: { name: 'Roman Shtylman', email: 'shtylman@gmail.com' },
+1111 silly resolved     name: 'cookie',
+1111 silly resolved     description: 'cookie parsing and serialization',
+1111 silly resolved     version: '0.0.5',
+1111 silly resolved     repository:
+1111 silly resolved      { type: 'git',
+1111 silly resolved        url: 'git://github.com/shtylman/node-cookie.git' },
+1111 silly resolved     keywords: [ 'cookie', 'cookies' ],
+1111 silly resolved     main: 'index.js',
+1111 silly resolved     scripts: { test: 'mocha' },
+1111 silly resolved     dependencies: {},
+1111 silly resolved     devDependencies: { mocha: '1.x.x' },
+1111 silly resolved     optionalDependencies: {},
+1111 silly resolved     engines: { node: '*' },
+1111 silly resolved     readme: '# cookie [![Build Status](https://secure.travis-ci.org/shtylman/node-cookie.png?branch=master)](http://travis-ci.org/shtylman/node-cookie) #\n\ncookie is a basic cookie parser and serializer. It doesn\'t make assumptions about how you are going to deal with your cookies. It basically just provides a way to read and write the HTTP cookie headers.\n\nSee [RFC6265](http://tools.ietf.org/html/rfc6265) for details about the http header for cookies.\n\n## how?\n\n```\nnpm install cookie\n```\n\n```javascript\nvar cookie = require(\'cookie\');\n\nvar hdr = cookie.serialize(\'foo\', \'bar\');\n// hdr = \'foo=bar\';\n\nvar cookies = cookie.parse(\'foo=bar; cat=meow; dog=ruff\');\n// cookies = { foo: \'bar\', cat: \'meow\', dog: \'ruff\' };\n```\n\n## more\n\nThe serialize function takes a third parameter, an object, to set cookie options. See the RFC for valid values.\n\n### path\n> cookie path\n\n### expires\n> absolute expiration date for the cookie (Date object)\n\n### maxAge\n> relative max age of the cookie from when the client receives it (seconds)\n\n### domain\n> domain for the cookie\n\n### secure\n> true or false\n\n### httpOnly\n> true or false\n\n',
+1111 silly resolved     readmeFilename: 'README.md',
+1111 silly resolved     _id: 'cookie@0.0.5',
+1111 silly resolved     dist: { shasum: '59c210f0e43888d4afcd7e3f030e501028a14f0b' },
+1111 silly resolved     _from: 'cookie@0.0.5' },
+1111 silly resolved   { name: 'send',
+1111 silly resolved     version: '0.1.0',
+1111 silly resolved     description: 'Better streaming static file server with Range and conditional-GET support',
+1111 silly resolved     keywords: [ 'static', 'file', 'server' ],
+1111 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+1111 silly resolved     dependencies:
+1111 silly resolved      { debug: '*',
+1111 silly resolved        mime: '1.2.6',
+1111 silly resolved        fresh: '0.1.0',
+1111 silly resolved        'range-parser': '0.0.4' },
+1111 silly resolved     devDependencies: { mocha: '*', should: '*', supertest: '0.0.1', connect: '2.x' },
+1111 silly resolved     scripts: { test: 'make test' },
+1111 silly resolved     main: 'index',
+1111 silly resolved     readme: '\n# send\n\n  Send is Connect\'s `static()` extracted for generalized use, a streaming static file\n  server supporting partial responses (Ranges), conditional-GET negotiation, high test coverage, and granular events which may be leveraged to take appropriate actions in your application or framework.\n\n## Installation\n\n    $ npm install send\n\n## Examples\n\n  Small:\n\n```js\nvar http = require(\'http\');\nvar send = require(\'send\');\n\nvar app = http.createServer(function(req, res){\n  send(req, req.url).pipe(res);\n});\n```\n\n  Serving from a root directory with custom error-handling:\n\n```js\nvar http = require(\'http\');\nvar send = require(\'send\');\n\nvar app = http.createServer(function(req, res){\n  // your custom error-handling logic:\n  function error(err) {\n    res.statusCode = err.status || 500;\n    res.end(err.message);\n  }\n\n  // your custom directory handling logic:\n  function redirect() {\n    res.statusCode = 301;\n    res.setHeader(\'Location\', req.url + \'/\');\n    res.end(\'Redirecting to \' + req.url + \'/\');\n  }\n\n  // transfer arbitrary files from within\n  // /www/example.com/public/*\n  send(req, url.parse(req.url).pathname)\n  .root(\'/www/example.com/public\')\n  .on(\'error\', error)\n  .on(\'directory\', redirect)\n  .pipe(res);\n});\n```\n\n## API\n\n### Events\n\n  - `error` an error occurred `(err)`\n  - `directory` a directory was requested\n  - `stream` file streaming has started `(stream)`\n  - `end` streaming has completed\n\n### .root(dir)\n\n  Serve files relative to `path`. Aliased as `.from(dir)`.\n\n### .index(path)\n\n  By default send supports "index.html" files, to disable this\n  invoke `.index(false)` or to supply a new index pass a string.\n\n### .maxage(ms)\n\n  Provide a max-age in milliseconds for http caching, defaults to 0.\n\n## Error-handling\n\n  By default when no `error` listeners are present an automatic response will be made, otherwise you have full control over the response, aka you may show a 5xx page etc.\n\n## Caching\n\n  It does _not_ perform internal caching, you should use a reverse proxy cache such\n  as Varnish for this, or those fancy things called CDNs. If your application is small enough that it would benefit from single-node memory caching, it\'s small enough that it does not need caching at all ;).\n\n## Debugging\n\n To enable `debug()` instrumentation output export __DEBUG__:\n\n```\n$ DEBUG=send node app\n```\n\n## Running tests\n\n```\n$ npm install\n$ make test\n```\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2012 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+1111 silly resolved     readmeFilename: 'Readme.md',
+1111 silly resolved     _id: 'send@0.1.0',
+1111 silly resolved     dist: { shasum: 'cfb08ebd3cec9b7fc1a37d9ff9e875a971cf4640' },
+1111 silly resolved     _from: 'send@0.1.0' },
+1111 silly resolved   { name: 'methods',
+1111 silly resolved     version: '0.0.1',
+1111 silly resolved     description: 'HTTP methods that node supports',
+1111 silly resolved     main: 'index.js',
+1111 silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+1111 silly resolved     keywords: [ 'http', 'methods' ],
+1111 silly resolved     author: { name: 'TJ Holowaychuk' },
+1111 silly resolved     license: 'MIT',
+1111 silly resolved     _id: 'methods@0.0.1',
+1111 silly resolved     readme: 'ERROR: No README.md file found!',
+1111 silly resolved     dist: { shasum: '277c90f8bef39709645a8371c51c3b6c648e068c' },
+1111 silly resolved     _from: 'methods@0.0.1' },
+1111 silly resolved   { name: 'mkdirp',
+1111 silly resolved     description: 'Recursively mkdir, like `mkdir -p`',
+1111 silly resolved     version: '0.3.3',
+1111 silly resolved     author:
+1111 silly resolved      { name: 'James Halliday',
+1111 silly resolved        email: 'mail@substack.net',
+1111 silly resolved        url: 'http://substack.net' },
+1111 silly resolved     main: './index',
+1111 silly resolved     keywords: [ 'mkdir', 'directory' ],
+1111 silly resolved     repository:
+1111 silly resolved      { type: 'git',
+1111 silly resolved        url: 'http://github.com/substack/node-mkdirp.git' },
+1111 silly resolved     scripts: { test: 'tap test/*.js' },
+1111 silly resolved     devDependencies: { tap: '~0.2.4' },
+1111 silly resolved     license: 'MIT/X11',
+1111 silly resolved     engines: { node: '*' },
+1111 silly resolved     readme: 'mkdirp\n======\n\nLike `mkdir -p`, but in node.js!\n\n[![build status](https://secure.travis-ci.org/substack/node-mkdirp.png)](http://travis-ci.org/substack/node-mkdirp)\n\nexample\n=======\n\npow.js\n------\n    var mkdirp = require(\'mkdirp\');\n    \n    mkdirp(\'/tmp/foo/bar/baz\', function (err) {\n        if (err) console.error(err)\n        else console.log(\'pow!\')\n    });\n\nOutput\n    pow!\n\nAnd now /tmp/foo/bar/baz exists, huzzah!\n\nmethods\n=======\n\nvar mkdirp = require(\'mkdirp\');\n\nmkdirp(dir, mode, cb)\n---------------------\n\nCreate a new directory and any necessary subdirectories at `dir` with octal\npermission string `mode`.\n\nIf `mode` isn\'t specified, it defaults to `0777 & (~process.umask())`.\n\n`cb(err, made)` fires with the error or the first directory `made`\nthat had to be created, if any.\n\nmkdirp.sync(dir, mode)\n----------------------\n\nSynchronously create a new directory and any necessary subdirectories at `dir`\nwith octal permission string `mode`.\n\nIf `mode` isn\'t specified, it defaults to `0777 & (~process.umask())`.\n\nReturns the first directory that had to be created, if any.\n\ninstall\n=======\n\nWith [npm](http://npmjs.org) do:\n\n    npm install mkdirp\n\nlicense\n=======\n\nMIT/X11\n',
+1111 silly resolved     readmeFilename: 'README.markdown',
+1111 silly resolved     _id: 'mkdirp@0.3.3',
+1111 silly resolved     dist: { shasum: '55f3d469ed6dac2b15ba71a69ca9d2bdd166cb01' },
+1111 silly resolved     _from: 'mkdirp@0.3.3' },
+1111 silly resolved   { name: 'connect',
+1111 silly resolved     version: '2.7.0',
+1111 silly resolved     description: 'High performance middleware framework',
+1111 silly resolved     keywords: [ 'framework', 'web', 'middleware', 'connect', 'rack' ],
+1111 silly resolved     repository: { type: 'git', url: 'git://github.com/senchalabs/connect.git' },
+1111 silly resolved     author:
+1111 silly resolved      { name: 'TJ Holowaychuk',
+1111 silly resolved        email: 'tj@vision-media.ca',
+1111 silly resolved        url: 'http://tjholowaychuk.com' },
+1111 silly resolved     dependencies:
+1111 silly resolved      { qs: '0.5.1',
+1111 silly resolved        formidable: '1.0.11',
+1111 silly resolved        'cookie-signature': '0.0.1',
+1111 silly resolved        crc: '0.2.0',
+1111 silly resolved        cookie: '0.0.5',
+1111 silly resolved        bytes: '0.1.0',
+1111 silly resolved        send: '0.1.0',
+1111 silly resolved        fresh: '0.1.0',
+1111 silly resolved        pause: '0.0.1',
+1111 silly resolved        debug: '*' },
+1111 silly resolved     devDependencies: { should: '*', mocha: '*', jade: '*', dox: '*' },
+1111 silly resolved     main: 'index',
+1111 silly resolved     engines: { node: '>= 0.5.0' },
+1111 silly resolved     scripts: { test: 'make' },
+1111 silly resolved     readme: '[![build status](https://secure.travis-ci.org/senchalabs/connect.png)](http://travis-ci.org/senchalabs/connect)\n# Connect\n\n  Connect is an extensible HTTP server framework for [node](http://nodejs.org), providing high performance "plugins" known as _middleware_.\n\n Connect is bundled with over _20_ commonly used middleware, including\n a logger, session support, cookie parser, and [more](http://senchalabs.github.com/connect). Be sure to view the 2.x [documentation](http://senchalabs.github.com/connect/).\n\n```js\nvar connect = require(\'connect\')\n  , http = require(\'http\');\n\nvar app = connect()\n  .use(connect.favicon())\n  .use(connect.logger(\'dev\'))\n  .use(connect.static(\'public\'))\n  .use(connect.directory(\'public\'))\n  .use(connect.cookieParser())\n  .use(connect.session({ secret: \'my secret here\' }))\n  .use(function(req, res){\n    res.end(\'Hello from Connect!\\n\');\n  });\n\nhttp.createServer(app).listen(3000);\n```\n\n## Middleware\n\n  - [csrf](http://www.senchalabs.org/connect/csrf.html)\n  - [basicAuth](http://www.senchalabs.org/connect/basicAuth.html)\n  - [bodyParser](http://www.senchalabs.org/connect/bodyParser.html)\n  - [json](http://www.senchalabs.org/connect/json.html)\n  - [multipart](http://www.senchalabs.org/connect/multipart.html)\n  - [urlencoded](http://www.senchalabs.org/connect/urlencoded.html)\n  - [cookieParser](http://www.senchalabs.org/connect/cookieParser.html)\n  - [directory](http://www.senchalabs.org/connect/directory.html)\n  - [compress](http://www.senchalabs.org/connect/compress.html)\n  - [errorHandler](http://www.senchalabs.org/connect/errorHandler.html)\n  - [favicon](http://www.senchalabs.org/connect/favicon.html)\n  - [limit](http://www.senchalabs.org/connect/limit.html)\n  - [logger](http://www.senchalabs.org/connect/logger.html)\n  - [methodOverride](http://www.senchalabs.org/connect/methodOverride.html)\n  - [query](http://www.senchalabs.org/connect/query.html)\n  - [responseTime](http://www.senchalabs.org/connect/responseTime.html)\n  - [session](http://www.senchalabs.org/connect/session.html)\n  - [static](http://www.senchalabs.org/connect/static.html)\n  - [staticCache](http://www.senchalabs.org/connect/staticCache.html)\n  - [vhost](http://www.senchalabs.org/connect/vhost.html)\n  - [subdomains](http://www.senchalabs.org/connect/subdomains.html)\n  - [cookieSession](http://www.senchalabs.org/connect/cookieSession.html)\n\n## Running Tests\n\nfirst:\n\n    $ npm install -d\n\nthen:\n\n    $ make test\n\n## Authors\n\n Below is the output from [git-summary](http://github.com/visionmedia/git-extras).\n\n\n     project: connect\n     commits: 2033\n     active : 301 days\n     files  : 171\n     authors: \n      1414\tTj Holowaychuk          69.6%\n       298\tvisionmedia             14.7%\n       191\tTim Caswell             9.4%\n        51\tTJ Holowaychuk          2.5%\n        10\tRyan Olds               0.5%\n         8\tAstro                   0.4%\n         5\tNathan Rajlich          0.2%\n         5\tJakub Nešetřil          0.2%\n         3\tDaniel Dickison         0.1%\n         3\tDavid Rio Deiros        0.1%\n         3\tAlexander Simmerl       0.1%\n         3\tAndreas Lind Petersen   0.1%\n         2\tAaron Heckmann          0.1%\n         2\tJacques Crocker         0.1%\n         2\tFabian Jakobs           0.1%\n         2\tBrian J Brennan         0.1%\n         2\tAdam Malcontenti-Wilson 0.1%\n         2\tGlen Mailer             0.1%\n         2\tJames Campos            0.1%\n         1\tTrent Mick              0.0%\n         1\tTroy Kruthoff           0.0%\n         1\tWei Zhu                 0.0%\n         1\tcomerc                  0.0%\n         1\tdarobin                 0.0%\n         1\tnateps                  0.0%\n         1\tMarco Sanson            0.0%\n         1\tArthur Taylor           0.0%\n         1\tAseem Kishore           0.0%\n         1\tBart Teeuwisse          0.0%\n         1\tCameron Howey           0.0%\n         1\tChad Weider             0.0%\n         1\tCraig Barnes            0.0%\n         1\tEran Hammer-Lahav       0.0%\n         1\tGregory McWhirter       0.0%\n         1\tGuillermo Rauch         0.0%\n         1\tJae Kwon                0.0%\n         1\tJakub Nesetril          0.0%\n         1\tJoshua Peek             0.0%\n         1\tJxck                    0.0%\n         1\tAJ ONeal                0.0%\n         1\tMichael Hemesath        0.0%\n         1\tMorten Siebuhr          0.0%\n         1\tSamori Gorse            0.0%\n         1\tTom Jensen              0.0%\n\n## Node Compatibility\n\n  Connect `< 1.x` is compatible with node 0.2.x\n\n\n  Connect `1.x` is compatible with node 0.4.x\n\n\n  Connect (_master_) `2.x` is compatible with node 0.6.x\n\n## CLA\n\n [http://sencha.com/cla](http://sencha.com/cla)\n\n## License\n\nView the [LICENSE](https://github.com/senchalabs/connect/blob/master/LICENSE) file. The [Silk](http://www.famfamfam.com/lab/icons/silk/) icons used by the `directory` middleware created by/copyright of [FAMFAMFAM](http://www.famfamfam.com/).\n',
+1111 silly resolved     readmeFilename: 'Readme.md',
+1111 silly resolved     _id: 'connect@2.7.0',
+1111 silly resolved     dist: { shasum: '52f5626d823c0848a87410f80de0ace2aa52ad95' },
+1111 silly resolved     _from: 'connect@2.7.0' } ]
+1112 info install debug@0.7.0 into /Users/bennycohen/Projects/node/klikVote/node_modules/express
+1113 info install cookie-signature@0.0.1 into /Users/bennycohen/Projects/node/klikVote/node_modules/express
+1114 info install range-parser@0.0.4 into /Users/bennycohen/Projects/node/klikVote/node_modules/express
+1115 info install crc@0.2.0 into /Users/bennycohen/Projects/node/klikVote/node_modules/express
+1116 info install commander@0.6.1 into /Users/bennycohen/Projects/node/klikVote/node_modules/express
+1117 info install fresh@0.1.0 into /Users/bennycohen/Projects/node/klikVote/node_modules/express
+1118 info install cookie@0.0.5 into /Users/bennycohen/Projects/node/klikVote/node_modules/express
+1119 info install send@0.1.0 into /Users/bennycohen/Projects/node/klikVote/node_modules/express
+1120 info install methods@0.0.1 into /Users/bennycohen/Projects/node/klikVote/node_modules/express
+1121 info install mkdirp@0.3.3 into /Users/bennycohen/Projects/node/klikVote/node_modules/express
+1122 info install connect@2.7.0 into /Users/bennycohen/Projects/node/klikVote/node_modules/express
+1123 info installOne debug@0.7.0
+1124 info installOne cookie-signature@0.0.1
+1125 info installOne range-parser@0.0.4
+1126 info installOne crc@0.2.0
+1127 info installOne commander@0.6.1
+1128 info installOne fresh@0.1.0
+1129 info installOne cookie@0.0.5
+1130 info installOne send@0.1.0
+1131 info installOne methods@0.0.1
+1132 info installOne mkdirp@0.3.3
+1133 info installOne connect@2.7.0
+1134 verbose from cache /Users/bennycohen/.npm/debug/0.7.0/package/package.json
+1135 verbose from cache /Users/bennycohen/.npm/cookie-signature/0.0.1/package/package.json
+1136 verbose from cache /Users/bennycohen/.npm/range-parser/0.0.4/package/package.json
+1137 verbose from cache /Users/bennycohen/.npm/crc/0.2.0/package/package.json
+1138 verbose from cache /Users/bennycohen/.npm/commander/0.6.1/package/package.json
+1139 verbose from cache /Users/bennycohen/.npm/fresh/0.1.0/package/package.json
+1140 verbose from cache /Users/bennycohen/.npm/cookie/0.0.5/package/package.json
+1141 verbose from cache /Users/bennycohen/.npm/send/0.1.0/package/package.json
+1142 verbose from cache /Users/bennycohen/.npm/methods/0.0.1/package/package.json
+1143 verbose from cache /Users/bennycohen/.npm/mkdirp/0.3.3/package/package.json
+1144 verbose from cache /Users/bennycohen/.npm/connect/2.7.0/package/package.json
+1145 info /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/debug unbuild
+1146 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/debug/package.json
+1147 info /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie-signature unbuild
+1148 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie-signature/package.json
+1149 info /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/range-parser unbuild
+1150 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/range-parser/package.json
+1151 info /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/crc unbuild
+1152 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/crc/package.json
+1153 info /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/commander unbuild
+1154 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/commander/package.json
+1155 info /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/fresh unbuild
+1156 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/fresh/package.json
+1157 info /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie unbuild
+1158 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie/package.json
+1159 info /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/send unbuild
+1160 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/send/package.json
+1161 info /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/methods unbuild
+1162 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/methods/package.json
+1163 info /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/mkdirp unbuild
+1164 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/mkdirp/package.json
+1165 info /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/connect unbuild
+1166 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/connect/package.json
+1167 verbose tar unpack /Users/bennycohen/.npm/debug/0.7.0/package.tgz
+1168 verbose tar unpack /Users/bennycohen/.npm/cookie-signature/0.0.1/package.tgz
+1169 verbose tar unpack /Users/bennycohen/.npm/range-parser/0.0.4/package.tgz
+1170 verbose tar unpack /Users/bennycohen/.npm/crc/0.2.0/package.tgz
+1171 verbose tar unpack /Users/bennycohen/.npm/commander/0.6.1/package.tgz
+1172 verbose tar unpack /Users/bennycohen/.npm/fresh/0.1.0/package.tgz
+1173 verbose tar unpack /Users/bennycohen/.npm/cookie/0.0.5/package.tgz
+1174 verbose tar unpack /Users/bennycohen/.npm/send/0.1.0/package.tgz
+1175 verbose tar unpack /Users/bennycohen/.npm/methods/0.0.1/package.tgz
+1176 verbose tar unpack /Users/bennycohen/.npm/mkdirp/0.3.3/package.tgz
+1177 verbose tar unpack /Users/bennycohen/.npm/connect/2.7.0/package.tgz
+1178 silly lockFile 75cc57e0-dules-express-node-modules-debug /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/debug
+1179 verbose lock /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/debug /Users/bennycohen/.npm/75cc57e0-dules-express-node-modules-debug.lock
+1180 silly lockFile de6c6fcb-ss-node-modules-cookie-signature /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie-signature
+1181 verbose lock /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie-signature /Users/bennycohen/.npm/de6c6fcb-ss-node-modules-cookie-signature.lock
+1182 silly lockFile 5e653fd2-xpress-node-modules-range-parser /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/range-parser
+1183 verbose lock /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/range-parser /Users/bennycohen/.npm/5e653fd2-xpress-node-modules-range-parser.lock
+1184 silly lockFile 24f3616d-modules-express-node-modules-crc /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/crc
+1185 verbose lock /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/crc /Users/bennycohen/.npm/24f3616d-modules-express-node-modules-crc.lock
+1186 silly lockFile bab2f6bd-s-express-node-modules-commander /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/commander
+1187 verbose lock /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/commander /Users/bennycohen/.npm/bab2f6bd-s-express-node-modules-commander.lock
+1188 silly lockFile 8db0d27c-dules-express-node-modules-fresh /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/fresh
+1189 verbose lock /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/fresh /Users/bennycohen/.npm/8db0d27c-dules-express-node-modules-fresh.lock
+1190 silly lockFile 163a17a9-ules-express-node-modules-cookie /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie
+1191 verbose lock /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie /Users/bennycohen/.npm/163a17a9-ules-express-node-modules-cookie.lock
+1192 silly lockFile 88ed3281-odules-express-node-modules-send /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/send
+1193 verbose lock /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/send /Users/bennycohen/.npm/88ed3281-odules-express-node-modules-send.lock
+1194 silly lockFile d2a8de1c-les-express-node-modules-methods /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/methods
+1195 verbose lock /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/methods /Users/bennycohen/.npm/d2a8de1c-les-express-node-modules-methods.lock
+1196 silly lockFile 69b226e2-ules-express-node-modules-mkdirp /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/mkdirp
+1197 verbose lock /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/mkdirp /Users/bennycohen/.npm/69b226e2-ules-express-node-modules-mkdirp.lock
+1198 silly lockFile 2d898165-les-express-node-modules-connect /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/connect
+1199 verbose lock /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/connect /Users/bennycohen/.npm/2d898165-les-express-node-modules-connect.lock
+1200 silly gunzTarPerm modes [ '755', '644' ]
+1201 silly gunzTarPerm modes [ '755', '644' ]
+1202 silly gunzTarPerm modes [ '755', '644' ]
+1203 silly gunzTarPerm modes [ '755', '644' ]
+1204 silly gunzTarPerm modes [ '755', '644' ]
+1205 silly gunzTarPerm modes [ '755', '644' ]
+1206 silly gunzTarPerm modes [ '755', '644' ]
+1207 silly gunzTarPerm modes [ '755', '644' ]
+1208 silly gunzTarPerm modes [ '755', '644' ]
+1209 silly gunzTarPerm modes [ '755', '644' ]
+1210 silly gunzTarPerm modes [ '755', '644' ]
+1211 silly gunzTarPerm extractEntry package.json
+1212 silly gunzTarPerm extractEntry package.json
+1213 silly gunzTarPerm extractEntry package.json
+1214 silly gunzTarPerm extractEntry package.json
+1215 silly gunzTarPerm extractEntry package.json
+1216 silly gunzTarPerm extractEntry package.json
+1217 silly gunzTarPerm extractEntry package.json
+1218 silly gunzTarPerm extractEntry package.json
+1219 silly gunzTarPerm extractEntry package.json
+1220 silly gunzTarPerm extractEntry package.json
+1221 silly gunzTarPerm extractEntry .npmignore
+1222 silly gunzTarPerm extractEntry index.js
+1223 silly gunzTarPerm extractEntry .npmignore
+1224 silly gunzTarPerm extractEntry index.js
+1225 silly gunzTarPerm extractEntry .npmignore
+1226 silly gunzTarPerm extractEntry README.md
+1227 silly gunzTarPerm extractEntry .npmignore
+1228 silly gunzTarPerm extractEntry index.js
+1229 silly gunzTarPerm extractEntry .npmignore
+1230 silly gunzTarPerm extractEntry index.js
+1231 silly gunzTarPerm extractEntry .npmignore
+1232 silly gunzTarPerm extractEntry README.md
+1233 silly gunzTarPerm extractEntry index.js
+1234 silly gunzTarPerm extractEntry .npmignore
+1235 silly gunzTarPerm extractEntry index.js
+1236 silly gunzTarPerm extractEntry .npmignore
+1237 silly gunzTarPerm extractEntry LICENSE
+1238 silly gunzTarPerm extractEntry .npmignore
+1239 silly gunzTarPerm extractEntry LICENSE
+1240 silly gunzTarPerm extractEntry package.json
+1241 silly gunzTarPerm extractEntry History.md
+1242 silly gunzTarPerm extractEntry Makefile
+1243 silly gunzTarPerm extractEntry History.md
+1244 silly gunzTarPerm extractEntry Makefile
+1245 silly gunzTarPerm extractEntry .gitmodules
+1246 silly gunzTarPerm extractEntry lib/crc.js
+1247 silly gunzTarPerm extractEntry .travis.yml
+1248 silly gunzTarPerm extractEntry History.md
+1249 silly gunzTarPerm extractEntry Makefile
+1250 silly gunzTarPerm extractEntry Readme.md
+1251 silly gunzTarPerm extractEntry index.js
+1252 silly gunzTarPerm extractEntry .travis.yml
+1253 silly gunzTarPerm extractEntry .npmignore
+1254 silly gunzTarPerm extractEntry debug.js
+1255 silly gunzTarPerm extractEntry History.md
+1256 silly gunzTarPerm extractEntry lib/send.js
+1257 silly gunzTarPerm extractEntry index.js
+1258 silly gunzTarPerm extractEntry .gitignore.orig
+1259 silly gunzTarPerm extractEntry index.js
+1260 silly gunzTarPerm extractEntry test.js
+1261 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/methods/package.json
+1262 silly gunzTarPerm extractEntry Readme.md
+1263 silly gunzTarPerm extractEntry Readme.md
+1264 silly gunzTarPerm extractEntry Makefile
+1265 silly gunzTarPerm extractEntry test/crc.js
+1266 silly gunzTarPerm extractEntry lib/commander.js
+1267 silly gunzTarPerm extractEntry Makefile
+1268 silly gunzTarPerm extractEntry test/parse.js
+1269 silly gunzTarPerm extractEntry test/serialize.js
+1270 silly gunzTarPerm extractEntry head.js
+1271 silly gunzTarPerm extractEntry debug.component.js
+1272 silly gunzTarPerm extractEntry lib/utils.js
+1273 silly gunzTarPerm extractEntry Makefile
+1274 silly gunzTarPerm extractEntry .gitignore.rej
+1275 silly gunzTarPerm extractEntry .travis.yml
+1276 silly gunzTarPerm extractEntry .travis.yml
+1277 silly gunzTarPerm extractEntry lib/cache.js
+1278 silly lockFile d2a8de1c-les-express-node-modules-methods /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/methods
+1279 silly gunzTarPerm extractEntry Readme.md
+1280 silly gunzTarPerm extractEntry tail.js
+1281 silly gunzTarPerm extractEntry index.js
+1282 info preinstall methods@0.0.1
+1283 silly gunzTarPerm extractEntry test/mocha.opts
+1284 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/methods/package.json
+1285 silly gunzTarPerm extractEntry Readme.md
+1286 silly gunzTarPerm extractEntry lib/connect.js
+1287 silly gunzTarPerm extractEntry lib/index.js
+1288 silly gunzTarPerm extractEntry examples/pow.js
+1289 silly gunzTarPerm extractEntry examples/pow.js.orig
+1290 silly gunzTarPerm extractEntry examples/pow.js.rej
+1291 silly gunzTarPerm extractEntry lib/patch.js
+1292 silly gunzTarPerm extractEntry lib/proto.js
+1293 silly gunzTarPerm extractEntry History.md
+1294 silly gunzTarPerm extractEntry lib/debug.js
+1295 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/fresh/package.json
+1296 silly gunzTarPerm extractEntry README.markdown
+1297 silly gunzTarPerm extractEntry test/chmod.js
+1298 silly gunzTarPerm extractEntry lib/utils.js
+1299 silly gunzTarPerm extractEntry lib/middleware/basicAuth.js
+1300 silly gunzTarPerm extractEntry Makefile
+1301 silly gunzTarPerm extractEntry example/app.js
+1302 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie-signature/package.json
+1303 silly lockFile 8db0d27c-dules-express-node-modules-fresh /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/fresh
+1304 silly gunzTarPerm extractEntry test/perm.js
+1305 silly gunzTarPerm extractEntry test/perm_sync.js
+1306 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/range-parser/package.json
+1307 silly gunzTarPerm extractEntry lib/middleware/errorHandler.js
+1308 silly gunzTarPerm extractEntry lib/middleware/favicon.js
+1309 verbose readDependencies using package.json deps
+1310 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/methods/package.json
+1311 info preinstall fresh@0.1.0
+1312 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/fresh/package.json
+1313 silly gunzTarPerm extractEntry example/wildcards.js
+1314 silly gunzTarPerm extractEntry example/worker.js
+1315 silly gunzTarPerm extractEntry test/race.js
+1316 silly gunzTarPerm extractEntry test/mkdirp.js
+1317 silly lockFile de6c6fcb-ss-node-modules-cookie-signature /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie-signature
+1318 verbose readDependencies using package.json deps
+1319 silly resolved []
+1320 verbose about to build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/methods
+1321 info build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/methods
+1322 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/methods/package.json
+1323 verbose readDependencies using package.json deps
+1324 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/fresh/package.json
+1325 silly lockFile 5e653fd2-xpress-node-modules-range-parser /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/range-parser
+1326 verbose linkStuff [ false,
+1326 verbose linkStuff   false,
+1326 verbose linkStuff   false,
+1326 verbose linkStuff   '/Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules' ]
+1327 info linkStuff methods@0.0.1
+1328 verbose linkBins methods@0.0.1
+1329 verbose linkMans methods@0.0.1
+1330 verbose rebuildBundles methods@0.0.1
+1331 info install methods@0.0.1
+1332 verbose readDependencies using package.json deps
+1333 silly resolved []
+1334 verbose about to build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/fresh
+1335 info build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/fresh
+1336 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/fresh/package.json
+1337 silly gunzTarPerm extractEntry lib/middleware/json.js
+1338 silly gunzTarPerm extractEntry lib/middleware/limit.js
+1339 silly gunzTarPerm extractEntry example/browser.html
+1340 silly gunzTarPerm extractEntry Readme.md
+1341 info postinstall methods@0.0.1
+1342 info preinstall cookie-signature@0.0.1
+1343 silly gunzTarPerm extractEntry test/return.js
+1344 silly gunzTarPerm extractEntry test/return_sync.js
+1345 info preinstall range-parser@0.0.4
+1346 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie-signature/package.json
+1347 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/range-parser/package.json
+1348 silly gunzTarPerm extractEntry lib/middleware/directory.js
+1349 silly gunzTarPerm extractEntry lib/middleware/methodOverride.js
+1350 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie/package.json
+1351 silly gunzTarPerm extractEntry test/root.js
+1352 silly gunzTarPerm extractEntry test/sync.js
+1353 silly gunzTarPerm extractEntry test/umask.js
+1354 silly gunzTarPerm extractEntry test/clobber.js
+1355 silly lockFile 163a17a9-ules-express-node-modules-cookie /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie
+1356 silly gunzTarPerm extractEntry lib/middleware/multipart.js
+1357 silly gunzTarPerm extractEntry lib/middleware/query.js
+1358 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/crc/package.json
+1359 info preinstall cookie@0.0.5
+1360 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/send/package.json
+1361 silly gunzTarPerm extractEntry test/umask_sync.js
+1362 silly gunzTarPerm extractEntry test/rel.js
+1363 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie/package.json
+1364 silly gunzTarPerm extractEntry lib/middleware/responseTime.js
+1365 silly gunzTarPerm extractEntry lib/middleware/urlencoded.js
+1366 silly lockFile 24f3616d-modules-express-node-modules-crc /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/crc
+1367 silly lockFile 88ed3281-odules-express-node-modules-send /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/send
+1368 silly gunzTarPerm extractEntry lib/middleware/csrf.js
+1369 info preinstall crc@0.2.0
+1370 verbose linkStuff [ false,
+1370 verbose linkStuff   false,
+1370 verbose linkStuff   false,
+1370 verbose linkStuff   '/Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules' ]
+1371 info linkStuff fresh@0.1.0
+1372 verbose linkBins fresh@0.1.0
+1373 verbose linkMans fresh@0.1.0
+1374 verbose rebuildBundles fresh@0.1.0
+1375 info install fresh@0.1.0
+1376 verbose readDependencies using package.json deps
+1377 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie-signature/package.json
+1378 verbose readDependencies using package.json deps
+1379 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/range-parser/package.json
+1380 verbose readDependencies using package.json deps
+1381 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie/package.json
+1382 info preinstall send@0.1.0
+1383 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/crc/package.json
+1384 silly gunzTarPerm extractEntry lib/middleware/session.js
+1385 info postinstall fresh@0.1.0
+1386 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/send/package.json
+1387 verbose readDependencies using package.json deps
+1388 silly resolved []
+1389 verbose about to build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie-signature
+1390 info build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie-signature
+1391 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie-signature/package.json
+1392 verbose readDependencies using package.json deps
+1393 silly resolved []
+1394 verbose about to build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/range-parser
+1395 info build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/range-parser
+1396 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/range-parser/package.json
+1397 verbose readDependencies using package.json deps
+1398 silly resolved []
+1399 verbose about to build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie
+1400 info build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie
+1401 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/cookie/package.json
+1402 verbose readDependencies using package.json deps
+1403 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/crc/package.json
+1404 verbose linkStuff [ false,
+1404 verbose linkStuff   false,
+1404 verbose linkStuff   false,
+1404 verbose linkStuff   '/Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules' ]
+1405 info linkStuff cookie-signature@0.0.1
+1406 verbose linkBins cookie-signature@0.0.1
+1407 verbose linkMans cookie-signature@0.0.1
+1408 verbose rebuildBundles cookie-signature@0.0.1
+1409 verbose linkStuff [ false,
+1409 verbose linkStuff   false,
+1409 verbose linkStuff   false,
+1409 verbose linkStuff   '/Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules' ]
+1410 info linkStuff range-parser@0.0.4
+1411 verbose linkBins range-parser@0.0.4
+1412 verbose linkMans range-parser@0.0.4
+1413 verbose rebuildBundles range-parser@0.0.4
+1414 verbose linkStuff [ false,
+1414 verbose linkStuff   false,
+1414 verbose linkStuff   false,
+1414 verbose linkStuff   '/Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules' ]
+1415 info linkStuff cookie@0.0.5
+1416 verbose linkBins cookie@0.0.5
+1417 verbose linkMans cookie@0.0.5
+1418 verbose rebuildBundles cookie@0.0.5
+1419 verbose readDependencies using package.json deps
+1420 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/send/package.json
+1421 info install cookie-signature@0.0.1
+1422 info install range-parser@0.0.4
+1423 info install cookie@0.0.5
+1424 verbose readDependencies using package.json deps
+1425 silly resolved []
+1426 verbose about to build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/crc
+1427 info build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/crc
+1428 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/crc/package.json
+1429 verbose linkStuff [ false,
+1429 verbose linkStuff   false,
+1429 verbose linkStuff   false,
+1429 verbose linkStuff   '/Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules' ]
+1430 info linkStuff crc@0.2.0
+1431 verbose linkBins crc@0.2.0
+1432 verbose linkMans crc@0.2.0
+1433 verbose rebuildBundles crc@0.2.0
+1434 verbose readDependencies using package.json deps
+1435 info install crc@0.2.0
+1436 info postinstall cookie-signature@0.0.1
+1437 info postinstall range-parser@0.0.4
+1438 info postinstall cookie@0.0.5
+1439 info postinstall crc@0.2.0
+1440 silly gunzTarPerm extractEntry lib/middleware/cookieSession.js
+1441 silly gunzTarPerm extractEntry lib/middleware/static.js
+1442 verbose cache add [ 'mime@1.2.6', null ]
+1443 silly cache add name=undefined spec="mime@1.2.6" args=["mime@1.2.6",null]
+1444 verbose parsed url { pathname: 'mime@1.2.6',
+1444 verbose parsed url   path: 'mime@1.2.6',
+1444 verbose parsed url   href: 'mime@1.2.6' }
+1445 silly cache add name="mime" spec="1.2.6" args=["mime","1.2.6"]
+1446 verbose parsed url { pathname: '1.2.6', path: '1.2.6', href: '1.2.6' }
+1447 verbose addNamed [ 'mime', '1.2.6' ]
+1448 verbose addNamed [ '1.2.6', '1.2.6' ]
+1449 silly lockFile 898e3106-mime-1-2-6 mime@1.2.6
+1450 verbose lock mime@1.2.6 /Users/bennycohen/.npm/898e3106-mime-1-2-6.lock
+1451 silly gunzTarPerm extractEntry lib/middleware/cookieParser.js
+1452 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/commander/package.json
+1453 silly gunzTarPerm extractEntry lib/middleware/staticCache.js
+1454 silly gunzTarPerm extractEntry lib/middleware/compress.js
+1455 silly lockFile bab2f6bd-s-express-node-modules-commander /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/commander
+1456 silly gunzTarPerm extractEntry lib/middleware/timeout.js
+1457 silly gunzTarPerm extractEntry lib/middleware/bodyParser.js
+1458 info preinstall commander@0.6.1
+1459 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/commander/package.json
+1460 verbose readDependencies using package.json deps
+1461 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/commander/package.json
+1462 silly gunzTarPerm extractEntry lib/middleware/vhost.js
+1463 verbose readDependencies using package.json deps
+1464 silly resolved []
+1465 verbose about to build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/commander
+1466 info build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/commander
+1467 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/commander/package.json
+1468 verbose linkStuff [ false,
+1468 verbose linkStuff   false,
+1468 verbose linkStuff   false,
+1468 verbose linkStuff   '/Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules' ]
+1469 info linkStuff commander@0.6.1
+1470 verbose linkBins commander@0.6.1
+1471 verbose linkMans commander@0.6.1
+1472 verbose rebuildBundles commander@0.6.1
+1473 info install commander@0.6.1
+1474 info postinstall commander@0.6.1
+1475 verbose url raw mime/1.2.6
+1476 verbose url resolving [ 'https://registry.npmjs.org/', './mime/1.2.6' ]
+1477 verbose url resolved https://registry.npmjs.org/mime/1.2.6
+1478 info trying registry request attempt 1 at 00:12:37
+1479 verbose etag "DTWL4HP4Y7B58LYE6SJRNKWJB"
+1480 http GET https://registry.npmjs.org/mime/1.2.6
+1481 silly gunzTarPerm extractEntry lib/middleware/logger.js
+1482 silly gunzTarPerm extractEntry lib/middleware/session/cookie.js
+1483 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/debug/package.json
+1484 silly lockFile 75cc57e0-dules-express-node-modules-debug /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/debug
+1485 silly gunzTarPerm extractEntry lib/middleware/session/memory.js
+1486 silly gunzTarPerm extractEntry lib/middleware/session/session.js
+1487 info preinstall debug@0.7.0
+1488 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/debug/package.json
+1489 verbose readDependencies using package.json deps
+1490 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/debug/package.json
+1491 verbose readDependencies using package.json deps
+1492 silly resolved []
+1493 verbose about to build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/debug
+1494 info build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/debug
+1495 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/debug/package.json
+1496 verbose linkStuff [ false,
+1496 verbose linkStuff   false,
+1496 verbose linkStuff   false,
+1496 verbose linkStuff   '/Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules' ]
+1497 info linkStuff debug@0.7.0
+1498 verbose linkBins debug@0.7.0
+1499 verbose linkMans debug@0.7.0
+1500 verbose rebuildBundles debug@0.7.0
+1501 info install debug@0.7.0
+1502 silly gunzTarPerm extractEntry lib/middleware/session/store.js
+1503 silly gunzTarPerm extractEntry lib/public/directory.html
+1504 info postinstall debug@0.7.0
+1505 silly gunzTarPerm extractEntry lib/public/error.html
+1506 silly gunzTarPerm extractEntry lib/public/favicon.ico
+1507 silly gunzTarPerm extractEntry lib/public/icons/page_white_edit.png
+1508 silly gunzTarPerm extractEntry lib/public/icons/page.png
+1509 silly gunzTarPerm extractEntry lib/public/icons/page_attach.png
+1510 silly gunzTarPerm extractEntry lib/public/icons/page_code.png
+1511 silly gunzTarPerm extractEntry lib/public/icons/page_copy.png
+1512 silly gunzTarPerm extractEntry lib/public/icons/page_delete.png
+1513 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/mkdirp/package.json
+1514 silly gunzTarPerm extractEntry lib/public/icons/page_edit.png
+1515 silly gunzTarPerm extractEntry lib/public/icons/page_error.png
+1516 silly gunzTarPerm extractEntry lib/public/icons/page_excel.png
+1517 silly lockFile 69b226e2-ules-express-node-modules-mkdirp /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/mkdirp
+1518 info preinstall mkdirp@0.3.3
+1519 silly gunzTarPerm extractEntry lib/public/icons/page_find.png
+1520 silly gunzTarPerm extractEntry lib/public/icons/page_gear.png
+1521 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/mkdirp/package.json
+1522 verbose readDependencies using package.json deps
+1523 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/mkdirp/package.json
+1524 verbose readDependencies using package.json deps
+1525 silly resolved []
+1526 verbose about to build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/mkdirp
+1527 info build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/mkdirp
+1528 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/mkdirp/package.json
+1529 verbose linkStuff [ false,
+1529 verbose linkStuff   false,
+1529 verbose linkStuff   false,
+1529 verbose linkStuff   '/Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules' ]
+1530 info linkStuff mkdirp@0.3.3
+1531 verbose linkBins mkdirp@0.3.3
+1532 verbose linkMans mkdirp@0.3.3
+1533 verbose rebuildBundles mkdirp@0.3.3
+1534 info install mkdirp@0.3.3
+1535 info postinstall mkdirp@0.3.3
+1536 silly gunzTarPerm extractEntry lib/public/icons/page_go.png
+1537 silly gunzTarPerm extractEntry lib/public/icons/page_green.png
+1538 silly gunzTarPerm extractEntry lib/public/icons/page_key.png
+1539 silly gunzTarPerm extractEntry lib/public/icons/page_lightning.png
+1540 silly gunzTarPerm extractEntry lib/public/icons/page_link.png
+1541 silly gunzTarPerm extractEntry lib/public/icons/page_paintbrush.png
+1542 silly gunzTarPerm extractEntry lib/public/icons/page_paste.png
+1543 silly gunzTarPerm extractEntry lib/public/icons/page_red.png
+1544 silly gunzTarPerm extractEntry lib/public/icons/page_refresh.png
+1545 silly gunzTarPerm extractEntry lib/public/icons/page_save.png
+1546 silly gunzTarPerm extractEntry lib/public/icons/page_white.png
+1547 silly gunzTarPerm extractEntry lib/public/icons/page_white_acrobat.png
+1548 silly gunzTarPerm extractEntry lib/public/icons/page_white_actionscript.png
+1549 silly gunzTarPerm extractEntry lib/public/icons/page_white_add.png
+1550 silly gunzTarPerm extractEntry lib/public/icons/page_white_c.png
+1551 silly gunzTarPerm extractEntry lib/public/icons/page_white_camera.png
+1552 silly gunzTarPerm extractEntry lib/public/icons/page_white_cd.png
+1553 silly gunzTarPerm extractEntry lib/public/icons/page_white_code.png
+1554 silly gunzTarPerm extractEntry lib/public/icons/page_white_code_red.png
+1555 silly gunzTarPerm extractEntry lib/public/icons/page_white_coldfusion.png
+1556 silly gunzTarPerm extractEntry lib/public/icons/page_white_compressed.png
+1557 silly gunzTarPerm extractEntry lib/public/icons/page_white_copy.png
+1558 silly gunzTarPerm extractEntry lib/public/icons/page_white_cplusplus.png
+1559 silly gunzTarPerm extractEntry lib/public/icons/page_white_csharp.png
+1560 silly gunzTarPerm extractEntry lib/public/icons/page_white_cup.png
+1561 silly gunzTarPerm extractEntry lib/public/icons/page_white_database.png
+1562 silly gunzTarPerm extractEntry lib/public/icons/page_white_delete.png
+1563 silly gunzTarPerm extractEntry lib/public/icons/page_white_dvd.png
+1564 silly gunzTarPerm extractEntry lib/public/icons/page_add.png
+1565 silly gunzTarPerm extractEntry lib/public/icons/page_white_error.png
+1566 silly gunzTarPerm extractEntry lib/public/icons/page_white_excel.png
+1567 silly gunzTarPerm extractEntry lib/public/icons/page_white_find.png
+1568 silly gunzTarPerm extractEntry lib/public/icons/page_white_flash.png
+1569 silly gunzTarPerm extractEntry lib/public/icons/page_white_freehand.png
+1570 silly gunzTarPerm extractEntry lib/public/icons/page_white_gear.png
+1571 silly gunzTarPerm extractEntry lib/public/icons/page_white_get.png
+1572 silly gunzTarPerm extractEntry lib/public/icons/page_white_go.png
+1573 silly gunzTarPerm extractEntry lib/public/icons/page_white_h.png
+1574 silly gunzTarPerm extractEntry lib/public/icons/page_white_horizontal.png
+1575 silly gunzTarPerm extractEntry lib/public/icons/page_white_key.png
+1576 silly gunzTarPerm extractEntry lib/public/icons/page_white_lightning.png
+1577 silly gunzTarPerm extractEntry lib/public/icons/page_white_link.png
+1578 silly gunzTarPerm extractEntry lib/public/icons/page_white_magnify.png
+1579 silly gunzTarPerm extractEntry lib/public/icons/page_white_medal.png
+1580 silly gunzTarPerm extractEntry lib/public/icons/page_white_office.png
+1581 silly gunzTarPerm extractEntry lib/public/icons/page_white_paint.png
+1582 silly gunzTarPerm extractEntry lib/public/icons/page_white_paintbrush.png
+1583 silly gunzTarPerm extractEntry lib/public/icons/page_white_paste.png
+1584 silly gunzTarPerm extractEntry lib/public/icons/page_white_php.png
+1585 silly gunzTarPerm extractEntry lib/public/icons/page_white_picture.png
+1586 silly gunzTarPerm extractEntry lib/public/icons/page_white_powerpoint.png
+1587 silly gunzTarPerm extractEntry lib/public/icons/page_white_put.png
+1588 silly gunzTarPerm extractEntry lib/public/icons/page_white_ruby.png
+1589 silly gunzTarPerm extractEntry lib/public/icons/page_white_stack.png
+1590 silly gunzTarPerm extractEntry lib/public/icons/page_white_star.png
+1591 silly gunzTarPerm extractEntry lib/public/icons/page_white_swoosh.png
+1592 silly gunzTarPerm extractEntry lib/public/icons/page_white_text.png
+1593 silly gunzTarPerm extractEntry lib/public/icons/page_white_text_width.png
+1594 silly gunzTarPerm extractEntry lib/public/icons/page_white_tux.png
+1595 silly gunzTarPerm extractEntry lib/public/icons/page_white_vector.png
+1596 silly gunzTarPerm extractEntry lib/public/icons/page_white_visualstudio.png
+1597 silly gunzTarPerm extractEntry lib/public/icons/page_white_width.png
+1598 silly gunzTarPerm extractEntry lib/public/icons/page_white_word.png
+1599 silly gunzTarPerm extractEntry lib/public/icons/page_white_world.png
+1600 silly gunzTarPerm extractEntry lib/public/icons/page_white_wrench.png
+1601 silly gunzTarPerm extractEntry lib/public/icons/page_white_zip.png
+1602 silly gunzTarPerm extractEntry lib/public/icons/page_word.png
+1603 silly gunzTarPerm extractEntry lib/public/icons/page_world.png
+1604 silly gunzTarPerm extractEntry lib/public/style.css
+1605 silly gunzTarPerm extractEntry Readme.md
+1606 verbose read json /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/connect/package.json
+1607 silly lockFile 2d898165-les-express-node-modules-connect /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/connect
+1608 info preinstall connect@2.7.0
+1609 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/connect/package.json
+1610 verbose readDependencies using package.json deps
+1611 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/connect/package.json
+1612 verbose readDependencies using package.json deps
+1613 verbose cache add [ 'qs@0.5.1', null ]
+1614 silly cache add name=undefined spec="qs@0.5.1" args=["qs@0.5.1",null]
+1615 verbose parsed url { pathname: 'qs@0.5.1', path: 'qs@0.5.1', href: 'qs@0.5.1' }
+1616 silly cache add name="qs" spec="0.5.1" args=["qs","0.5.1"]
+1617 verbose parsed url { pathname: '0.5.1', path: '0.5.1', href: '0.5.1' }
+1618 verbose addNamed [ 'qs', '0.5.1' ]
+1619 verbose addNamed [ '0.5.1', '0.5.1' ]
+1620 silly lockFile dd3beb89-qs-0-5-1 qs@0.5.1
+1621 verbose lock qs@0.5.1 /Users/bennycohen/.npm/dd3beb89-qs-0-5-1.lock
+1622 verbose cache add [ 'formidable@1.0.11', null ]
+1623 silly cache add name=undefined spec="formidable@1.0.11" args=["formidable@1.0.11",null]
+1624 verbose parsed url { pathname: 'formidable@1.0.11',
+1624 verbose parsed url   path: 'formidable@1.0.11',
+1624 verbose parsed url   href: 'formidable@1.0.11' }
+1625 silly cache add name="formidable" spec="1.0.11" args=["formidable","1.0.11"]
+1626 verbose parsed url { pathname: '1.0.11', path: '1.0.11', href: '1.0.11' }
+1627 verbose addNamed [ 'formidable', '1.0.11' ]
+1628 verbose addNamed [ '1.0.11', '1.0.11' ]
+1629 silly lockFile 85cafced-formidable-1-0-11 formidable@1.0.11
+1630 verbose lock formidable@1.0.11 /Users/bennycohen/.npm/85cafced-formidable-1-0-11.lock
+1631 verbose cache add [ 'bytes@0.1.0', null ]
+1632 silly cache add name=undefined spec="bytes@0.1.0" args=["bytes@0.1.0",null]
+1633 verbose parsed url { pathname: 'bytes@0.1.0',
+1633 verbose parsed url   path: 'bytes@0.1.0',
+1633 verbose parsed url   href: 'bytes@0.1.0' }
+1634 silly cache add name="bytes" spec="0.1.0" args=["bytes","0.1.0"]
+1635 verbose parsed url { pathname: '0.1.0', path: '0.1.0', href: '0.1.0' }
+1636 verbose addNamed [ 'bytes', '0.1.0' ]
+1637 verbose addNamed [ '0.1.0', '0.1.0' ]
+1638 silly lockFile d6abeac8-bytes-0-1-0 bytes@0.1.0
+1639 verbose lock bytes@0.1.0 /Users/bennycohen/.npm/d6abeac8-bytes-0-1-0.lock
+1640 verbose cache add [ 'pause@0.0.1', null ]
+1641 silly cache add name=undefined spec="pause@0.0.1" args=["pause@0.0.1",null]
+1642 verbose parsed url { pathname: 'pause@0.0.1',
+1642 verbose parsed url   path: 'pause@0.0.1',
+1642 verbose parsed url   href: 'pause@0.0.1' }
+1643 silly cache add name="pause" spec="0.0.1" args=["pause","0.0.1"]
+1644 verbose parsed url { pathname: '0.0.1', path: '0.0.1', href: '0.0.1' }
+1645 verbose addNamed [ 'pause', '0.0.1' ]
+1646 verbose addNamed [ '0.0.1', '0.0.1' ]
+1647 silly lockFile c62fc432-pause-0-0-1 pause@0.0.1
+1648 verbose lock pause@0.0.1 /Users/bennycohen/.npm/c62fc432-pause-0-0-1.lock
+1649 verbose url raw qs/0.5.1
+1650 verbose url resolving [ 'https://registry.npmjs.org/', './qs/0.5.1' ]
+1651 verbose url resolved https://registry.npmjs.org/qs/0.5.1
+1652 info trying registry request attempt 1 at 00:12:37
+1653 verbose etag "9ACOOSG37E5BN7QSY59OD31D0"
+1654 http GET https://registry.npmjs.org/qs/0.5.1
+1655 verbose url raw formidable/1.0.11
+1656 verbose url resolving [ 'https://registry.npmjs.org/', './formidable/1.0.11' ]
+1657 verbose url resolved https://registry.npmjs.org/formidable/1.0.11
+1658 info trying registry request attempt 1 at 00:12:37
+1659 verbose etag "7EULH7Y330OZAZ774IFM9PS7Q"
+1660 http GET https://registry.npmjs.org/formidable/1.0.11
+1661 verbose url raw bytes/0.1.0
+1662 verbose url resolving [ 'https://registry.npmjs.org/', './bytes/0.1.0' ]
+1663 verbose url resolved https://registry.npmjs.org/bytes/0.1.0
+1664 info trying registry request attempt 1 at 00:12:37
+1665 verbose etag "8N81S7URRYT0SCBW71PHV2DV9"
+1666 http GET https://registry.npmjs.org/bytes/0.1.0
+1667 verbose url raw pause/0.0.1
+1668 verbose url resolving [ 'https://registry.npmjs.org/', './pause/0.0.1' ]
+1669 verbose url resolved https://registry.npmjs.org/pause/0.0.1
+1670 info trying registry request attempt 1 at 00:12:37
+1671 verbose etag "A5RQHA7UP2E66VXKWWB07KPBP"
+1672 http GET https://registry.npmjs.org/pause/0.0.1
+1673 http 200 https://registry.npmjs.org/mime/1.2.6
+1674 silly registry.get cb [ 200,
+1674 silly registry.get   { vary: 'Accept',
+1674 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+1674 silly registry.get     etag: '"BYZWJCRKKP0YD66TNVMZQT7XI"',
+1674 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:16 GMT',
+1674 silly registry.get     'content-type': 'application/json',
+1674 silly registry.get     'content-length': '3051' } ]
+1675 http 200 https://registry.npmjs.org/pause/0.0.1
+1676 silly registry.get cb [ 200,
+1676 silly registry.get   { vary: 'Accept',
+1676 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+1676 silly registry.get     etag: '"JHHQ59Y8USIVBG6ZTIAHB1YR"',
+1676 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:16 GMT',
+1676 silly registry.get     'content-type': 'application/json',
+1676 silly registry.get     'content-length': '453' } ]
+1677 silly lockFile a43c9c4e-ry-npmjs-org-mime-mime-1-2-6-tgz https://registry.npmjs.org/mime/-/mime-1.2.6.tgz
+1678 verbose lock https://registry.npmjs.org/mime/-/mime-1.2.6.tgz /Users/bennycohen/.npm/a43c9c4e-ry-npmjs-org-mime-mime-1-2-6-tgz.lock
+1679 silly lockFile 51c6cd47--npmjs-org-pause-pause-0-0-1-tgz https://registry.npmjs.org/pause/-/pause-0.0.1.tgz
+1680 verbose lock https://registry.npmjs.org/pause/-/pause-0.0.1.tgz /Users/bennycohen/.npm/51c6cd47--npmjs-org-pause-pause-0-0-1-tgz.lock
+1681 verbose addRemoteTarball [ 'https://registry.npmjs.org/mime/-/mime-1.2.6.tgz',
+1681 verbose addRemoteTarball   'b1f86c768c025fa87b48075f1709f28aeaf20365' ]
+1682 verbose addRemoteTarball [ 'https://registry.npmjs.org/pause/-/pause-0.0.1.tgz',
+1682 verbose addRemoteTarball   '1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d' ]
+1683 info retry fetch attempt 1 at 00:12:39
+1684 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.35767342266626656/tmp.tgz
+1685 info retry fetch attempt 1 at 00:12:39
+1686 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.2573765974957496/tmp.tgz
+1687 http GET https://registry.npmjs.org/mime/-/mime-1.2.6.tgz
+1688 http GET https://registry.npmjs.org/pause/-/pause-0.0.1.tgz
+1689 http 200 https://registry.npmjs.org/qs/0.5.1
+1690 silly registry.get cb [ 200,
+1690 silly registry.get   { vary: 'Accept',
+1690 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+1690 silly registry.get     etag: '"4MNGI3ITXN89O0Q3OOOHLTAWV"',
+1690 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:16 GMT',
+1690 silly registry.get     'content-type': 'application/json',
+1690 silly registry.get     'content-length': '2741' } ]
+1691 http 200 https://registry.npmjs.org/formidable/1.0.11
+1692 silly registry.get cb [ 200,
+1692 silly registry.get   { vary: 'Accept',
+1692 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+1692 silly registry.get     etag: '"5PP1SWSIXN7YLB638ZJSG6QN1"',
+1692 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:16 GMT',
+1692 silly registry.get     'content-type': 'application/json',
+1692 silly registry.get     'content-length': '11652' } ]
+1693 silly lockFile d4796027-gistry-npmjs-org-qs-qs-0-5-1-tgz https://registry.npmjs.org/qs/-/qs-0.5.1.tgz
+1694 verbose lock https://registry.npmjs.org/qs/-/qs-0.5.1.tgz /Users/bennycohen/.npm/d4796027-gistry-npmjs-org-qs-qs-0-5-1-tgz.lock
+1695 verbose addRemoteTarball [ 'https://registry.npmjs.org/qs/-/qs-0.5.1.tgz',
+1695 verbose addRemoteTarball   '9f6bf5d9ac6c76384e95d36d15b48980e5e4add0' ]
+1696 silly lockFile deb6627a-formidable-formidable-1-0-11-tgz https://registry.npmjs.org/formidable/-/formidable-1.0.11.tgz
+1697 verbose lock https://registry.npmjs.org/formidable/-/formidable-1.0.11.tgz /Users/bennycohen/.npm/deb6627a-formidable-formidable-1-0-11-tgz.lock
+1698 info retry fetch attempt 1 at 00:12:39
+1699 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959551-0.07463151845149696/tmp.tgz
+1700 verbose addRemoteTarball [ 'https://registry.npmjs.org/formidable/-/formidable-1.0.11.tgz',
+1700 verbose addRemoteTarball   '68f63325a035e644b6f7bb3d11243b9761de1b30' ]
+1701 info retry fetch attempt 1 at 00:12:39
+1702 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959551-0.8930503525771201/tmp.tgz
+1703 http GET https://registry.npmjs.org/qs/-/qs-0.5.1.tgz
+1704 http GET https://registry.npmjs.org/formidable/-/formidable-1.0.11.tgz
+1705 http 200 https://registry.npmjs.org/bytes/0.1.0
+1706 silly registry.get cb [ 200,
+1706 silly registry.get   { vary: 'Accept',
+1706 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+1706 silly registry.get     etag: '"CEU5QYSNS88TF16LQ4LTW2KD7"',
+1706 silly registry.get     date: 'Thu, 10 Jan 2013 22:11:16 GMT',
+1706 silly registry.get     'content-type': 'application/json',
+1706 silly registry.get     'content-length': '1992' } ]
+1707 silly lockFile a1809790--npmjs-org-bytes-bytes-0-1-0-tgz https://registry.npmjs.org/bytes/-/bytes-0.1.0.tgz
+1708 verbose lock https://registry.npmjs.org/bytes/-/bytes-0.1.0.tgz /Users/bennycohen/.npm/a1809790--npmjs-org-bytes-bytes-0-1-0-tgz.lock
+1709 verbose addRemoteTarball [ 'https://registry.npmjs.org/bytes/-/bytes-0.1.0.tgz',
+1709 verbose addRemoteTarball   'c574812228126d6369d1576925a8579db3f8e5a2' ]
+1710 info retry fetch attempt 1 at 00:12:39
+1711 verbose fetch to= /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959601-0.7156362007372081/tmp.tgz
+1712 http GET https://registry.npmjs.org/bytes/-/bytes-0.1.0.tgz
+1713 http 200 https://registry.npmjs.org/mime/-/mime-1.2.6.tgz
+1714 http 200 https://registry.npmjs.org/pause/-/pause-0.0.1.tgz
+1715 http 200 https://registry.npmjs.org/qs/-/qs-0.5.1.tgz
+1716 http 200 https://registry.npmjs.org/formidable/-/formidable-1.0.11.tgz
+1717 silly shasum updated bytes 17648
+1718 info shasum b1f86c768c025fa87b48075f1709f28aeaf20365
+1718 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.35767342266626656/tmp.tgz
+1719 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.35767342266626656/tmp.tgz
+1720 silly lockFile 59c5de91-9251-0-35767342266626656-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.35767342266626656/package
+1721 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.35767342266626656/package /Users/bennycohen/.npm/59c5de91-9251-0-35767342266626656-package.lock
+1722 silly gunzTarPerm modes [ '755', '644' ]
+1723 silly gunzTarPerm extractEntry package.json
+1724 silly gunzTarPerm extractEntry README.md
+1725 silly gunzTarPerm extractEntry types/
+1726 silly gunzTarPerm extractEntry types/mime.types
+1727 silly gunzTarPerm extractEntry types/node.types
+1728 silly gunzTarPerm extractEntry test.js
+1729 silly gunzTarPerm extractEntry LICENSE
+1730 silly gunzTarPerm extractEntry mime.js
+1731 http 200 https://registry.npmjs.org/bytes/-/bytes-0.1.0.tgz
+1732 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.35767342266626656/package/package.json
+1733 silly shasum updated bytes 1459
+1734 info shasum 1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d
+1734 info shasum /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.2573765974957496/tmp.tgz
+1735 verbose tar unpack /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.2573765974957496/tmp.tgz
+1736 silly lockFile 5ea650f8-59251-0-2573765974957496-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.2573765974957496/package
+1737 verbose lock /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.2573765974957496/package /Users/bennycohen/.npm/5ea650f8-59251-0-2573765974957496-package.lock
+1738 silly gunzTarPerm modes [ '755', '644' ]
+1739 silly gunzTarPerm extractEntry package.json
+1740 silly lockFile 59c5de91-9251-0-35767342266626656-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.35767342266626656/package
+1741 silly gunzTarPerm extractEntry .npmignore
+1742 silly gunzTarPerm extractEntry index.js
+1743 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.35767342266626656/package/package.json
+1744 verbose tar pack [ '/Users/bennycohen/.npm/mime/1.2.6/package.tgz',
+1744 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.35767342266626656/package' ]
+1745 verbose tarball /Users/bennycohen/.npm/mime/1.2.6/package.tgz
+1746 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.35767342266626656/package
+1747 silly lockFile 333d10b9-cohen-npm-mime-1-2-6-package-tgz /Users/bennycohen/.npm/mime/1.2.6/package.tgz
+1748 verbose lock /Users/bennycohen/.npm/mime/1.2.6/package.tgz /Users/bennycohen/.npm/333d10b9-cohen-npm-mime-1-2-6-package-tgz.lock
+1749 silly gunzTarPerm extractEntry History.md
+1750 silly gunzTarPerm extractEntry Makefile
+1751 silly gunzTarPerm extractEntry Readme.md
+1752 verbose read json /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.2573765974957496/package/package.json
+1753 silly lockFile 5ea650f8-59251-0-2573765974957496-package /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.2573765974957496/package
+1754 verbose from cache /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.2573765974957496/package/package.json
+1755 verbose tar pack [ '/Users/bennycohen/.npm/pause/0.0.1/package.tgz',
+1755 verbose tar pack   '/var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.2573765974957496/package' ]
+1756 verbose tarball /Users/bennycohen/.npm/pause/0.0.1/package.tgz
+1757 verbose folder /var/folders/7z/jl36qq6d11b3m1lrthm5nj7r0000gn/T/npm-59112/1357855959251-0.2573765974957496/package
+1758 silly lockFile 1d89b2c0-ohen-npm-pause-0-0-1-package-tgz /Users/bennycohen/.npm/pause/0.0.1/package.tgz
+1759 verbose lock /Users/bennycohen/.npm/pause/0.0.1/package.tgz /Users/bennycohen/.npm/1d89b2c0-ohen-npm-pause-0-0-1-package-tgz.lock
+1760 silly lockFile 333d10b9-cohen-npm-mime-1-2-6-package-tgz /Users/bennycohen/.npm/mime/1.2.6/package.tgz
+1761 silly lockFile ed262223-ennycohen-npm-mime-1-2-6-package /Users/bennycohen/.npm/mime/1.2.6/package
+1762 verbose lock /Users/bennycohen/.npm/mime/1.2.6/package /Users/bennycohen/.npm/ed262223-ennycohen-npm-mime-1-2-6-package.lock
+1763 silly lockFile ed262223-ennycohen-npm-mime-1-2-6-package /Users/bennycohen/.npm/mime/1.2.6/package
+1764 error addPlacedTarball Could not remove "/Users/bennycohen/.npm/mime/1.2.6/package"
+1765 silly lockFile a43c9c4e-ry-npmjs-org-mime-mime-1-2-6-tgz https://registry.npmjs.org/mime/-/mime-1.2.6.tgz
+1766 silly lockFile 898e3106-mime-1-2-6 mime@1.2.6
+1767 silly lockFile 1d89b2c0-ohen-npm-pause-0-0-1-package-tgz /Users/bennycohen/.npm/pause/0.0.1/package.tgz
+1768 verbose about to build /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/send
+1769 info /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/send unbuild
+1770 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules/send/package.json
+1771 silly lockFile 363da92d-nnycohen-npm-pause-0-0-1-package /Users/bennycohen/.npm/pause/0.0.1/package
+1772 verbose lock /Users/bennycohen/.npm/pause/0.0.1/package /Users/bennycohen/.npm/363da92d-nnycohen-npm-pause-0-0-1-package.lock
+1773 info preuninstall send@0.1.0
+1774 info uninstall send@0.1.0
+1775 verbose false,/Users/bennycohen/Projects/node/klikVote/node_modules,/Users/bennycohen/Projects/node/klikVote/node_modules/express/node_modules unbuild send@0.1.0
+1776 info postuninstall send@0.1.0
+1777 silly lockFile 363da92d-nnycohen-npm-pause-0-0-1-package /Users/bennycohen/.npm/pause/0.0.1/package
+1778 verbose tar unpack /Users/bennycohen/.npm/pause/0.0.1/package.tgz
+1779 silly lockFile 363da92d-nnycohen-npm-pause-0-0-1-package /Users/bennycohen/.npm/pause/0.0.1/package
+1780 verbose lock /Users/bennycohen/.npm/pause/0.0.1/package /Users/bennycohen/.npm/363da92d-nnycohen-npm-pause-0-0-1-package.lock
+1781 verbose about to build /Users/bennycohen/Projects/node/klikVote/node_modules/express
+1782 info /Users/bennycohen/Projects/node/klikVote/node_modules/express unbuild
+1783 verbose from cache /Users/bennycohen/Projects/node/klikVote/node_modules/express/package.json
+1784 silly gunzTarPerm modes [ '755', '644' ]
+1785 silly gunzTarPerm extractEntry package.json
+1786 silly gunzTarPerm extractEntry .npmignore
+1787 silly gunzTarPerm extractEntry index.js
+1788 info preuninstall express@3.0.3
+1789 info uninstall express@3.0.3
+1790 silly gunzTarPerm extractEntry History.md
+1791 silly gunzTarPerm extractEntry Makefile
+1792 verbose true,/Users/bennycohen/Projects/node/klikVote/node_modules,/Users/bennycohen/Projects/node/klikVote/node_modules unbuild express@3.0.3
+1793 verbose /Users/bennycohen/Projects/node/klikVote/node_modules/.bin,[object Object] binRoot
+1794 info postuninstall express@3.0.3
+1795 silly gunzTarPerm extractEntry Readme.md
+1796 error Error: EACCES, unlink '/Users/bennycohen/.npm/mime/1.2.6/package'
+1796 error  { [Error: EACCES, unlink '/Users/bennycohen/.npm/mime/1.2.6/package']
+1796 error   errno: 3,
+1796 error   code: 'EACCES',
+1796 error   path: '/Users/bennycohen/.npm/mime/1.2.6/package' }
+1797 error Please try running this command again as root/Administrator.
+1798 error System Darwin 12.2.0
+1799 error command "node" "/usr/local/bin/npm" "install" "express"
+1800 error cwd /Users/bennycohen/Projects/node/klikVote
+1801 error node -v v0.8.16
+1802 error npm -v 1.1.70
+1803 error path /Users/bennycohen/.npm/mime/1.2.6/package
+1804 error code EACCES
+1805 error errno 3
+1806 error stack Error: EACCES, unlink '/Users/bennycohen/.npm/mime/1.2.6/package'
+1807 verbose exit [ 3, true ]
