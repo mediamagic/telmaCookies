@@ -1,5 +1,5 @@
 'user strict';
-angular.module('klikVote.controllers', ['ngResource','ui']);
+angular.module('telmaCookies.controllers', ['ngResource','ui']);
 
 var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams', function($scope,$resource,$location,$window,$routeParams){
 	$scope.window = $window
@@ -8,8 +8,8 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 	, $scope.route = $routeParams
 	, $scope.Math = $window.Math
 	, $scope.Settings = $scope.resource('/resources/settings')
-	, $scope.Users = $scope.resource('/resources/users/:user')
-	, $scope.Votes = $scope.resource('/resources/votes/:user')
+	, $scope.Users = $scope.resource('/resources/users/:user/:vote')
+	//, $scope.Votes = $scope.resource('/resources/votes/:user')
 	, $scope.Voters = $scope.resource('/resources/voters/:voter', {}, {update: {method:'PUT'}});
 
 	$scope.Settings.query({}, function(settings){
@@ -26,6 +26,7 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 			}
 			$scope.users = newObj;
 			$scope.totalVotes = totalVotes;
+			console.log($scope.users);
 		});
 	});
 
@@ -47,12 +48,13 @@ var StatsCtrl = ['$scope', function($scope){
 }];
 
 var VoteCtrl = ['$scope', function($scope){
-	var userId = $scope.route.id
-	, $scope.modalShown = false;
+	var userId = $scope.route.id;
+	$scope.modalShown = false;
 	
 	$scope.Users.get({user: userId}, function(resp){
 		//change global user
 		$scope.user = resp;
+		console.log($scope.user);
 	});
 	$scope.closeModal = function(){
 		$scope.modalShown = false;
@@ -60,7 +62,10 @@ var VoteCtrl = ['$scope', function($scope){
 	$scope.vote = function(id){
 		$scope.Voters.save({}, {ref: '1234', voted_user: userId}, function(resp){
 			$scope.vId = resp._id;
-			$scope.Votes.save({user:userId}, {voterId: $scope.vId}, function(resp){
+			$scope.Users.save({user:userId, vote: 'votes'}, {voterId: $scope.vId}, function(resp){
+				console.log($scope.users);
+				console.log(id);
+				console.log($scope.users[id]);
 				$scope.users[id].votes++;
 				$scope.modalShown = true;
 			});

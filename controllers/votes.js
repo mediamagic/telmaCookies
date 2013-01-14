@@ -25,17 +25,15 @@ module.exports = {
 		res.send(req.vote.votes);
 	},
 	create: function(req,res,next){
-		console.log('here');
-		// var data = req.body;
-		// data.voterIp = (req.headers['x-forwarded-for']) ? 
-		// 	req.headers['x-forwarded-for'] : 
-		// 	req.connection.remoteAddress;
-		// db.Users.vote({_id:req.user._id}, data, function(err,doc){
-		// 	if (err)
-		// 		return res.send(err);
-		// 	//io.sockets.emit('updateStats', {user:req.user._id, votes: doc.votes.length});
-		// 	return res.send(handle(err,doc));
-		// });
-		return res.send('ok');
+		var data = req.body;
+		data.voterIp = (req.headers['x-forwarded-for']) ? 
+			req.headers['x-forwarded-for'] : 
+			req.connection.remoteAddress;
+		db.Users.vote({_id:req.params.id}, data, function(err,doc){
+			if (err)
+				return res.send(err);
+			//io.sockets.emit('updateStats', {user:req.user._id, votes: doc.votes.length});
+			return res.send(handle(err,doc));
+		});
 	}
 }

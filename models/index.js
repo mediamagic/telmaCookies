@@ -73,7 +73,7 @@ db.once('open', function () {
 	 * Settings Manipulation
 	 */
 
-	settingsSchema.statics = extendStaticMethods('Settings', ['list']);
+	settingsSchema.statics = extendStaticMethods('Settings', ['list', 'edit']);
 	settingsSchema.statics.populate = function(data,cb){
 		this.model('Settings').find({}, function(err,doc){
 			if (err)
@@ -108,7 +108,6 @@ db.once('open', function () {
 		} else 
 			return;
 	})
-
 
 	var powerUsersSchema = new mongoose.Schema({
 		username: String,

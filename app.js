@@ -2,7 +2,11 @@ var express = require('express')
   , routes = require('./routes')
   , http = require('http')
   , path = require('path')
-  , sessionConnections = 0;
+  , sessionConnections = 0
+  , Users = require('./controllers/users')
+  , Votes = require('./controllers/votes')
+  , Voters = require('./controllers/voters')
+  , Settings = require('./controllers/settings');
   global.root = process.cwd() + '/';
 
 var app = express();
@@ -35,20 +39,27 @@ app.configure('production', function(){
 app.get('/', routes.index);
 app.get('/views/:view.html', routes.views);
 
-//COLLECTION CONTROLLERS
-var Users = require('./controllers/users')
-, Votes = require('./controllers/votes')
-, Voters = require('./controllers/voters')
-, Settings = require('./controllers/settings');
-
 //REST
 app.get('resources/users', Users.index);
 app.get('resources/user/:id', Users.show);
 
-var users = app.resource('resources/users', Users)
-, votes = app.resource('resources/votes', Votes)
-, voters = app.resource('resources/voters', Voters)
-, settings = app.resource('resources/settings', Settings);
+app.get ('/resources/users', Users.index);
+app.get ('/resources/users/:id', Users.load, Users.show);
+app.post('/resources/users', Users.create);
+app.put ('/resources/user/:id', Users.load, Users.update);
+
+app.get ('/resources/users/:id/votes', Votes.index);
+app.post('/resources/users/:id/votes', Votes.create);
+
+app.get ('/resources/voters', Voters.index);
+app.get ('/resources/voters/:id', Voters.show);
+app.post('/resources/voters', Voters.create);
+app.put('/resources/voters/:id', Voters.update);
+
+app.get ('/resources/settings', Settings.index);
+app.put ('/resources/settings', Settings.update);
+
+
 //users.add(votes);
 
 var server = http.createServer(app);

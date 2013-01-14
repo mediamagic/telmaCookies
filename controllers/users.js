@@ -8,19 +8,14 @@ module.exports = {
 	/*
 	 * User Operations
 	 */
-	load: function(req, id, fn) {
-		db.Users.get({_id:id},function(err,doc){
+	load: function(req, res, next) {
+		db.Users.get({_id:req.params.id},function(err,doc){
 			if (doc) {
-				fn(null, doc);
+				req.user = doc;
+				next();
+				//fn(null, doc);
 			} else {
-				switch (req.params.format) {
-					case 'json':
-						req.res.json({'error' : 'User Not Found'}, 404);
-						break;
-					case 'html':
-					default:
-						req.res.send(404);
-				}
+				res.send({'error' : 'User Not Found'}, 404);
 			}
   		});
 	},

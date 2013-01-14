@@ -1,6 +1,6 @@
 'use strict'; 
 
-angular.module('klikVote', ['ngResource', 'ui']).
+angular.module('telmaCookies', ['ngResource', 'ui']).
 config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider.
 		when('/main', {templateUrl: '/views/Main.html', controller: MainCtrl, name:'Main'}).
