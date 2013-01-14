@@ -200,11 +200,11 @@ db.once('open', function () {
 	 */
 
 	var votersSchema = new mongoose.Schema({
-		slogan: String,
 		name: String,
 		email: String,
 		phone: String,
-		voted_user: ObjectId,
+		registered: {type: String, default: false},
+		voted_user: {type: ObjectId, index: 1},
 		ref: String
 	});
 
