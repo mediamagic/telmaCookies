@@ -1,5 +1,4 @@
 var db = require('../models');
-
 function handle(err,doc){
 	if (err)
 		return err;
@@ -7,8 +6,8 @@ function handle(err,doc){
 }
 module.exports = {
 	load: function(req, id, fn) {
+		console.log('performing voters auto-load');
 		db.Voters.get({_id:id},function(err,doc){
-			console.log(doc);
 			if (doc) {
 				fn(null, doc);
 			} else {

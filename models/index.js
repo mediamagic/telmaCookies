@@ -1,5 +1,7 @@
-var mongoose = require('mongoose')
-, db = mongoose.createConnection('localhost', 'klikVoteDB')
+var mongoose = require('mongoose');
+mongoose.set('debug', function(a,b,c,d,e){console.log('---'); console.log(a); console.log(b); console.log(c); console.log(d);})
+mongoose.connect('mongodb://localhost/telmaCookiesDB');
+var db = mongoose.connection
 , ObjectId = mongoose.Schema.ObjectId;
 
 function extendStaticMethods(modelName, registerArr){
@@ -29,6 +31,8 @@ function extendStaticMethods(modelName, registerArr){
 			});
 		},
 		edit: function(params,data,cb){
+			console.log('editing' + modelName);
+			console.log(data);
 			this.model(modelName).findOne(params, function(err,doc){
 				if (err)
 					return cb(err);
@@ -63,80 +67,29 @@ db.once('open', function () {
 	 * Settings Schema
 	 */
 	var settingsSchema = new mongoose.Schema({
-		modeState: {type: Boolean, default: true},
-		auditionState: {type: Boolean, default: true},
-		mainState: {type: Boolean, default: true},
-		currentUser: {type: Boolean, default: 'default'},
-		videoUrl: {type: Boolean, default: 'default'}
+		modeState: {type: Boolean, default: true}
 	});
 	/*
 	 * Settings Manipulation
 	 */
-	settingsSchema.statics = {
-		get: function(cb){
-			this.model('Settings').findOne({}, function(err,doc){
-				if(err)
-					return cb(err);
-				return cb(null,doc);
-			});
-		},
-		populate: function(data,cb){
-			this.model('Settings').find({}, function(err,doc){
-				if (err)
-					return cb(err)
-				if (typeof(doc) == 'null' || typeof(doc) == 'undefined' || doc.length == 0) {
-					var Settings = db.model('Settings', settingsSchema);
-					var tmp = new Settings(data);
-					tmp.save(function(err,doc){
-						if (err)
-							return cb(err)
-						return cb(doc);
-					});
-				} else {
-					return cb();
-				}
-			});
-		},
-		setModeState: function(value,cb){
-			this.findOne({}, function(err,doc){
-				if (err)
-					return cb(err);
-				doc.modeState = value;
-				return doc.save(cb(null,doc));
-			});
-		},
-		setAuditionState: function(value,cb){
-			this.findOne({}, function(err,doc){
-				if (err)
-					return cb(err);
-				doc.auditionState = value;
-				return doc.save(cb(null,doc));
-			});
-		},
-		setMainState: function(value,cb){
-			this.findOne({}, function(err,doc){
-				if (err)
-					return cb(err);
-				doc.mainState = value;
-				return doc.save(cb(null,doc));
-			});
-		},
-		setCurrentUser: function(value,cb){
-			this.findOne({}, function(err,doc){
-				if(err)
-					return cb(err);
-				doc.currentUser = value;
-				return doc.save(cb(null,doc));
-			});
-		},
-		setVideoUrl: function(value,cb){
-			this.findOne({}, function(err,doc){
-				if(err)
-					return cb(err);
-				doc.videoUrl = value;
-				return doc.save(cb(null,doc));
-			});
-		}
+
+	settingsSchema.statics = extendStaticMethods('Settings', ['list']);
+	settingsSchema.statics.populate = function(data,cb){
+		this.model('Settings').find({}, function(err,doc){
+			if (err)
+				return cb(err)
+			if (typeof(doc) == 'null' || typeof(doc) == 'undefined' || doc.length == 0) {
+				var Settings = db.model('Settings', settingsSchema);
+				var tmp = new Settings(data);
+				tmp.save(function(err,doc){
+					if (err)
+						return cb(err)
+					return cb(doc);
+				});
+			} else {
+				return cb();
+			}
+		});
 	}
 	
 	/*
@@ -212,14 +165,9 @@ db.once('open', function () {
 	 */
 	var usersSchema = new mongoose.Schema({
 		name: String,
-		image: {
-			large: { type: String, default: 'http://placehold.it/300x300'},
-			small: { type: String, default: 'http://placehold.it/200x200'},
-			thumb: { type: String, default: 'http://placehold.it/100x100'}
-		},
+		videoId: String,
 		description: String,
 		hidden: {type: Boolean, default: true},
-		dateCreated: {type: Date, default: Date.now},
 		votes: [votesSchema]
 	});
 

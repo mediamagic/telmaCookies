@@ -1,16 +1,4 @@
 var db = require('../models');
-
-// Object.prototype.clone = function() {
-//   var newObj = (this instanceof Array) ? [] : {};
-//   for (i in this) {
-//     if (i == 'clone') continue;
-//     if (this[i] && typeof this[i] == "object") {
-//       newObj[i] = this[i].clone();
-//     } else newObj[i] = this[i]
-//   } return newObj;
-// };
-console.log(Object);
-
 function handle(err,doc){
 	if (err)
 		return err;
@@ -55,9 +43,10 @@ module.exports = {
 		return res.send(req.user);
 	},
 	update: function(req,res,next){
-		var id = req.params.id;
+		var id = req.user.id;
 		var data = req.body;
 		db.Users.edit({_id:id}, data, function(err,doc){
+			console.log('done editing user');
 			return res.send(handle(err,doc));
 		});
 	}

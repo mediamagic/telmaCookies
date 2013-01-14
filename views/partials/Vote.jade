@@ -5,7 +5,7 @@ h3 Vote
 .description description: {{user.description}}
 
 .vote
-	a(ng-click="vote(user._id)") vote
+	a(ng-click="vote(user._id, this)") vote
 
 .back
 	a(href="#/main") back

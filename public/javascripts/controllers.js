@@ -2,27 +2,33 @@
 angular.module('klikVote.controllers', ['ngResource','ui']);
 
 var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams', function($scope,$resource,$location,$window,$routeParams){
-	$scope.window = $window,
-	$scope.location = $location,
-	$scope.resource = $resource;
-	$scope.route = $routeParams;
-	$scope.Math = $window.Math;
-	$scope.Users = $scope.resource('/resources/users/:user/:votes');
-	$scope.Voters = $scope.resource('/resources/voters/:voter', {}, {update: {method:'PUT'}});
-	$scope.Users.query({}, function(response){
-		var newObj = {}
-		, totalVotes = 0;
-		for(var i=0;i<response.length;i++){
-			newObj[response[i]._id] = response[i];
-			totalVotes = totalVotes + response[i].votes;
+	$scope.window = $window
+	, $scope.location = $location
+	, $scope.resource = $resource
+	, $scope.route = $routeParams
+	, $scope.Math = $window.Math
+	, $scope.Settings = $scope.resource('/resources/settings')
+	, $scope.Users = $scope.resource('/resources/users/:user')
+	, $scope.Votes = $scope.resource('/resources/votes/:user')
+	, $scope.Voters = $scope.resource('/resources/voters/:voter', {}, {update: {method:'PUT'}});
+
+	$scope.Settings.query({}, function(settings){
+		$scope.settings = settings[0];
+		if ($scope.settings.modeState === false){
+			return; 
 		}
-		$scope.users = newObj;
-		$scope.totalVotes = totalVotes;
+		$scope.Users.query({}, function(response){
+			var newObj = {}
+			, totalVotes = 0;
+			for(var i=0;i<response.length;i++){
+				newObj[response[i]._id] = response[i];
+				totalVotes = totalVotes + response[i].votes;
+			}
+			$scope.users = newObj;
+			$scope.totalVotes = totalVotes;
+		});
 	});
-	$scope.socket = socket;
-	$scope.socket.on('connected', function(data){
-		console.log('socket connected');
-	});
+
 	$scope.shareFB = function(){
 		console.log('sharing facebook');
 	}
@@ -32,17 +38,18 @@ var MainCtrl = ['$scope', function($scope){
 }];
 
 var StatsCtrl = ['$scope', function($scope){
-	$scope.socket.on('updateStats', function(data){
-		$scope.$apply(function(){
-			$scope.users[data.user]['votes'] = data.votes;
-			$scope.totalVotes++;
-		});
-	});
+	// $scope.socket.on('updateStats', function(data){
+	// 	$scope.$apply(function(){
+	// 		$scope.users[data.user]['votes'] = data.votes;
+	// 		$scope.totalVotes++;
+	// 	});
+	// });
 }];
 
 var VoteCtrl = ['$scope', function($scope){
-	var userId = $scope.route.id;
-	$scope.modalShown = false;
+	var userId = $scope.route.id
+	, $scope.modalShown = false;
+	
 	$scope.Users.get({user: userId}, function(resp){
 		//change global user
 		$scope.user = resp;
@@ -53,7 +60,8 @@ var VoteCtrl = ['$scope', function($scope){
 	$scope.vote = function(id){
 		$scope.Voters.save({}, {ref: '1234', voted_user: userId}, function(resp){
 			$scope.vId = resp._id;
-			$scope.Users.save({user:userId, votes:'votes'}, {voterId: $scope.vId}, function(resp){
+			$scope.Votes.save({user:userId}, {voterId: $scope.vId}, function(resp){
+				$scope.users[id].votes++;
 				$scope.modalShown = true;
 			});
 		});
@@ -85,8 +93,6 @@ var ChartCtrl = ['$scope', function($scope){
 		$scope.chartCategories.push($scope.users[key].name);
 		$scope.chartData.push($scope.users[key].votes);
 	}
-	console.log($scope.chartCategories);
-	console.log($scope.chartData);
 	$scope.chartStep = 1;
 	$scope.chartName = '';
 	$scope.$watch('users', function(){
