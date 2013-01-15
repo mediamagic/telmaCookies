@@ -13,7 +13,6 @@ module.exports = {
 			if (doc) {
 				req.user = doc;
 				next();
-				//fn(null, doc);
 			} else {
 				res.send({'error' : 'User Not Found'}, 404);
 			}

@@ -5,20 +5,13 @@ function handle(err,doc){
 	return doc;
 }
 module.exports = {
-	load: function(req, id, fn) {
-		console.log('performing voters auto-load');
+	load: function(req, res, next) {
 		db.Voters.get({_id:id},function(err,doc){
 			if (doc) {
-				fn(null, doc);
+				req.voter = doc;
+				next();
 			} else {
-				switch (req.params.format) {
-					case 'json':
-						req.res.json({'error' : 'voter Not Found'}, 404);
-						break;
-					case 'html':
-					default:
-						req.res.send(404);
-				}
+				res.send({'error' : 'User Not Found'}, 404);
 			}
   		});
 	},

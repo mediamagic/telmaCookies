@@ -10,6 +10,7 @@ module.exports = {
 	 */
 	index: function(req,res,next){
 		db.Settings.list(function(err,doc){
+			doc.token = res.locals.token;
 			return res.send(handle(err,doc));
 		});
 	},

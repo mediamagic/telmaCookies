@@ -7,11 +7,11 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 	, $scope.resource = $resource
 	, $scope.route = $routeParams
 	, $scope.Math = $window.Math
-	, $scope.Settings = $scope.resource('/resources/settings')
-	, $scope.Users = $scope.resource('/resources/users/:user/:vote')
-	, $scope.Voters = $scope.resource('/resources/voters/:voter', {}, {update: {method:'PUT'}});
-	$scope.Settings.query({}, function(settings){
-		$scope.settings = settings[0];
+	, $scope.Settings = $scope.resource('/resources/settings');
+	$scope.Settings.get({}, function(settings){
+		$scope.settings = settings
+		, $scope.Users = $scope.resource('/resources/users/:user/:vote', {_csrf: settings.token})
+		, $scope.Voters = $scope.resource('/resources/voters/:voter', {_csrf: settings.token}, {update: {method:'PUT'}});
 		if ($scope.settings.modeState === false){
 			return; 
 		}
@@ -26,7 +26,6 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 			$scope.totalVotes = totalVotes;
 		});
 	});
-
 	$scope.shareFB = function(){
 		console.log('sharing facebook');
 	}
@@ -81,6 +80,20 @@ var RegisterCtrl = ['$scope', function($scope){
 				$scope.closeModal();
 				$scope.shareFB();
 			});
+		});
+	}
+}];
+
+var LoginCtrl = ['$scope', function($scope){
+	var prevUrl = $scope.location.$$search.url;
+	$scope.loginSubmit = function(){
+		$scope.Login = $scope.resource('/api/login', {_csrf: $scope.settings.token});
+		$scope.Login.save({}, {username: $scope.username, password: $scope.password}, function(resp){
+			if (resp.error === undefined){
+				console.log($scope.window);
+				(prevUrl === undefined) ? $scope.location.path('/admin') : $scope.window.location.href = prevUrl;
+				console.log($scope.location);
+			}
 		});
 	}
 }];

@@ -1,4 +1,5 @@
-var mongoose = require('mongoose');
+var mongoose = require('mongoose')
+, bcrypt = require('bcrypt');
 mongoose.set('debug', function(a,b,c,d,e){console.log('---'); console.log(a); console.log(b); console.log(c); console.log(d);})
 mongoose.connect('mongodb://localhost/telmaCookiesDB');
 var db = mongoose.connection
@@ -91,6 +92,13 @@ db.once('open', function () {
 			}
 		});
 	}
+	settingsSchema.statics.list = function(cb){
+		this.model('Settings').findOne({},{},{sort:{dateCreated: 1}}).lean().exec(function(err,doc){
+			if (err)
+				return cb(err);
+			return cb(null,doc);
+		});
+	}
 	
 	/*
 	 * Settings Model
@@ -110,9 +118,8 @@ db.once('open', function () {
 	})
 
 	var powerUsersSchema = new mongoose.Schema({
-		username: String,
-		password: String,
-		salt: String,
+		username: {type: String, required: true, index: {unique:true} },
+		password: {type: String, required: true},
 		email: String,
 		lastLogin: {type: Date, default: Date.now},
 		lastIp: String,
@@ -125,6 +132,31 @@ db.once('open', function () {
 	});
 
 	powerUsersSchema.statics = extendStaticMethods('powerUsers', ['get','add']);
+
+	powerUsersSchema.pre('save', function(next) {
+		var user = this;
+		// only hash the password if it has been modified (or is new)
+		if (!user.isModified('password')) return next();
+		// generate a salt
+		bcrypt.genSalt(10, function(err, salt) {
+			if (err) return next(err);
+			// hash the password using our new salt
+			bcrypt.hash(user.password, salt, function(err, hash) {
+				if (err) return next(err);
+				// override the cleartext password with the hashed one
+				user.password = hash;
+				next();
+			});
+		});
+	});
+
+	powerUsersSchema.methods.comparePassword = function(candidatePassword, cb) {
+		bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
+			if (err) return cb(err);
+			cb(null, isMatch);
+		});
+	};
+
 	exports.powerUsers = db.model('powerUsers', powerUsersSchema);
 
 	exports.powerUsers.count({}, function(err,c){
@@ -134,7 +166,6 @@ db.once('open', function () {
 			var defaultPowerUser = {
 				username: 'Admin',
 				password: 'Admin',
-				salt: '12345',
 				email: 'info@mediamagic.co.il',
 				level: 1,
 				name: {
@@ -148,7 +179,7 @@ db.once('open', function () {
 			});
 		} else 
 			return;
-	})
+	});
 
 	/*
 	 * User Votes Schema
