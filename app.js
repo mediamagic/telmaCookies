@@ -44,7 +44,7 @@ app.configure('development', function(){
 app.configure('production', function(){
   app.use(express.static(path.join(__dirname, 'public')));
   console.log('production mode');
-});
+}); 
 
 //MIDDLEWARE
 function adminAuth(req, res, next){
