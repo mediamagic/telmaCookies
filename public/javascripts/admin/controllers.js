@@ -11,18 +11,21 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 	$scope.Settings.get({}, function(settings){
 		$scope.settings = settings
 		, $scope.Users = $scope.resource('/resources/users/:user/:vote', {_csrf: settings.token})
-		, $scope.Voters = $scope.resource('/resources/voters/:voter', {_csrf: settings.token}, {update: {method:'PUT'}});
-		if ($scope.settings.modeState === false){
-			return; 
-		}
+		, $scope.Voters = $scope.resource('/resources/voters/:voter', {_csrf: settings.token}, {update: {method:'PUT'}})
+		, $scope.Stats = $scope.resource('/resources/stats/:type', {})
 	});
-
-	$scope.shareFB = function(){
-		console.log('sharing facebook');
-	}
 }];
 
 var MainCtrl = ['$scope', function($scope){
+	$scope.Users.query({}, function(response){
+		$scope.users = response;
+	});
+	$scope.Stats.query({type: 'visit'}, function(resp){
+		$scope.refs = resp;
+	});
+	$scope.Stats.query({type: 'share'}, function(resp){
+		$scope.shares = resp;
+	});
 }];
 
 var NomineesCtrl = ['$scope', function($scope){

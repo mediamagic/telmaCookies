@@ -7,11 +7,13 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 	, $scope.resource = $resource
 	, $scope.route = $routeParams
 	, $scope.Math = $window.Math
-	, $scope.Settings = $scope.resource('/resources/settings');
+	, $scope.Settings = $scope.resource('/resources/settings')
 	$scope.Settings.get({}, function(settings){
 		$scope.settings = settings
 		, $scope.Users = $scope.resource('/resources/users/:user/:vote', {_csrf: settings.token})
-		, $scope.Voters = $scope.resource('/resources/voters/:voter', {_csrf: settings.token}, {update: {method:'PUT'}});
+		, $scope.Voters = $scope.resource('/resources/voters/:voter', {_csrf: settings.token}, {update: {method:'PUT'}})
+		, $scope.Stats = $scope.resource('/resources/stats/:type', {_csrf: settings.token});
+		$scope.ref = ($scope.location.$$search.ref || 0);
 		if ($scope.settings.modeState === false){
 			return; 
 		}
@@ -25,16 +27,24 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 			$scope.users = newObj;
 			$scope.totalVotes = totalVotes;
 		});
+		$scope.stats('visit', $scope.ref);
 	});
-	$scope.shareFB = function(){
+	$scope.shareFB = function(type){
 		console.log('sharing facebook');
+		$scope.stats('share', type);
+	}
+
+	$scope.stats = function(metric, type){
+		$scope.Stats.save({type:metric}, {ref: type}, function(response){
+			console.log(response);
+		});
 	}
 }];
 
 var MainCtrl = ['$scope', function($scope){
 }];
 
-var StatsCtrl = ['$scope', function($scope){
+var ChartCtrl = ['$scope', function($scope){
 	$scope.Users.query({}, function(response){
 		var newObj = {}
 		, totalVotes = 0;
@@ -48,37 +58,16 @@ var StatsCtrl = ['$scope', function($scope){
 }];
 
 var VoteCtrl = ['$scope', function($scope){
-	var userId = $scope.route.id;
-	$scope.modalShown = false;
-	$scope.Users.get({user: userId}, function(resp){
-		$scope.user = resp;
-	});
-	$scope.closeModal = function(){
-		$scope.modalShown = false;
-	}
-	$scope.vote = function(id){
-		$scope.Voters.save({}, {ref: '1234', voted_user: userId}, function(resp){
-			$scope.vId = resp._id;
-			$scope.Users.save({user:userId, vote: 'votes'}, {voterId: $scope.vId}, function(resp){
-				$scope.users[id].votes++;
-				$scope.modalShown = true;
-			});
-		});
-	}
-}];
-
-var RegisterCtrl = ['$scope', function($scope){
-	$scope.registerObj = {};
+	$scope.registerObj = {
+		ref: $scope.ref
+	};
 	$scope.register = function(){
-		$scope.registerForm.$valid = false;
-		$scope.Voters.get({voter:$scope.vId}, function(doc){
-			doc.slogan = $scope.registerObj.slogan;
-			doc.name = $scope.registerObj.name;
-			doc.email = $scope.registerObj.email
-			doc.phone = $scope.registerObj.phone;
-			doc.$update({voter: doc._id}, function(u,c){
-				$scope.closeModal();
-				$scope.shareFB();
+		$scope.Voters.save({}, $scope.registerObj, function(resp){
+			$scope.vId = resp._id;
+			$scope.Users.save({user:$scope.registerObj.voted_user, vote: 'votes'}, {voterId: $scope.vId}, function(resp){
+				var voted_user_id = $scope.registerObj.voted_user;
+				$scope.users[voted_user_id].votes++;
+				$scope.shareFB($scope.users[voted_user_id].name);
 			});
 		});
 	}

@@ -1,1 +1,32 @@
 h1 Main
+
+
+.votes 
+	.title total number of votes
+	table
+		tr
+			th nominee
+			th votes
+		tr(ng-repeat="user in users")
+			td {{user.name}}
+			td {{user.votes}}
+
+.shares
+	.title Facebook shares
+	table
+		tr
+			th shared name
+			th total
+		tr(ng-repeat="share in shares")
+			td {{share.ref}}
+			td {{share.count}}
+
+.refs
+	.title ref entries
+	table
+		tr
+			th ref id
+			th total
+		tr(ng-repeat="ref in refs")
+			td {{ref.ref}}
+			td {{ref.count}}

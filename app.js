@@ -8,6 +8,7 @@ var express = require('express')
   , Votes = require('./controllers/votes')
   , Voters = require('./controllers/voters')
   , Settings = require('./controllers/settings')
+  , Statistics = require('./controllers/statistics')
   , PowerUsers = require('./controllers/PowerUsers');
   global.root = process.cwd() + '/';
 
@@ -48,7 +49,11 @@ app.configure('production', function(){
 
 //MIDDLEWARE
 function adminAuth(req, res, next){
-  (!req.session.user_id) ? res.redirect('/#/login?url='+res.locals.requested_url) : next();
+  req.admin = false;
+  if (!req.session.user_id)
+    return res.redirect('/#/login?url='+res.locals.requested_url);
+  req.admin = true;
+  next();
 }
 
 //VIEWS
@@ -63,7 +68,7 @@ app.post('/api/login', PowerUsers.login);
 
 //RESTful RESOURCES
 app.get ('/resources/users', Users.index);
-app.get ('/resources/users/:id', Users.show);
+app.get ('/resources/users/:id', Users.load, Users.show);
 app.get ('/resources/users', Users.index);
 app.get ('/resources/users/:id', Users.load, Users.show);
 app.post('/resources/users', adminAuth, Users.create);
@@ -73,9 +78,10 @@ app.post('/resources/users/:id/votes', Votes.create);
 app.get ('/resources/voters', adminAuth, Voters.index);
 app.get ('/resources/voters/:id', adminAuth, Voters.show);
 app.post('/resources/voters', Voters.create);
-app.put ('/resources/voters/:id', Voters.update);
 app.get ('/resources/settings', Settings.index);
 app.put ('/resources/settings', adminAuth, Settings.update);
+app.post('/resources/stats/:type', Statistics.create);
+app.get ('/resources/stats/:type', adminAuth, Statistics.index);
 
 var server = http.createServer(app);
 

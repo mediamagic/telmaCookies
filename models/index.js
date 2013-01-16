@@ -43,6 +43,16 @@ function extendStaticMethods(modelName, registerArr){
 				});
 			});
 		},
+		upd: function(params, data, options, cb){
+			console.log('here');
+			console.log(params);
+			console.log(options);
+			this.model(modelName).update(params, data, options, function(err,doc){
+				if (err)
+					return cb(err)
+				return cb(null,doc);
+			});
+		},
 		delete: function(params,cb){
 			this.remove(params, function(err,doc){
 				if (err)
@@ -140,15 +150,11 @@ db.once('open', function () {
 	powerUsersSchema.statics = extendStaticMethods('powerUsers', ['get','add']);
 	powerUsersSchema.pre('save', function(next) {
 		var user = this;
-		// only hash the password if it has been modified (or is new)
 		if (!user.isModified('password')) return next();
-		// generate a salt
 		bcrypt.genSalt(10, function(err, salt) {
 			if (err) return next(err);
-			// hash the password using our new salt
 			bcrypt.hash(user.password, salt, function(err, hash) {
 				if (err) return next(err);
-				// override the cleartext password with the hashed one
 				user.password = hash;
 				next();
 			});
@@ -190,6 +196,25 @@ db.once('open', function () {
 		} else 
 			return;
 	});
+
+	/*
+	 * Statistics Schema
+	 */
+	var referenceSchema = new mongoose.Schema({
+		ref: {type: Number, default: 0, index: true},
+		count: Number
+	});
+
+	var sharesSchema = new mongoose.Schema({
+		ref: {type: String, index: true},
+		count: Number
+	});
+
+	referenceSchema.statics = extendStaticMethods('References', ['list', 'upd']);
+	sharesSchema.statics = extendStaticMethods('Shares', ['list', 'upd']);
+
+	exports.Refs = db.model('References', referenceSchema);
+	exports.Shares  = db.model('Shares', sharesSchema);
 
 	/*
 	 * User Votes Schema
