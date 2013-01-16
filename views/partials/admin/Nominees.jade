@@ -1,1 +1,18 @@
 h1 Nominees
+
+table
+	tr
+		th image
+		th name
+		th number of votes
+		th(colspan="2") controls
+	tr(ng-repeat="user in users")
+		td {{user.image}}
+		td {{user.name}}	
+		td {{user.votes}}
+		td() 
+			a(href="#/nominee/{{user._id}}") view
+		td()
+			a(href="#/nominee/{{user._id}}/settings") settings
+		td() 
+			a() toggle

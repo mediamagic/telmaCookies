@@ -15,9 +15,6 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 		if ($scope.settings.modeState === false){
 			return; 
 		}
-		$scope.Users.query({}, function(response){
-			$scope.users = response;
-		});
 	});
 
 	$scope.shareFB = function(){
@@ -26,13 +23,33 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 }];
 
 var MainCtrl = ['$scope', function($scope){
+}];
 
+var NomineesCtrl = ['$scope', function($scope){
+	$scope.Users.query({}, function(response){
+		$scope.users = response;
+	});	
 }];
 
 var NomineeCtrl = ['$scope', function($scope){
-	
+	var userId = $scope.route.id;
+	$scope.Users.get({user: userId}, function(resp){
+		$scope.user = resp;
+		$scope.Voters.query({voted_user: userId}, function(resp){
+			$scope.voters = resp;
+		});
+	});
+}];
+
+var EditNomineeCtrl = ['$scope', function($scope){
+	var userId = $scope.route.id;
+	$scope.Users.get({user: userId}, function(resp){
+		$scope.user = resp;
+	});
 }];
 
 var VotersCtrl = ['$scope', function($scope){
-	
+	$scope.Voters.query({}, function(resp){
+		$scope.voters = resp;
+	});
 }];
