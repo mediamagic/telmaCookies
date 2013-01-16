@@ -6,7 +6,7 @@ function handle(err,doc){
 }
 module.exports = {
 	load: function(req, res, next) {
-		db.Voters.get({_id:id},function(err,doc){
+		db.Voters.get({_id:req.params.id},function(err,doc){
 			if (doc) {
 				req.voter = doc;
 				next();
@@ -16,7 +16,7 @@ module.exports = {
   		});
 	},
 	index: function(req,res,next){
-		db.Voters.list(function(err,doc){
+		db.Voters.list(req.query, function(err,doc){
 			return res.send(handle(err,doc));
 		});
 	},

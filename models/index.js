@@ -9,8 +9,10 @@ function extendStaticMethods(modelName, registerArr){
 	var registerArr = (registerArr === undefined) ? [] : registerArr;
 	var methods = {}
 	var template = {
-		list: function(cb){
-			this.model(modelName).find({},{},{sort:{dateCreated: 1}},function(err,doc){
+		list: function(search, cb){
+			if (search != undefined)
+				delete search._csrf;
+			this.model(modelName).find(search,{},{sort:{dateCreated: 1}},function(err,doc){
 				if (err)
 					return cb(err);
 				return cb(null,doc);
@@ -32,8 +34,6 @@ function extendStaticMethods(modelName, registerArr){
 			});
 		},
 		edit: function(params,data,cb){
-			console.log('editing' + modelName);
-			console.log(data);
 			this.model(modelName).findOne(params, function(err,doc){
 				if (err)
 					return cb(err);
@@ -51,8 +51,6 @@ function extendStaticMethods(modelName, registerArr){
 			});
 		}
 	}
-
-	methods = {};
 	for (var i = 0; i < registerArr.length; i++){
 		if (template[registerArr[i]] != undefined) {
 			methods[registerArr[i]] = template[registerArr[i]];
@@ -73,7 +71,6 @@ db.once('open', function () {
 	/*
 	 * Settings Manipulation
 	 */
-
 	settingsSchema.statics = extendStaticMethods('Settings', ['list', 'edit']);
 	settingsSchema.statics.populate = function(data,cb){
 		this.model('Settings').find({}, function(err,doc){
@@ -92,8 +89,8 @@ db.once('open', function () {
 			}
 		});
 	}
-	settingsSchema.statics.list = function(cb){
-		this.model('Settings').findOne({},{},{sort:{dateCreated: 1}}).lean().exec(function(err,doc){
+	settingsSchema.statics.list = function(params, cb){
+		this.model('Settings').findOne(params,{},{sort:{dateCreated: 1}}).lean().exec(function(err,doc){
 			if (err)
 				return cb(err);
 			return cb(null,doc);
@@ -105,6 +102,9 @@ db.once('open', function () {
 	 */
 	exports.Settings = db.model('Settings', settingsSchema);
 
+	/*
+	 * Settings Auto-populate
+	 */
 	exports.Settings.count({}, function(err,c){
 		if(err)
 			return err;
@@ -117,6 +117,9 @@ db.once('open', function () {
 			return;
 	})
 
+	/*
+	 * Power Users Schema
+	 */
 	var powerUsersSchema = new mongoose.Schema({
 		username: {type: String, required: true, index: {unique:true} },
 		password: {type: String, required: true},
@@ -131,8 +134,10 @@ db.once('open', function () {
 		dateCreated: {type: Date, default: Date.now}
 	});
 
+	/*
+	 * Power Users Manipulation
+	 */
 	powerUsersSchema.statics = extendStaticMethods('powerUsers', ['get','add']);
-
 	powerUsersSchema.pre('save', function(next) {
 		var user = this;
 		// only hash the password if it has been modified (or is new)
@@ -149,7 +154,6 @@ db.once('open', function () {
 			});
 		});
 	});
-
 	powerUsersSchema.methods.comparePassword = function(candidatePassword, cb) {
 		bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
 			if (err) return cb(err);
@@ -157,8 +161,14 @@ db.once('open', function () {
 		});
 	};
 
+	/*
+	 * Power Users Model
+	 */
 	exports.powerUsers = db.model('powerUsers', powerUsersSchema);
 
+	/*
+	 * Power Users Auto-Populate master user
+	 */
 	exports.powerUsers.count({}, function(err,c){
 		if(err)
 			return err;
@@ -225,21 +235,26 @@ db.once('open', function () {
 	 */
 	exports.Users = db.model('Users', usersSchema);
 
+	/*
+	 * Voters Schema
+	 */
+	var votersSchema = new mongoose.Schema({
+		slogan: String,
+		name: String,
+		email: String,
+		phone: String,
+		voted_user: {type: ObjectId, index: true},
+		ref: String,
+		dateCreated: {type: Date, default: Date.now}
+	});
+
+	/*
+	 * Voters Maniuplation
+	 */
+	votersSchema.statics = extendStaticMethods('Voters', ['list','add','get','edit']);
 
 	/*
 	 * Voters Model
 	 */
-
-	var votersSchema = new mongoose.Schema({
-		name: String,
-		email: String,
-		phone: String,
-		registered: {type: String, default: false},
-		voted_user: {type: ObjectId, index: 1},
-		ref: String
-	});
-
-	votersSchema.statics = extendStaticMethods('Voters', ['list','add','get','edit']);
-
 	exports.Voters = db.model('Voters', votersSchema);
 });
