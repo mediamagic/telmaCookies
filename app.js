@@ -84,7 +84,20 @@ app.post('/resources/stats/:type', Statistics.create);
 app.get ('/resources/stats/:type', adminAuth, Statistics.index);
 
 var server = http.createServer(app);
+var cluster = require('cluster'),
+numCPUs = require('os').cpus().length;
+if (cluster.isMaster) {
+  // Fork workers.
+  for (var i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
 
-server.listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
-});
+  cluster.on('death', function(worker) {
+    console.log('worker ' + worker.pid + ' died');
+    cluster.fork();
+  });
+} else {
+  server.listen(app.get('port'), function(){
+    console.log("Express server listening on port " + app.get('port'));
+  });
+}

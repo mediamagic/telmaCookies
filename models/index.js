@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
 , bcrypt = require('bcrypt');
-mongoose.set('debug', function(a,b,c,d,e){console.log('---'); console.log(a); console.log(b); console.log(c); console.log(d);})
+//mongoose.set('debug', function(a,b,c,d,e){console.log('---'); console.log(a); console.log(b); console.log(c); console.log(d);})
 mongoose.connect('mongodb://localhost/telmaCookiesDB');
 var db = mongoose.connection
 , ObjectId = mongoose.Schema.ObjectId;
@@ -37,16 +37,13 @@ function extendStaticMethods(modelName, registerArr){
 			this.model(modelName).findOne(params, function(err,doc){
 				if (err)
 					return cb(err);
-				doc.set(data);
+				doc.set(data);F
 				doc.save(function(e,d){
 					return cb(null,doc);
 				});
 			});
 		},
 		upd: function(params, data, options, cb){
-			console.log('here');
-			console.log(params);
-			console.log(options);
 			this.model(modelName).update(params, data, options, function(err,doc){
 				if (err)
 					return cb(err)
