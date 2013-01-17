@@ -1,9 +1,26 @@
 h3 Application settings
 
-.title general
+.title 
+	h3 general
 	.view
-		div mode: 
-		div application title: 
+		div mode: {{settings.mode}}
+		div application title: {{settings.title}}
 	.edit
 		form
-			input(type="text", name="")
+			.row title:
+				input(type="text", name="title", value="{{settings.title}}", ng-model="settings.title")
+				button(ng-click="save('title')") save
+			.row application mode:
+				button(ng-click="save('toggle')") enable/disable
+
+.title 
+	h3 nominees
+	.user(ng-repeat="user in users")
+		.name name:
+			input(type="text", name="name", value="{{user.name}}")
+		.video video id:
+			input(type="text", name="", value="{{user.videoId}}")
+		.description description:
+			textarea(name="description") {{user.description}}
+		.save
+			button(ng-click="save($index)") save

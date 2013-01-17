@@ -5,14 +5,10 @@ table
 		th image
 		th name
 		th number of votes
-		th(colspan="2") controls
+		th link
 	tr(ng-repeat="user in users")
 		td {{user.image}}
 		td {{user.name}}	
 		td {{user.votes}}
 		td() 
 			a(href="#/nominee/{{user._id}}") view
-		td()
-			a(href="#/nominee/{{user._id}}/settings") settings
-		td() 
-			a() toggle

@@ -3,11 +3,11 @@ angular.module('admin.controllers', ['ngResource','ui', 'ngCookies']);
 
 var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams','$cookies', function($scope,$resource,$location,$window,$routeParams,$cookies){
 	$scope.window = $window
+	, $scope.Settings = $resource('/resources/settings', {_csrf: $cookies['csrf.token']}, {update: {method: 'PUT'}})
 	, $scope.location = $location
 	, $scope.resource = $resource
 	, $scope.route = $routeParams
-	, $scope.Math = $window.Math
-	, $scope.Settings = $scope.resource('/resources/settings');
+	, $scope.Math = $window.Math;
 	$scope.Settings.get({}, function(settings){
 		$scope.settings = settings
 		, $scope.Users = $scope.resource('/resources/users/:user/:vote', {_csrf: $cookies['csrf.token']})
@@ -31,7 +31,7 @@ var MainCtrl = ['$scope', function($scope){
 var NomineesCtrl = ['$scope', function($scope){
 	$scope.Users.query({}, function(response){
 		$scope.users = response;
-	});	
+	});
 }];
 
 var NomineeCtrl = ['$scope', function($scope){
@@ -55,4 +55,17 @@ var VotersCtrl = ['$scope', function($scope){
 	$scope.Voters.query({}, function(resp){
 		$scope.voters = resp;
 	});
+}];
+
+var SettingsCtrl = ['$scope', function($scope){
+	$scope.Users.query({}, function(response){
+		$scope.users = response;
+	});
+
+	$scope.save = function(action){
+		if (action==='title')
+			$scope.Settings.update({},{title: $scope.settings.title}, function(resp){
+				console.log(resp);
+			});
+	}
 }];
