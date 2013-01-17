@@ -3,16 +3,18 @@ angular.module('telmaCookies.controllers', ['ngResource','ui','ngCookies']);
 
 var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams', '$cookies', function($scope,$resource,$location,$window,$routeParams,$cookies){
 	$scope.window = $window
+	, $scope.Settings = $resource('/resources/settings')
 	, $scope.location = $location
 	, $scope.resource = $resource
 	, $scope.route = $routeParams
-	, $scope.Math = $window.Math
-	, $scope.Settings = $scope.resource('/resources/settings')
+	, $scope.Math = $window.Math;
+
 	$scope.Settings.get({}, function(settings){
 		$scope.settings = settings
 		, $scope.Users = $scope.resource('/resources/users/:user/:vote', {_csrf: $cookies['csrf.token']})
 		, $scope.Voters = $scope.resource('/resources/voters/:voter', {_csrf: $cookies['csrf.token']}, {update: {method:'PUT'}})
-		, $scope.Stats = $scope.resource('/resources/stats/:type', {_csrf: $cookies['csrf.token']});
+		, $scope.Stats = $scope.resource('/resources/stats/:type', {_csrf: $cookies['csrf.token']})
+		, $scope.Login = $scope.resource('/api/login', {_csrf: $cookies['csrf.token']});
 		$scope.ref = ($scope.location.$$search.ref || 0);
 		if ($scope.settings.modeState === false){
 			return; 
@@ -29,11 +31,11 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 		});
 		$scope.stats('visit', $scope.ref);
 	});
+
 	$scope.shareFB = function(type){
 		console.log('sharing facebook');
 		$scope.stats('share', type);
 	}
-
 	$scope.stats = function(metric, type){
 		$scope.Stats.save({type:metric}, {ref: type}, function(response){
 			console.log(response);
@@ -76,12 +78,9 @@ var VoteCtrl = ['$scope', function($scope){
 var LoginCtrl = ['$scope', function($scope){
 	var prevUrl = $scope.location.$$search.url;
 	$scope.loginSubmit = function(){
-		$scope.Login = $scope.resource('/api/login', {_csrf: $scope.settings.token});
 		$scope.Login.save({}, {username: $scope.username, password: $scope.password}, function(resp){
 			if (resp.error === undefined){
-				console.log($scope.window);
 				(prevUrl === undefined) ? $scope.location.path('/admin') : $scope.window.location.href = prevUrl;
-				console.log($scope.location);
 			}
 		});
 	}
