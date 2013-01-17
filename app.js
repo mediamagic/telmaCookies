@@ -22,7 +22,8 @@ if (cluster.isMaster) {
     , Voters = require('./controllers/voters')
     , Settings = require('./controllers/settings')
     , Statistics = require('./controllers/statistics')
-    , PowerUsers = require('./controllers/PowerUsers');
+    , PowerUsers = require('./controllers/PowerUsers')
+    , MemcachedStore = require('connect-memcached')(express);
     global.root = process.cwd() + '/';
 
   var app = express();
@@ -35,10 +36,10 @@ if (cluster.isMaster) {
     app.use(express.favicon());
     app.use(express.logger('dev'));
     app.use(express.cookieParser()); 
-    app.use(express.session({ secret: "p@5HqrL.v[&kKq/Q" }));
+    app.use(express.session({ secret: "p@5HqrL.v[&kKq/Q", store: new MemcachedStore }));
     app.use(express.bodyParser({keepExtensions: true}));
     app.use(express.methodOverride());
-    app.use(express.csrf());
+    //app.use(express.csrf());
     app.use(function(req, res, next){
       var token = req.session._csrf
       , cookie = req.cookies['csrf.token']
