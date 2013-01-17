@@ -37,7 +37,7 @@ function extendStaticMethods(modelName, registerArr){
 			this.model(modelName).findOne(params, function(err,doc){
 				if (err)
 					return cb(err);
-				doc.set(data);F
+				doc.set(data);
 				doc.save(function(e,d){
 					return cb(null,doc);
 				});
@@ -73,8 +73,10 @@ db.once('open', function () {
 	 * Settings Schema
 	 */
 	var settingsSchema = new mongoose.Schema({
-		modeState: {type: Boolean, default: true}
+		modeState: {type: Boolean, default: true},
+		title: String
 	});
+
 	/*
 	 * Settings Manipulation
 	 */
@@ -116,7 +118,7 @@ db.once('open', function () {
 		if(err)
 			return err;
 		if (c == 0) {
-			exports.Settings.populate({}, function(err, doc){
+			exports.Settings.populate({title: 'Telma Cookies'}, function(err, doc){
 				if(err)
 					return err;
 			});

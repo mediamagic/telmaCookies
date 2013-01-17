@@ -16,7 +16,7 @@ module.exports = {
 	update: function(req,res,next){
 		var id = req.params.id;
 		var data = req.body;
-		db.Settings.edit({_id:id}, data, function(err,doc){
+		db.Settings.edit({}, data, function(err,doc){
 			return res.send(handle(err,doc));
 		});
 	}
