@@ -1,7 +1,7 @@
 'user strict';
-angular.module('admin.controllers', ['ngResource','ui']);
+angular.module('admin.controllers', ['ngResource','ui', 'ngCookies']);
 
-var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams', function($scope,$resource,$location,$window,$routeParams){
+var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams','$cookies', function($scope,$resource,$location,$window,$routeParams,$cookies){
 	$scope.window = $window
 	, $scope.location = $location
 	, $scope.resource = $resource
@@ -10,9 +10,9 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 	, $scope.Settings = $scope.resource('/resources/settings');
 	$scope.Settings.get({}, function(settings){
 		$scope.settings = settings
-		, $scope.Users = $scope.resource('/resources/users/:user/:vote', {_csrf: settings.token})
-		, $scope.Voters = $scope.resource('/resources/voters/:voter', {_csrf: settings.token}, {update: {method:'PUT'}})
-		, $scope.Stats = $scope.resource('/resources/stats/:type', {})
+		, $scope.Users = $scope.resource('/resources/users/:user/:vote', {_csrf: $cookies['csrf.token']})
+		, $scope.Voters = $scope.resource('/resources/voters/:voter', {_csrf: $cookies['csrf.token']}, {update: {method:'PUT'}})
+		, $scope.Stats = $scope.resource('/resources/stats/:type', {_csrf: $cookies['csrf.token']})
 	});
 }];
 
