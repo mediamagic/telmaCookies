@@ -39,6 +39,8 @@ function extendStaticMethods(modelName, registerArr){
 					return cb(err);
 				doc.set(data);
 				doc.save(function(e,d){
+					if (e)
+						return cb(e);
 					return cb(null,doc);
 				});
 			});
@@ -74,7 +76,12 @@ db.once('open', function () {
 	 */
 	var settingsSchema = new mongoose.Schema({
 		modeState: {type: Boolean, default: true},
-		title: String
+		title: String,
+		facebook: {
+			shareTitle: String,
+			shareText: String,
+			shareReference: Number
+		}
 	});
 
 	/*
@@ -232,6 +239,12 @@ db.once('open', function () {
 		videoId: String,
 		description: String,
 		hidden: {type: Boolean, default: true},
+		facebook: {
+			shareImage: String,
+			shareTitle: String,
+			shareText: String,
+			shareReference: Number
+		},
 		votes: [votesSchema]
 	});
 
@@ -268,7 +281,7 @@ db.once('open', function () {
 		email: String,
 		phone: String,
 		voted_user: {type: ObjectId, index: true},
-		ref: String,
+		ref: {type: String, default: '0'},
 		dateCreated: {type: Date, default: Date.now}
 	});
 

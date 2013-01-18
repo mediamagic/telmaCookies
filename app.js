@@ -1,7 +1,6 @@
 var cluster = require('cluster'),
 numCPUs = require('os').cpus().length;
 if (cluster.isMaster) {
-  // Fork workers.
   for (var i = 0; i < numCPUs; i++) {
     cluster.fork();
   }
@@ -23,6 +22,7 @@ if (cluster.isMaster) {
     , Settings = require('./controllers/settings')
     , Statistics = require('./controllers/statistics')
     , PowerUsers = require('./controllers/PowerUsers')
+    , Api = require('./controllers/api')
     , MemcachedStore = require('connect-memcached')(express);
     global.root = process.cwd() + '/';
 
@@ -39,7 +39,7 @@ if (cluster.isMaster) {
     app.use(express.session({ secret: "p@5HqrL.v[&kKq/Q", store: new MemcachedStore }));
     app.use(express.bodyParser({keepExtensions: true}));
     app.use(express.methodOverride());
-    //app.use(express.csrf());
+    app.use(express.csrf());
     app.use(function(req, res, next){
       var token = req.session._csrf
       , cookie = req.cookies['csrf.token']
@@ -82,6 +82,9 @@ if (cluster.isMaster) {
 
   //API
   app.post('/api/login', PowerUsers.login);
+  app.get('/api/videoCheck/:id', Api.videoCheck);
+  app.get('/api/createCSV', adminAuth, Api.createCSV);
+  app.get('/api/createCSV/:id', adminAuth, Api.createCSV);
 
   //RESTful RESOURCES
   app.get ('/resources/users', Users.index);

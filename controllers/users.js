@@ -20,13 +20,11 @@ module.exports = {
 	},
 	index: function(req,res,next){
 		db.Users.list({}, function(err,doc){
-			//if (req.admin === false) {
 				var ndoc = JSON.parse(JSON.stringify(doc));
 				for(var i = 0; i<ndoc.length;i++) {
 				 	ndoc[i]['votes'] = ndoc[i]['votes'].length;
 				}
 				return res.send(handle(err,ndoc));
-			//}
 			return res.send(handle(err,doc));
 		});
 	},
@@ -43,7 +41,6 @@ module.exports = {
 		var id = req.user.id;
 		var data = req.body;
 		db.Users.edit({_id:id}, data, function(err,doc){
-			console.log('done editing user');
 			return res.send(handle(err,doc));
 		});
 	}
