@@ -1,6 +1,35 @@
-h3 main
+#elm_ipad.animated.bounceInDown
 
-.kliks
-	.klik(ng-repeat="user in users | orderBy:user.dateCreated")
-		.name 
-			a(href="#/vote/{{user._id}}") {{user.name}}
+a#elm_vote(href="#/vote")
+
+#video
+	iframe(width="703", height="399", src="http://www.youtube.com/embed/{{videoId}}?feature=oembed&autoplay=1",frameborder="0",allowfullscreen)
+
+#elm_plane.animated.plane
+
+#thumbs
+	.thumb(ng-repeat="user in users | orderBy:user.dateCreated", id="{{user.name}}", class="item_{{$index}}")
+			a.video(ng-click="setVideo($index)") &nbsp;
+			a.share(ng-click="shareFB()") &nbsp;
+
+.dock
+	ul
+		li
+			a.navItem(href="#/about")
+				img(src="images/main_menu_about.png", border="0", width="51", height="54")
+		li
+			a.navItem(href="#/chart")
+				img(src="images/main_menu_chart.png", border="0", width="51", height="54")
+		li
+			a.navItem(href="#/prizes")
+				img(src="images/main_menu_prizes.png", border="0", width="51", height="54")
+		li
+			a.navItem(href="#/guide")
+				img(src="images/main_menu_guide.png", border="0", width="51", height="54")
+		li
+			a.navItem(href="#/leaders")
+				img(src="images/main_menu_leaders.png", border="0", width="51", height="54")
+		li
+			a.navItem(href="http://www.facebook.com", target="_blank")
+				img(src="images/main_menu_fb.png", border="0", width="51", height="54")
+#legal

@@ -1,2 +1,33 @@
-body{padding:50px;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;}
-a{color:#00B7FF;}
+html{background:black;}
+body{background:black;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+#wrapper{background:#000000 url(../images/main_bg.jpg) top left;height:700px;margin:0 auto;outline:blue solid 1px;width:1024px;overflow:hidden;position:relative;}
+@-webkit-keyframes bounce{0%{-webkit-transform:translateY(0);} 100%{-webkit-transform:translateY(-20px);}}@-moz-keyframes bounce{0%{-moz-transform:translateY(0);} 100%{-moz-transform:translateY(-20px);}}#elm_vote{background:transparent url(../images/main_elm_vote.png) no-repeat center center;display:block;height:146px;position:absolute;left:29px;top:5px;width:151px;z-index:10;}
+#elm_ipad{background:transparent url(../images/main_elm_ipad.png) no-repeat center center;height:122px;position:absolute;width:153px;left:143px;top:3px;z-index:5;}
+#video{background:black;height:399px;left:70px;position:absolute;top:145px;width:703px;}
+#elm_plane{background:transparent url(../images/main_elm_plane.png) no-repeat center center;height:261px;position:absolute;right:0;top:0;width:571px;-webkit-transform:translate(-200px, -200px);z-index:100;}
+#thumbs{position:absolute;height:353px;left:770px;top:245px;width:237px;z-index:10;}#thumbs .thumb.item_0{height:115px;position:absolute;z-index:1;}
+#thumbs .thumb.item_1{height:115px;position:absolute;top:103px;z-index:2;}
+#thumbs .thumb.item_2{height:140px;position:absolute;top:200px;z-index:3;}
+#thumbs .thumb.item_3{display:none;}
+#thumbs .thumb#comedy{background:transparent url(../images/main_thumb_comedy.png);width:228px;}
+#thumbs .thumb#suspense{background:transparent url(../images/main_thumb_suspense.png);width:228px;}
+#thumbs .thumb#scifi{background:transparent url(../images/main_thumb_scifi.png);width:235px;}
+#thumbs .thumb#trailer{background:transparent url(../images/main_thumb_trailer.png);height:139px;width:228px;}
+#thumbs .thumb a.video{cursor:pointer;display:block;height:115px;left:0;position:absolute;width:186px;}
+#thumbs .thumb a.share{cursor:pointer;display:block;height:115px;position:absolute;right:0;width:30px;}
+.dock{position:absolute;left:361px;bottom:26px;z-index:10;text-align:center;font:normal 14px 'Lucida Grande',Arial,sans-serif;}.dock a{display:inline-block;cursor:default;outline:none;}
+.dock ul{position:relative;display:inline-block;padding:0 5px;margin:0;background:url(images/dock-m.png) repeat-x bottom;}
+.dock img{width:51px;height:auto;border:none;-webkit-transition:width .2s, height .2s;-moz-transition:width .2s, height .2s;-o-transition:width .2s, height .2s;transition:width: .2s, height: .2s;}
+.dock li:target a{-webkit-animation:bounce 0.3s 6 alternate ease-out;-moz-animation:bounce 0.3s 6 alternate ease-out;animation:bounce 0.3s 6 alternate ease-out;}
+.dock li:active img{opacity:.9;}
+.dock li:target:after{visibility:visible;opacity:1;}
+.dock ul:after{right:-31px;background:url(images/dock-r.png) no-repeat right bottom;}
+.dock ul:before{left:-31px;background:url(images/dock-l.png) no-repeat left bottom;}
+.dock li{cursor:pointer;display:inline-block;position:relative;margin:0 19px 0 0;margin-bottom:15px;vertical-align:baseline;-webkit-box-reflect:below -5px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(91%, rgba(255, 255, 255, 0.4)), color-stop(45.01%, transparent), to(transparent));}
+.dock em{position:absolute;top:-34px;left:50%;display:none;width:150px;margin-left:-75px;text-align:center;}.dock em span{display:inline-block;padding:5px 12px;font-size:14px;font-style:normal;color:#FFF;background:#000;background:rgba(0, 0, 0, 0.6);text-shadow:1px 1px 1px rgba(0, 0, 0, 0.9);-webkit-border-radius:12px;-moz-border-radius:12px;-o-border-radius:12px;border-radius:12px;}
+.dock li:after{content:" ";position:absolute;bottom:-20px;left:50%;width:5px;height:5px;opacity:0;visibility:hidden;background-color:rgba(255, 255, 255, 0.8);margin-left:-2px;-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;border-radius:5px;-webkit-box-shadow:inset 0 1px 3px rgba(75, 255, 255, 0.4),0 0 4px rgba(75, 255, 255, 0.5),0 -1px 7px #4bffff;-moz-box-shadow:inset 0 1px 3px rgba(75, 255, 255, 0.4),0 0 4px rgba(75, 255, 255, 0.5),0 -1px 7px #4bffff;box-shadow:inset 0 1px 3px rgba(75, 255, 255, 0.4),0 0 4px rgba(75, 255, 255, 0.5),0 -1px 7px #4bffff;-webkit-transition:opacity .5s;-moz-transition:opacity .5s;-o-transition:opacity .5s;transition:opacity: .5s;}
+.dock em:after{content:" ";position:absolute;bottom:-6px;left:50%;margin-left:-19px;width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid rgba(0, 0, 0, 0.6);border-bottom:none;}
+.dock ul:before,.dock ul:after{content:" ";position:absolute;top:0;bottom:0;width:31px;}
+.dock li:hover em,.dock li a:focus em{display:block;}
+.dock li:hover img,.dock li a:focus img{width:76px;}

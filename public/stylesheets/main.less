@@ -1,0 +1,122 @@
+// * MAIN PAGE *//
+@-webkit-keyframes bounce {
+	  0% { -webkit-transform: translateY(0); }
+	100% { -webkit-transform: translateY(-20px); }
+}
+
+@-moz-keyframes bounce {
+	  0% { -moz-transform: translateY(0); }
+	100% { -moz-transform: translateY(-20px); }
+}
+
+#elm_vote {
+	background: transparent url(../images/main_elm_vote.png) no-repeat center center;
+	display: block;
+	height: 146px;
+	position: absolute;
+	left: 29px;
+	top: 5px;
+	width: 151px;
+	z-index: 10;
+	&:hover{
+
+	}
+}
+
+#elm_ipad {
+	background: transparent url(../images/main_elm_ipad.png) no-repeat center center;
+	height: 122px;
+	position: absolute;
+	width: 153px;
+	left: 143px;
+	top: 3px;
+	z-index: 5;
+}
+
+#video {
+	background: black;
+	height: 399px;
+	left: 70px;
+	position: absolute;
+	top: 145px;
+	width: 703px;
+
+}
+
+#elm_plane {
+	background: transparent url(../images/main_elm_plane.png) no-repeat center center;
+	height: 261px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 571px;
+	-webkit-transform: translate(-200px, -200px);
+	z-index: 100;
+}
+
+#thumbs {
+	position: absolute;
+	height: 353px;
+	left: 770px;
+	top: 245px;
+	width: 237px;
+	z-index: 10;
+	.thumb {
+		&.item_0 {
+			height: 115px;
+			position: absolute;
+			z-index: 1;
+		}
+		&.item_1 {
+			height: 115px;
+			position: absolute;
+			top: 103px;
+			z-index: 2;
+		}
+		&.item_2 {
+			height: 140px;
+			position: absolute;
+			top: 200px;
+			z-index: 3;
+		}
+		&.item_3 {
+			display: none;
+		}
+		&#comedy {
+			background:  transparent url(../images/main_thumb_comedy.png);
+			width: 228px;
+		}
+		&#suspense {
+			background:  transparent url(../images/main_thumb_suspense.png);
+			width: 228px;
+		}
+		&#scifi{
+			background:  transparent url(../images/main_thumb_scifi.png);
+			width: 235px;
+		}
+		&#trailer{
+			background:  transparent url(../images/main_thumb_trailer.png);
+			height: 139px;
+			width: 228px;
+		}
+		a.video {
+			cursor: pointer;
+			display: block;
+			height: 115px;
+			left: 0;
+			position: absolute;
+			width: 186px;
+		}
+		a.share {
+			cursor: pointer;
+			display: block;
+			height: 115px;
+			position: absolute;
+			right: 0;
+			width: 30px;
+		}
+	}
+}
+
+//dock
+@import 'dock';

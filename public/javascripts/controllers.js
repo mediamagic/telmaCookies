@@ -20,6 +20,9 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 			return; 
 		}
 		$scope.Users.query({}, function(response){
+			var random = Math.floor(Math.random()*3)
+			$scope.videoId = response[random].videoId
+			$scope.thumbs = response;
 			var newObj = {}
 			, totalVotes = 0;
 			for(var i=0;i<response.length;i++){
@@ -44,6 +47,9 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 }];
 
 var MainCtrl = ['$scope', function($scope){
+	$scope.setVideo = function(index){
+		$scope.videoId = $scope.thumbs[index].videoId;
+	}
 }];
 
 var ChartCtrl = ['$scope', function($scope){

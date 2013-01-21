@@ -26,6 +26,7 @@ function extendStaticMethods(modelName, registerArr){
 			});
 		},
 		add: function(data,cb){
+			delete data._csrf;
 			var tmp = new this(data);
 			tmp.save(function(err,doc){
 				if(err)

@@ -1,8 +1,50 @@
+//* MIXINS *//
+
+//* COLORS *//
+
+// * CSS *//
+
+html {
+	background: black;
+}
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background: black;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
 }
 
-a {
-  color: #00B7FF;
+#wrapper {
+	background: black url(../images/main_bg.jpg) top left;
+	height: 700px;
+	margin: 0 auto;
+	outline: blue solid 1px;
+	width: 1024px;
+	overflow: hidden;
+	position: relative;
 }
+
+// Main
+@import 'main';
+
+// vote
+@import 'vote';
+
+// chart
+//@import 'chart';
+
+// guide
+//@import 'guide';
+
+// about
+//@import 'about';
+
+//leaderboard
+//@import 'leaders';
+
+//animations
+@import 'animate-custom.css'

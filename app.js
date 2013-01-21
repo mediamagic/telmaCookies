@@ -60,7 +60,8 @@ if (cluster.isMaster) {
   });
 
   app.configure('production', function(){
-    app.use(express.static(path.join(__dirname, 'public')));
+    var oneYear = 31557600000;
+    app.use(express.static(path.join(__dirname, 'public', {maxAge: oneYear})));
     console.log('production mode');
   }); 
 
