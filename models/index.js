@@ -1,5 +1,5 @@
 var mongoose = require('mongoose')
-, bcrypt = require('bcrypt');
+//, bcrypt = require('bcrypt');
 //mongoose.set('debug', function(a,b,c,d,e){console.log('---'); console.log(a); console.log(b); console.log(c); console.log(d);})
 mongoose.connect('mongodb://localhost/telmaCookiesDB');
 var db = mongoose.connection
@@ -11,7 +11,11 @@ function extendStaticMethods(modelName, registerArr){
 	var template = {
 		list: function(search, cb){
 			if (search != undefined)
-				delete search._csrf;
+				try {
+					delete search._csrf;
+				} catch(e){
+					
+				}
 			this.model(modelName).find(search,{},{sort:{dateCreated: 1}},function(err,doc){
 				if (err)
 					return cb(err);

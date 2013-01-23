@@ -15,7 +15,6 @@
         display: inline-block;
         padding: 0 5px;
         margin: 0;
-        background: url(images/dock-m.png) repeat-x bottom;
     }
     img {
         width: 51px;
@@ -44,11 +43,9 @@
     }
     ul:after {
         right: -31px;
-        background: url(images/dock-r.png) no-repeat right bottom;
     }
     ul:before {
         left: -31px;
-        background: url(images/dock-l.png) no-repeat left bottom;
     }
     li {
     	cursor: pointer;
@@ -131,4 +128,15 @@
 }
 .dock li:hover img, .dock li a:focus img {
     width: 76px;
+}
+.dock ul li div.navTitle {
+    display: none !important;
+    color: white;
+    font-size: 12px;
+    bottom: -14px;
+    position: absolute;
+    width: 78px;
+}
+.dock ul li:hover div.navTitle {
+    display: block !important;
 }

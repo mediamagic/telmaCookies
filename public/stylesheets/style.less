@@ -19,13 +19,42 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #wrapper {
-	background: black url(../images/main_bg.jpg) top left;
+	background: black url(../images/main_bg.jpg) no-repeat top left;
 	height: 700px;
 	margin: 0 auto;
-	outline: blue solid 1px;
 	width: 1024px;
 	overflow: hidden;
 	position: relative;
+}
+
+.popup {
+	background: transparent url(../images/popup_bg.jpg) no-repeat center center;
+	height: 700px;
+	width: 1024px;
+	overflow: hidden;
+	position: relative;
+	.close {
+		cursor: pointer;
+		display: block;
+		height: 22px;
+		left: 51px;
+		position: absolute;
+		top: 43px;
+		width: 22px;
+		z-index: 1000;
+		&:hover {
+			background: white;
+		}
+	}
+	.content {
+		height:663px;
+		left:23px;
+		padding: 3px;
+		position: absolute;
+		top:15px;
+		width:978px;
+		z-index: 1;
+	}
 }
 
 // Main
@@ -35,16 +64,19 @@ h1,h2,h3,h4,h5,h6 {
 @import 'vote';
 
 // chart
-//@import 'chart';
+@import 'chart';
 
 // guide
-//@import 'guide';
+@import 'guide';
 
 // about
-//@import 'about';
+@import 'about';
+
+//prizes
+@import 'prizes';
 
 //leaderboard
-//@import 'leaders';
+@import 'leaders';
 
 //animations
 @import 'animate-custom.css'

@@ -2,17 +2,25 @@ doctype 5
 html(ng-app="telmaCookies", ng-controller="GlobalCtrl")
 	head
 		title(ng-bind="settings.title") loading...
-		link(rel='stylesheet', href='//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/black-tie/jquery-ui.css')
-		link(rel="stylesheet", href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.no-icons.min.css")
+		//link(rel='stylesheet', href='//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/black-tie/jquery-ui.css')
+		//link(rel="stylesheet", href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.no-icons.min.css")
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		link(rel='stylesheet', href='/stylesheets/animate-custom.css')
-		script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
+		//script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
 		script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js")
 		script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-resource.min.js")
 		script(src="//code.angularjs.org/1.0.3/angular-cookies.min.js")
-		script(src="/javascripts/vendor/angular-ui.min.js")
-		script(src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js")
+		//script(src="/javascripts/vendor/angular-ui.min.js")
+		//script(src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js")
 		script(src="/javascripts/app.js")
 		script(src="/javascripts/controllers.js")
 	body
+		script
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-33644543-1']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
 		#wrapper(ng-view) loading...

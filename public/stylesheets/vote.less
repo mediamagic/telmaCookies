@@ -1,0 +1,157 @@
+.content {
+	&#vote {
+		background: transparent url(../images/popup_bg_vote_mini.jpg) no-repeat center center;
+	}
+}
+
+#voteForm {
+	.radios {
+		.radioInput {
+			display: none;
+		}
+		.radio{
+			position: absolute;
+			top: 185px;
+			label {
+				display: block;
+				height: 236px;
+				width: 197px;
+			}
+			&#comedy {
+				.cookie {
+					background: transparent url(../images/cookie_comedy.png) no-repeat center center;
+					left: 120px;
+					height: 178px;
+					position: absolute;
+					top: 20px;
+					width: 126px;
+				}
+				left: 122px;
+				label {
+					background: transparent url(../images/star_comedy_btn.png) no-repeat center center;
+					cursor: pointer;
+					&:hover {
+						background: transparent url(../images/star_comedy_btn_over.png) no-repeat center center;
+					}
+				}
+			}
+			&#suspense {
+				.cookie {
+					background: transparent url(../images/cookie_suspense.png) no-repeat center center;
+					left: 120px;
+					height: 178px;
+					position: absolute;
+					top: 20px;
+					width: 126px;
+				}
+				left: 388px;
+				label {
+					background: transparent url(../images/star_suspense_btn.png) no-repeat center center;
+					cursor: pointer;
+					&:hover {
+						background: transparent url(../images/star_suspense_btn_over.png) no-repeat center center;
+					}
+				}
+			}
+			&#scifi {
+				.cookie {
+					background: transparent url(../images/cookie_scifi.png) no-repeat center center;
+					left: 130px;
+					height: 178px;
+					position: absolute;
+					top: 20px;
+					width: 126px;
+				}
+				left: 658px;
+				label {
+					background: transparent url(../images/star_scifi_btn.png) no-repeat center center;
+					cursor: pointer;
+					&:hover {
+						background: transparent url(../images/star_scifi_btn_over.png) no-repeat center center;
+					}
+				}
+			}
+			&#trailer {
+				display: none;
+			}
+		}
+		.radio {
+			&#scifi input.radioInput[type="radio"]:checked + label {
+				background: transparent url(../images/star_scifi_btn_voted.png) no-repeat center center !important;
+			}
+			&#suspense input.radioInput[type="radio"]:checked + label {
+				background: transparent url(../images/star_suspense_btn_voted.png) no-repeat center center !important;
+			}
+			&#comedy input.radioInput[type="radio"]:checked + label {
+				background: transparent url(../images/star_comedy_btn_voted.png) no-repeat center center !important;
+			}
+		}
+	}
+	input {
+		border: transparent solid 1px;
+		background: transparent;
+		color: white;
+		direction: rtl;
+		display: block;
+		line-height: 22px;
+		padding: 0 5px;
+		position: absolute;
+		width: 123px;
+		height: 22px;
+		&#slogan {
+			left: 275px;
+			top: 397px;
+			width: 377px;
+		}
+		&#name {
+			left: 529px;
+			top: 429px;
+		}
+		&#phone {
+			left: 275px;
+			top: 461px;
+		}
+		&#age {
+			left: 529px;
+			top: 461px;
+		}
+		&#email {
+			direction: ltr;
+			left: 275px;
+			top: 429px;
+		}
+	}
+	#submit {
+		background: transparent url(../images/vote_submit_enabled.png);
+		border: none;
+		cursor: pointer;
+		display: block;
+		height: 44px;
+		position: absolute;
+		left: 160px;
+		top: 443px;
+		width: 93px;
+		&[disabled=disabled] {
+			cursor: ;
+			background: transparent url(../images/vote_submit_disabled.png);
+		}
+	}
+	#print {
+		direction: rtl;
+		position: absolute;
+		top: 495px; 
+		left: 145px;
+		input, label {
+			width: auto;
+			position: relative;
+			float: right;
+		}
+		label {
+			color: white;
+			display: block;
+			height: 22px;
+			line-height: 22px;
+			margin: 0 0 0 10px;
+		}
+	}
+}

@@ -1,35 +1,24 @@
-h3 Vote
-
-.back
-	a(href="#/main") back
-
-form.form-horizontal(name="registerForm", novalidate)
-	.radio(ng-repeat="user in users")
-		input(type="radio", name="user", value="{{user._id}}", ng-model="registerObj.voted_user", id="user_{{$index}}", required)
-		label(for="user_{{$index}}") {{user.name}}
-	.control-group
-		label.control-label slogan
-		.controls
-			input(type="text", name="slogan", ng-model="registerObj.slogan", required)
-	.control-group
-		label.control-label name
-		.controls
-			input(type="text", name="name", ng-model="registerObj.name", required)
-	.control-group
-		label.control-label email
-		.controls
-			input(type="email", name="email", ng-model="registerObj.email", required)
-	.control-group
-		label.control-label phone
-		.controls
-			input(type="tel", name="phone", ng-model="registerObj.phone", required)
-	.control-group
-		.controls
-			label.checkbox i agree to the terms
-			input(type="checkbox", name="terms", value="true", ng-model="terms", required)
-		.controls
-			label.checkbox i agree to emails
-			input(type="checkbox", name="marketing", value="true", ng-model="marketing", required)
-	.control-group
-		.controls
-			input(type="submit", ng-disabled="registerForm.$invalid", ng-click="register()")
+.popup
+	a.close(href="#/main")
+	.content#vote
+		form#voteForm(name="registerForm", novalidate)
+			.radios
+				.radio(ng-repeat="user in users", id="{{user.name}}")
+					input.radioInput(type="radio", name="user", value="{{user._id}}", ng-model="registerObj.voted_user", id="user_{{$index}}", required)
+					label(for="user_{{$index}}")
+					.cookie
+			input#slogan(type="text", name="slogan", ng-model="registerObj.slogan", required)
+			input#name(type="text", name="name", ng-model="registerObj.name", required)
+			input#email(type="email", name="email", ng-model="registerObj.email", required)
+			input#age(type="number", name="age", ng-model="registerObj.age", required)
+			input#phone(type="tel", name="phone", ng-model="registerObj.phone", required)
+			input#submit(type="submit", ng-disabled="registerForm.$invalid", ng-click="register()", value="&nbsp;")
+			#print
+				input#male(type="radio", name="gender", value="male", checked)
+				label(for="male") אני בן
+				input#fem(type="radio", name="gender", value="female")
+				label(for="fem") אני בת
+				input#marketing(type="checkbox", name="marketing", value="true", ng-model="marketing", required)
+				label(for="marketing") אני מאשר\ת לקבל דיוורים מיניליוור ישראל
+				input#terms(type="checkbox", name="terms", value="true", ng-model="terms", required)
+				label(for="terms") אני מאשר\ת כי קראתי את התקנון והסכמתי לתנאיו

@@ -1,35 +1,44 @@
 #elm_ipad.animated.bounceInDown
 
-a#elm_vote(href="#/vote")
-
-#video
-	iframe(width="703", height="399", src="http://www.youtube.com/embed/{{videoId}}?feature=oembed&autoplay=1",frameborder="0",allowfullscreen)
+a#elm_vote.animated.pulse(href="#/vote")
 
 #elm_plane.animated.plane
+
+#elm_message
 
 #thumbs
 	.thumb(ng-repeat="user in users | orderBy:user.dateCreated", id="{{user.name}}", class="item_{{$index}}")
 			a.video(ng-click="setVideo($index)") &nbsp;
 			a.share(ng-click="shareFB()") &nbsp;
 
+#main_player
+	#video
+		iframe(width="703", height="399", src="http://www.youtube.com/embed/{{videoId}}?feature=oembed&autoplay=0&rel=0",frameborder="0",allowfullscreen)
+
 .dock
 	ul
 		li
-			a.navItem(href="#/about")
-				img(src="images/main_menu_about.png", border="0", width="51", height="54")
-		li
-			a.navItem(href="#/chart")
-				img(src="images/main_menu_chart.png", border="0", width="51", height="54")
-		li
-			a.navItem(href="#/prizes")
-				img(src="images/main_menu_prizes.png", border="0", width="51", height="54")
-		li
-			a.navItem(href="#/guide")
-				img(src="images/main_menu_guide.png", border="0", width="51", height="54")
+			a.navItem(href="https://www.facebook.com/pages/%D7%A7%D7%95%D7%A7%D7%95%D7%9E%D7%9F-Cocoman/112857262133769", target="_blank")
+				img(src="images/main_menu_fb.png", border="0", width="51", height="54")
+			.navTitle לעמוד קוקומן
 		li
 			a.navItem(href="#/leaders")
 				img(src="images/main_menu_leaders.png", border="0", width="51", height="54")
+			.navTitle זוכים
 		li
-			a.navItem(href="http://www.facebook.com", target="_blank")
-				img(src="images/main_menu_fb.png", border="0", width="51", height="54")
+			a.navItem(href="#/guide")
+				img(src="images/main_menu_guide.png", border="0", width="51", height="54")
+			.navTitle איך משתתפים
+		li
+			a.navItem(href="#/prizes")
+				img(src="images/main_menu_prizes.png", border="0", width="51", height="54")
+			.navTitle הפרסים
+		li
+			a.navItem(href="#/about")
+				img(src="images/main_menu_about.png", border="0", width="51", height="54")
+			.navTitle הכירו את קוקיס
+		li
+			a.navItem(href="#/chart")
+				img(src="images/main_menu_chart.png", border="0", width="51", height="54")
+			.navTitle תוצאות ההצבעה
 #legal

@@ -1,9 +1,8 @@
 'user strict';
-angular.module('telmaCookies.controllers', ['ngResource','ui','ngCookies']);
+angular.module('telmaCookies.controllers', ['ngResource','ngCookies']);
 
-var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams', '$cookies', function($scope,$resource,$location,$window,$routeParams,$cookies){
-	$scope.window = $window
-	, $scope.Settings = $resource('/resources/settings')
+var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams', '$cookies', '$route', function($scope,$resource,$location,$window,$routeParams,$cookies,$route){
+	$scope.Settings = $resource('/resources/settings')
 	, $scope.location = $location
 	, $scope.resource = $resource
 	, $scope.route = $routeParams
@@ -17,10 +16,12 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 		, $scope.Login = $scope.resource('/api/login', {_csrf: $cookies['csrf.token']});
 		$scope.ref = ($scope.location.$$search.ref || 0);
 		if ($scope.settings.modeState === false){
+			delete $route.routes['/vote'];
 			return; 
 		}
 		$scope.Users.query({}, function(response){
-			var random = Math.floor(Math.random()*3)
+			var random = Math.floor((Math.random()*3000)/1000)
+			console.log(random);
 			$scope.videoId = response[random].videoId
 			$scope.thumbs = response;
 			var newObj = {}
@@ -46,6 +47,40 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 	}
 }];
 
+var IntroCtrl = ['$scope', function($scope, $location){
+	var fr1 = new Image();
+	var fr2 = new Image();
+	var fr3 = new Image();
+	var fr4 = new Image();
+	var iw = document.getElementById('introWrapper');
+	fr4.onload = function(){
+		iw.innerHTML = '';
+		iw.appendChild(fr4)
+		window.location.href = "#/main";
+	}
+	fr3.onload = function(){
+		iw.innerHTML = ''; 
+		iw.appendChild(fr3)
+		setTimeout(function(){
+			fr4.src='../images/intro_4.jpg'	
+		}, 1000);
+	}
+	fr2.onload = function(){
+		iw.innerHTML = ''; 
+		iw.appendChild(fr2)
+		setTimeout(function(){
+			fr3.src='../images/intro_3.jpg'
+		}, 1000);
+	}	
+	fr1.onload = function(){
+		iw.appendChild(fr1);
+		setTimeout(function(){
+			fr2.src='../images/intro_2.jpg';
+		}, 1000);
+	}
+	fr1.src = '../images/intro_1.jpg';
+}];
+
 var MainCtrl = ['$scope', function($scope){
 	$scope.setVideo = function(index){
 		$scope.videoId = $scope.thumbs[index].videoId;
@@ -62,6 +97,9 @@ var ChartCtrl = ['$scope', function($scope){
 		}
 		$scope.users = newObj;
 		$scope.totalVotes = totalVotes;
+		for (var user in $scope.users){
+			$scope.users[user].height = Math.round(($scope.users[user].votes / $scope.totalVotes ) * 320);
+		}
 	});
 }];
 
@@ -90,4 +128,8 @@ var LoginCtrl = ['$scope', function($scope){
 			}
 		});
 	}
+}];
+
+var StaticCtrl = ['$scope', function($scope){
+	
 }];

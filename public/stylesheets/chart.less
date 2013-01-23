@@ -1,0 +1,87 @@
+.content {
+	&#chart {
+		background: transparent url(../images/popup_bg_chart_mini.jpg) no-repeat center center;
+	}
+}
+.charts {
+	height: 320px;
+	left: 317px;
+	position: absolute;
+	bottom: 67px;
+	width: 394px;
+	.column {
+		height: 320px;
+		width: 63px;
+		float: left;
+		position: absolute;
+		bottom: 0;
+		.filler {
+			bottom: 0;
+			position: absolute;
+			width: 63px;
+			z-index: 1;
+		}
+		.cookie {
+			height: 178px;
+			position: absolute;
+			bottom: -30px;
+			left: -100px;
+			z-index: 2;
+		}
+		.label {
+			color: white;
+			font-weight: bold;
+			font-size: 18px;
+			padding: 0 0 10px 0;
+			position: absolute;
+			text-align: center;
+			width: 63px;
+			z-index: 2;
+			&:after {
+				content: ' %';
+			}
+		}
+		.title {
+			position: absolute;
+			bottom: -50px;
+			color: white;
+			direction: rtl;
+			font-weight: bold;
+			width: 80px;
+			text-align: center;
+		}
+		&#comedy {
+			left: 5px;
+			.cookie {
+				width: 126px;
+				background: transparent url(../images/cookie_comedy.png) no-repeat top center;
+			}
+			.filler {
+				background: transparent url(../images/chart_comedy.png) no-repeat top center;
+			}
+		}
+		&#suspense {
+			left: 159px;
+			.cookie {
+				width: 118px;
+				background: transparent url(../images/cookie_suspense.png) no-repeat top center;
+			}
+			.filler {
+				background: transparent url(../images/chart_suspense.png) no-repeat top center;
+			}
+		}
+		&#scifi {
+			left: 324px;
+			.cookie {
+				width: 121px;
+				background: transparent url(../images/cookie_scifi.png) no-repeat top center;
+			}
+			.filler {
+				background: transparent url(../images/chart_scifi.png) no-repeat top center;
+			}
+		}
+		&#trailer {
+			display: none;
+		}
+	}
+}
