@@ -33,7 +33,7 @@ if (cluster.isMaster) {
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
     app.use(express.compress());
-    app.use(express.favicon());
+    app.use(express.favicon(__dirname + '/public/favicon.ico'));
     app.use(express.logger('dev'));
     app.use(express.cookieParser()); 
     app.use(express.session({ secret: "p@5HqrL.v[&kKq/Q", store: new MemcachedStore }));
@@ -60,8 +60,9 @@ if (cluster.isMaster) {
   });
 
   app.configure('production', function(){
-    var oneYear = 31557600000;
-    app.use(express.static(path.join(__dirname, 'public', {maxAge: oneYear})));
+    var live = 86400000;
+    app.use(express.staticCache());
+    app.use(express.static(path.join(__dirname, 'public', {maxAge: live})));
     console.log('production mode');
   }); 
 

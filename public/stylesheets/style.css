@@ -1,13 +1,16 @@
-html{background:black;}
-body{background:black;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;margin:0;padding:0;}
+html{background:url(../images/main_bg_pat.png);}html.pop{background:#011520;}
+body{background:transparent;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;margin:0;padding:0;}
 h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
-#wrapper{background:#000000 url(../images/main_bg.jpg) no-repeat top left;height:700px;margin:0 auto;width:1024px;overflow:hidden;position:relative;}
+a{color:#ffe821;}
+#wrapper{background:transparent url(../images/main_bg.png) no-repeat top left;height:700px;margin:0 auto;width:1024px;position:relative;}
 .popup{background:transparent url(../images/popup_bg.jpg) no-repeat center center;height:700px;width:1024px;overflow:hidden;position:relative;}.popup .close{cursor:pointer;display:block;height:22px;left:51px;position:absolute;top:43px;width:22px;z-index:1000;}.popup .close:hover{background:white;}
 .popup .content{height:663px;left:23px;padding:3px;position:absolute;top:15px;width:978px;z-index:1;}
 @-webkit-keyframes bounce{0%{-webkit-transform:translateY(0);} 100%{-webkit-transform:translateY(-20px);}}@-moz-keyframes bounce{0%{-moz-transform:translateY(0);} 100%{-moz-transform:translateY(-20px);}}#elm_vote{background:transparent url(../images/main_elm_vote.png) no-repeat center center;display:block;height:146px;position:absolute;left:29px;top:5px;width:151px;z-index:40;}
 #elm_ipad{background:transparent url(../images/main_elm_ipad.png) no-repeat center center;height:122px;position:absolute;width:153px;left:143px;top:3px;z-index:30;}
 #elm_message{background:transparent url(../images/main_elm_message.png) no-repeat center center;position:absolute;height:89px;left:300px;top:15px;width:278px;}
 #main_player{background:transparent url(../images/main_player.png) no-repeat center center;height:478px;left:36px;position:absolute;top:112px;width:787px;z-index:20;}
+#elm_logo{background:transparent url(../images/main_elm_logo.png) no-repeat center center;bottom:20px;height:94px;right:10px;position:absolute;width:116px;}
+#elm_pack{background:transparent url(../images/main_elm_pack.png) no-repeat center center;bottom:0px;height:127px;left:10px;position:absolute;width:277px;}
 #video{background:black;height:399px;left:34px;position:absolute;top:32px;width:703px;}
 #elm_plane{background:transparent url(../images/main_elm_plane.png) no-repeat center center;height:261px;position:absolute;right:0;top:0;width:571px;-webkit-transform:translate(-200px, -200px);z-index:100;}
 #thumbs{position:absolute;height:353px;left:770px;top:245px;width:237px;z-index:10;}#thumbs .thumb.item_0{height:115px;position:absolute;z-index:1;}
@@ -20,6 +23,7 @@ h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
 #thumbs .thumb#trailer{background:transparent url(../images/main_thumb_trailer.png);height:139px;width:228px;}
 #thumbs .thumb a.video{cursor:pointer;display:block;height:115px;left:0;position:absolute;width:186px;}
 #thumbs .thumb a.share{cursor:pointer;display:block;height:115px;position:absolute;right:0;width:30px;}
+a#legal{bottom:0;position:absolute;right:10px;}
 .dock{position:absolute;left:361px;bottom:26px;z-index:10;text-align:center;font:normal 14px 'Lucida Grande',Arial,sans-serif;}.dock a{display:inline-block;cursor:default;outline:none;}
 .dock ul{position:relative;display:inline-block;padding:0 5px;margin:0;}
 .dock img{width:51px;height:auto;border:none;-webkit-transition:width .2s, height .2s;-moz-transition:width .2s, height .2s;-o-transition:width .2s, height .2s;transition:width: .2s, height: .2s;}
@@ -37,7 +41,7 @@ h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
 .dock li:hover img,.dock li a:focus img{width:76px;}
 .dock ul li div.navTitle{display:none !important;color:white;font-size:12px;bottom:-14px;position:absolute;width:78px;}
 .dock ul li:hover div.navTitle{display:block !important;}
-.content#vote{background:transparent url(../images/popup_bg_vote_mini.jpg) no-repeat center center;}
+.content#vote{background:transparent url(../images/popup_bg_vote.jpg) no-repeat center center;}
 #voteForm .radios .radioInput{display:none;}
 #voteForm .radios .radio{position:absolute;top:185px;}#voteForm .radios .radio label{display:block;height:236px;width:197px;}
 #voteForm .radios .radio#comedy{left:122px;}#voteForm .radios .radio#comedy .cookie{background:transparent url(../images/cookie_comedy.png) no-repeat center center;left:120px;height:178px;position:absolute;top:20px;width:126px;}
@@ -50,15 +54,16 @@ h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
 #voteForm .radios .radio#scifi input.radioInput[type="radio"]:checked+label{background:transparent url(../images/star_scifi_btn_voted.png) no-repeat center center !important;}
 #voteForm .radios .radio#suspense input.radioInput[type="radio"]:checked+label{background:transparent url(../images/star_suspense_btn_voted.png) no-repeat center center !important;}
 #voteForm .radios .radio#comedy input.radioInput[type="radio"]:checked+label{background:transparent url(../images/star_comedy_btn_voted.png) no-repeat center center !important;}
-#voteForm input{border:transparent solid 1px;background:transparent;color:white;direction:rtl;display:block;line-height:22px;padding:0 5px;position:absolute;width:123px;height:22px;}#voteForm input#slogan{left:275px;top:397px;width:377px;}
+#voteForm input{border:transparent solid 1px;background:transparent;color:white;direction:rtl;display:block;line-height:24px;padding:0 5px;position:absolute;width:123px;height:24px;}#voteForm input.ng-invalid.ng-dirty{background-color:#ffcccc;color:black;}
+#voteForm input#slogan{left:275px;top:397px;width:377px;}
 #voteForm input#name{left:529px;top:429px;}
 #voteForm input#phone{left:275px;top:461px;}
 #voteForm input#age{left:529px;top:461px;}
 #voteForm input#email{direction:ltr;left:275px;top:429px;}
-#voteForm #submit{background:transparent url(../images/vote_submit_enabled.png);border:none;cursor:pointer;display:block;height:44px;position:absolute;left:160px;top:443px;width:93px;}#voteForm #submit[disabled=disabled]{cursor:;background:transparent url(../images/vote_submit_disabled.png);}
+#voteForm #submit{background:transparent url(../images/vote_submit_enabled.png);border:none;cursor:pointer;display:block;height:71px;position:absolute;left:154px;top:428px;width:117px;}#voteForm #submit[disabled=disabled]{cursor:default;background:transparent url(../images/vote_submit_disabled.png);}
 #voteForm #print{direction:rtl;position:absolute;top:495px;left:145px;}#voteForm #print input,#voteForm #print label{width:auto;position:relative;float:right;}
-#voteForm #print label{color:white;display:block;height:22px;line-height:22px;margin:0 0 0 10px;}
-.content#chart{background:transparent url(../images/popup_bg_chart_mini.jpg) no-repeat center center;}
+#voteForm #print label{color:white;display:block;height:24px;line-height:24px;margin:0 0 0 10px;}
+.content#chart{background:transparent url(../images/popup_bg_chart.jpg) no-repeat center center;}
 .charts{height:320px;left:317px;position:absolute;bottom:67px;width:394px;}.charts .column{height:320px;width:63px;float:left;position:absolute;bottom:0;}.charts .column .filler{bottom:0;position:absolute;width:63px;z-index:1;}
 .charts .column .cookie{height:178px;position:absolute;bottom:-30px;left:-100px;z-index:2;}
 .charts .column .label{color:white;font-weight:bold;font-size:18px;padding:0 0 10px 0;position:absolute;text-align:center;width:63px;z-index:2;}.charts .column .label:after{content:' %';}
@@ -70,7 +75,8 @@ h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
 .charts .column#scifi{left:324px;}.charts .column#scifi .cookie{width:121px;background:transparent url(../images/cookie_scifi.png) no-repeat top center;}
 .charts .column#scifi .filler{background:transparent url(../images/chart_scifi.png) no-repeat top center;}
 .charts .column#trailer{display:none;}
-.content#guide{background:transparent url(../images/popup_bg_guide_mini.jpg) no-repeat center center;}
-.content#about{background:transparent url(../images/popup_bg_about_mini.jpg) no-repeat center center;}
-.content#prizes{background:transparent url(../images/popup_bg_prizes_mini.jpg) no-repeat center center;}
-.content#leaders{background:transparent url(../images/popup_bg_leaders_mini.jpg) no-repeat center center;}
+.content#guide{background:transparent url(../images/popup_bg_guide.jpg) no-repeat center center;}
+.content#about{background:transparent url(../images/popup_bg_about.jpg) no-repeat center center;}
+.content#prizes{background:transparent url(../images/popup_bg_prizes.jpg) no-repeat center center;}
+.content#leaders{background:transparent url(../images/popup_bg_leaders.jpg) no-repeat center center;}
+.content#thankyou{background:transparent url(../images/popup_bg_thankyou.jpg) no-repeat center center;}

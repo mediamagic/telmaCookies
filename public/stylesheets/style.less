@@ -5,10 +5,13 @@
 // * CSS *//
 
 html {
-	background: black;
+	background:  url(../images/main_bg_pat.png);
+	&.pop {
+		background: #011520;
+	}
 }
 body {
-	background: black;
+	background: transparent;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 	margin: 0;
 	padding: 0;
@@ -17,13 +20,15 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0;
 	padding: 0;
 }
+a {
+	color: #ffe821;
+}
 
 #wrapper {
-	background: black url(../images/main_bg.jpg) no-repeat top left;
+	background: transparent url(../images/main_bg.png) no-repeat top left;
 	height: 700px;
 	margin: 0 auto;
 	width: 1024px;
-	overflow: hidden;
 	position: relative;
 }
 
@@ -77,6 +82,9 @@ h1,h2,h3,h4,h5,h6 {
 
 //leaderboard
 @import 'leaders';
+
+//thankyouy
+@import 'thankyou';
 
 //animations
 @import 'animate-custom.css'

@@ -10,7 +10,7 @@
 			input#slogan(type="text", name="slogan", ng-model="registerObj.slogan", required)
 			input#name(type="text", name="name", ng-model="registerObj.name", required)
 			input#email(type="email", name="email", ng-model="registerObj.email", required)
-			input#age(type="number", name="age", ng-model="registerObj.age", required)
+			input#age(type="number", name="age", ng-model="registerObj.age", min="1", required)
 			input#phone(type="tel", name="phone", ng-model="registerObj.phone", required)
 			input#submit(type="submit", ng-disabled="registerForm.$invalid", ng-click="register()", value="&nbsp;")
 			#print
@@ -21,4 +21,8 @@
 				input#marketing(type="checkbox", name="marketing", value="true", ng-model="marketing", required)
 				label(for="marketing") אני מאשר\ת לקבל דיוורים מיניליוור ישראל
 				input#terms(type="checkbox", name="terms", value="true", ng-model="terms", required)
-				label(for="terms") אני מאשר\ת כי קראתי את התקנון והסכמתי לתנאיו
+				label(for="terms") 
+					span אני מאשר\ת כי קראתי את 
+					span
+						a(href="/docs/takanon.pdf", target="_blank") התקנון
+					span  והסכמתי לתנאיו

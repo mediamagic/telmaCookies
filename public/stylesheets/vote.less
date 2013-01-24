@@ -1,6 +1,6 @@
 .content {
 	&#vote {
-		background: transparent url(../images/popup_bg_vote_mini.jpg) no-repeat center center;
+		background: transparent url(../images/popup_bg_vote.jpg) no-repeat center center;
 	}
 }
 
@@ -93,11 +93,15 @@
 		color: white;
 		direction: rtl;
 		display: block;
-		line-height: 22px;
+		line-height: 24px;
 		padding: 0 5px;
 		position: absolute;
 		width: 123px;
-		height: 22px;
+		height: 24px;
+		&.ng-invalid.ng-dirty {
+			background-color: #ffcccc;
+			color: black;
+		}
 		&#slogan {
 			left: 275px;
 			top: 397px;
@@ -126,20 +130,20 @@
 		border: none;
 		cursor: pointer;
 		display: block;
-		height: 44px;
+		height: 71px;
 		position: absolute;
-		left: 160px;
-		top: 443px;
-		width: 93px;
+		left: 154px;
+		top: 428px;
+		width: 117px;
 		&[disabled=disabled] {
-			cursor: ;
+			cursor: default;
 			background: transparent url(../images/vote_submit_disabled.png);
 		}
 	}
 	#print {
 		direction: rtl;
 		position: absolute;
-		top: 495px; 
+		top: 495px;
 		left: 145px;
 		input, label {
 			width: auto;
@@ -149,8 +153,8 @@
 		label {
 			color: white;
 			display: block;
-			height: 22px;
-			line-height: 22px;
+			height: 24px;
+			line-height: 24px;
 			margin: 0 0 0 10px;
 		}
 	}
