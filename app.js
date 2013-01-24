@@ -21,7 +21,7 @@ if (cluster.isMaster) {
     , Voters = require('./controllers/voters')
     , Settings = require('./controllers/settings')
     , Statistics = require('./controllers/statistics')
-    , PowerUsers = require('./controllers/PowerUsers')
+    , PowerUsers = require('./controllers/powerUsers')
     , Api = require('./controllers/api')
     , MemcachedStore = require('connect-memcached')(express);
     global.root = process.cwd() + '/';
