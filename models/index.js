@@ -1,5 +1,9 @@
-var mongoose = require('mongoose')
-//, bcrypt = require('bcrypt');
+var mongoose = require('mongoose');
+try {
+	var bcrypt = require('bcrypt');
+} catch(e){
+
+}
 //mongoose.set('debug', function(a,b,c,d,e){console.log('---'); console.log(a); console.log(b); console.log(c); console.log(d);})
 mongoose.connect('mongodb://localhost/telmaCookiesDB');
 var db = mongoose.connection
