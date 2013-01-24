@@ -192,7 +192,7 @@ db.once('open', function () {
 		if (c == 0) {
 			var defaultPowerUser = {
 				username: 'Admin',
-				password: 'Admin',
+				password: '$cookies2013!',
 				email: 'info@mediamagic.co.il',
 				level: 1,
 				name: {
@@ -284,6 +284,7 @@ db.once('open', function () {
 		slogan: String,
 		name: String,
 		email: String,
+		marketing: Boolean,
 		age: Number,
 		gender: String,
 		phone: String,
