@@ -1,5 +1,5 @@
 'user strict';
-angular.module('admin.controllers', ['ngResource','ui', 'ngCookies']);
+angular.module('admin.controllers', ['ngResource', 'ngCookies']);
 
 var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams','$cookies', function($scope,$resource,$location,$window,$routeParams,$cookies){
 	$scope.window = $window

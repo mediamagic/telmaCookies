@@ -1,6 +1,6 @@
 'use strict'; 
 
-angular.module('admin', ['ngResource', 'ui', 'ngCookies']).
+angular.module('admin', ['ngResource','ngCookies']).
 config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider.
 		when('/main', {templateUrl: '/views/admin/Main.html', controller: MainCtrl, name:'Main'}).
