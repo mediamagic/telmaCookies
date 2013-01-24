@@ -73,6 +73,7 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 			$scope.thumbs = response;
 			var newObj = {}
 			, totalVotes = 0;
+
 			for(var i=0;i<response.length;i++){
 				newObj[response[i]._id] = response[i];
 				totalVotes = totalVotes + response[i].votes;
@@ -108,6 +109,11 @@ var ChartCtrl = ['$scope', function($scope){
 			$scope.users[user].height = Math.round(($scope.users[user].votes / $scope.totalVotes ) * 320);
 		}
 	});
+	$scope.itemStyle = function (item, style) {
+		var obj = {}
+	    obj[style] = $scope.users[item].height + 'px';
+	    return obj;
+	};
 }];
 
 var VoteCtrl = ['$scope', function($scope){

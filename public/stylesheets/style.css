@@ -12,7 +12,7 @@ a{color:#ffe821;}
 #elm_logo{background:transparent url(../images/main_elm_logo.png) no-repeat center center;bottom:20px;height:94px;right:10px;position:absolute;width:116px;}
 #elm_pack{background:transparent url(../images/main_elm_pack.png) no-repeat center center;bottom:0px;height:127px;left:10px;position:absolute;width:277px;}
 #video{background:black;height:399px;left:34px;position:absolute;top:32px;width:703px;}
-#elm_plane{background:transparent url(../images/main_elm_plane.png) no-repeat center center;height:261px;position:absolute;right:0;top:0;width:571px;-webkit-transform:translate(-200px, -200px);z-index:100;}
+#elm_plane{background:transparent url(../images/main_elm_plane.png) no-repeat center center;height:263px;position:absolute;right:0;top:-10px;width:630px;-webkit-transform:translate(-200px, -200px);z-index:100;}
 #thumbs{position:absolute;height:353px;left:770px;top:245px;width:237px;z-index:10;}#thumbs .thumb.item_0{height:115px;position:absolute;z-index:1;}
 #thumbs .thumb.item_1{height:115px;position:absolute;top:103px;z-index:2;}
 #thumbs .thumb.item_2{height:140px;position:absolute;top:200px;z-index:3;}

@@ -284,6 +284,8 @@ db.once('open', function () {
 		slogan: String,
 		name: String,
 		email: String,
+		age: Number,
+		gender: String,
 		phone: String,
 		voted_user: {type: ObjectId, index: true},
 		ref: {type: String, default: '0'},

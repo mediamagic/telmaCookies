@@ -4,6 +4,6 @@
 		.charts
 			.column(ng-repeat="user in users", id="{{user.name}}")
 				.cookie
-				.filler(style="height: {{user.height}}px;")
-				.label(style="bottom: {{user.height}}px;") {{Math.round ((user.votes / totalVotes) * 100)}}
+				.filler(ng-style="itemStyle(user._id, 'height')")
+				.label(ng-style="itemStyle(user._id, 'bottom')") {{Math.round ((user.votes / totalVotes) * 100)}}
 				.title(style="bottom: -40px") {{user.description}}
