@@ -143,7 +143,7 @@ var LoginCtrl = ['$scope', function($scope){
 	$scope.loginSubmit = function(){
 		$scope.Login.save({}, {username: $scope.username, password: $scope.password}, function(resp){
 			if (resp.error === undefined){
-				(prevUrl === undefined) ? $scope.location.path('/admin') : $scope.window.location.href = prevUrl;
+				(prevUrl === undefined) ? $scope.location.path('/admin') : $window.location.href = prevUrl;
 			}
 		});
 	}
