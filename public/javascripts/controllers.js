@@ -137,7 +137,7 @@ var VoteCtrl = ['$scope', function($scope){
 	}
 }];
 
-var LoginCtrl = ['$scope', function($scope){
+var LoginCtrl = ['$scope', '$window' , function($scope, $window){
 	var prevUrl = $scope.location.$$search.url;
 	$scope.glob.mode='pop';
 	$scope.loginSubmit = function(){
