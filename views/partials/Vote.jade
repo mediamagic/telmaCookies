@@ -14,11 +14,11 @@
 			input#phone(type="tel", name="phone", ng-model="registerObj.phone", required)
 			input#submit(type="submit", ng-disabled="registerForm.$invalid", ng-click="register()", value="&nbsp;")
 			#print
-				input#male(type="radio", name="gender", value="male", checked)
+				input#male(type="radio", name="gender", value="male", ng-model="registerObj.gender", checked)
 				label(for="male") אני בן
-				input#fem(type="radio", name="gender", value="female")
+				input#fem(type="radio", name="gender", value="female", ng-model="registerObj.gender")
 				label(for="fem") אני בת
-				input#marketing(type="checkbox", name="marketing", value="true", ng-model="marketing", required)
+				input#marketing(type="checkbox", name="marketing", value="true", ng-model="registerObj.marketing")
 				label(for="marketing") אני מאשר\ת לקבל דיוורים מיניליוור ישראל
 				input#terms(type="checkbox", name="terms", value="true", ng-model="terms", required)
 				label(for="terms") 

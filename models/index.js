@@ -285,14 +285,14 @@ db.once('open', function () {
 	 * Voters Schema
 	 */
 	var votersSchema = new mongoose.Schema({
-		slogan: String,
-		name: String,
-		email: String,
-		marketing: Boolean,
-		age: Number,
-		gender: String,
-		phone: String,
-		voted_user: {type: ObjectId, index: true},
+		slogan: {type: String, required: true} ,
+		name: {type: String, required: true},
+		email: {type: String, required: true},
+		marketing: {type:Boolean, default: false},
+		age: {type: Number, required: true} ,
+		gender: {type: String, required: true},
+		phone: {type: String, required: true},
+		voted_user: {type: ObjectId, index: true, required: true},
 		ref: {type: String, default: '0'},
 		dateCreated: {type: Date, default: Date.now}
 	});

@@ -15,12 +15,11 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 					'SEND': 15038,'Results': 15039,'COCOMAN Cookies': 15040,'Awards': 15041,'HOW TO': 15042,'WINNERS': 15043,'FACEBOOK': 15044,'Share comedy': 15045,
 					'Share suspense': 15046,'Share scifi': 15047,'Share vote': 15048};
 	$scope.shareFB = function(type){
+		var obj = {
+			method: 'feed'
+		};
 		var root = $window.location.protocol 
 				+ '//' +$window.location.host;
-		var obj = {
-			method: 'feed',
-			link: root
-		};
 		if (type != 'vote') {
 			for (var key in $scope.users) {
 				if ($scope.users[key].name === type)
@@ -29,10 +28,12 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 			obj.picture = root + '/images/cookie_'+type+'.png';
 			obj.name = $scope.users[uKey].facebook.shareTitle;
 			obj.description = $scope.users[uKey].facebook.shareText;
+			obj.link = root	+ '#main/?ref=' +$scope.users[uKey].facebook.shareReference;
 		} else {
 			obj.picture = root + '/images/cookie_comedy.png';
 			obj.name  = $scope.settings.facebook.shareTitle;
 			obj.description = $scope.settings.facebook.shareText;
+			obj.link = root+ '#main/?ref'+ $scope.settings.facebook.shareReference;
 		}
 		FB.ui(obj, function(response) {
 			$scope.track('Share ' + type);
@@ -119,6 +120,7 @@ var ChartCtrl = ['$scope', function($scope){
 var VoteCtrl = ['$scope', function($scope){
 	$scope.registerObj = $scope.glob.lastRegister
 	, $scope.registerObj.ref = $scope.ref
+	, $scope.registerObj.gender = 'male'
 	, $scope.glob.mode='pop';
 	$scope.register = function(){
 		$scope.Voters.save({}, $scope.registerObj, function(resp){
