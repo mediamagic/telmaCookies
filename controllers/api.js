@@ -30,11 +30,11 @@ exports.createCSV = function(req,res,next){
 		params._id = req.params.id;
 	db.Voters.list(params, function(err,resp){
 		var tmp = [];
-		tmp.push('"Slogan",','"Name",','"Email",','"Phone",','"Referer",', '"Date Created"\n');
+		tmp.push('"Slogan",','"Name",','"Email",','"Phone",','"Age",','"Gender",','"Marketing",','"Referer",', '"Date Created"\n');
 		for (var i = 0; i<resp.length;i++){
 			var row = [];
 			var val = resp[i];
-			row.push('"'+val.slogan+'"','"'+val.name+'"','"'+val.email+'"','="'+val.phone+'"','"'+val.ref+'"', '"'+val.dateCreated+'"\n')
+			row.push('"'+val.slogan+'"','"'+val.name+'"','"'+val.email+'"','="'+val.phone+'"','"'+val.age+'"','"'+val.gender+'"','"'+val.marketing+'"','"'+val.ref+'"', '"'+val.dateCreated+'"\n')
 			row = row.join(',');
 			tmp.push(row);
 			delete row;
