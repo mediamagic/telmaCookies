@@ -34,7 +34,6 @@ if (cluster.isMaster) {
     app.set('view engine', 'jade');
     app.use(express.compress());
     app.use(express.favicon(__dirname + '/public/favicon.ico'));
-    app.use(express.logger('dev'));
     app.use(express.cookieParser()); 
     app.use(express.session({ secret: "p@5HqrL.v[&kKq/Q", store: new MemcachedStore }));
     app.use(express.bodyParser({keepExtensions: true}));
@@ -53,6 +52,7 @@ if (cluster.isMaster) {
   });
 
   app.configure('development', function(){
+    app.use(express.logger('dev'));
     app.use(express.errorHandler());
     app.use(require('less-middleware')({ src: __dirname + '/public', compress: true, optimization: 2 }));
     app.use(express.static(path.join(__dirname, 'public')));
@@ -64,7 +64,7 @@ if (cluster.isMaster) {
     app.use(express.staticCache());
     app.use(express.static(path.join(__dirname, 'public', {maxAge: live})));
     console.log('production mode');
-  }); 
+  });
 
   //MIDDLEWARE
   function adminAuth(req, res, next){
