@@ -1,18 +1,18 @@
 .popup
 	a.close(href="#/main")
 	.content#vote
-		form#voteForm(name="registerForm", novalidate)
+		form#voteForm(name="registerForm", novalidate, ng-submit="register(registerForm)")
 			.radios
 				.radio(ng-repeat="user in users", id="{{user.name}}")
 					input.radioInput(type="radio", name="user", value="{{user._id}}", ng-model="registerObj.voted_user", id="user_{{$index}}", required)
 					label(for="user_{{$index}}")
 					.cookie
-			input#slogan(type="text", name="slogan", ng-model="registerObj.slogan", required)
-			input#name(type="text", name="name", ng-model="registerObj.name", required)
-			input#email(type="email", name="email", ng-model="registerObj.email", required)
-			input#age(type="number", name="age", ng-model="registerObj.age", min="1", required)
-			input#phone(type="tel", name="phone", ng-model="registerObj.phone", required)
-			input#submit(type="submit", ng-disabled="registerForm.$invalid", ng-click="register()", value="&nbsp;")
+			input#slogan(type="text", name="slogan", id="slogan", ng-model="registerObj.slogan", required)
+			input#name(type="text", name="name", id="name", ng-model="registerObj.name", required)
+			input#email(type="email", name="email", id="email", ng-model="registerObj.email", required)
+			input#age(type="number", name="age", id="age", ng-model="registerObj.age", min="1", required)
+			input#phone(type="tel", name="phone", id="phone", ng-model="registerObj.phone", required)
+			input#submit(type="submit", value="&nbsp;")
 			#print
 				input#male(type="radio", name="gender", value="male", ng-model="registerObj.gender", checked)
 				label(for="male") אני בן

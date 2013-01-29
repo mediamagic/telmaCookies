@@ -20,6 +20,8 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 		};
 		var root = $window.location.protocol 
 				+ '//' +$window.location.host;
+		var channel = { comedy: 'sc', suspense: 'st', scifi: 'ss', vote: 'sv'};
+		var append = "?utm_source=facebook&utm_medium=banner&utm_content=0x0&utm_ch=" + channel[type] +  "&utm_campaign=Cookies";
 		if (type != 'vote') {
 			for (var key in $scope.users) {
 				if ($scope.users[key].name === type)
@@ -28,12 +30,12 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 			obj.picture = root + '/images/cookie_'+type+'.png';
 			obj.name = $scope.users[uKey].facebook.shareTitle;
 			obj.description = $scope.users[uKey].facebook.shareText;
-			obj.link = root	+ '#main/?ref=' +$scope.users[uKey].facebook.shareReference;
+			obj.link = root	+ append + '#main/?ref=' +$scope.users[uKey].facebook.shareReference;
 		} else {
 			obj.picture = root + '/images/cookie_comedy.png';
 			obj.name  = $scope.settings.facebook.shareTitle;
 			obj.description = $scope.settings.facebook.shareText;
-			obj.link = root+ '#main/?ref'+ $scope.settings.facebook.shareReference;
+			obj.link = root+  append +'#main/?ref'+ $scope.settings.facebook.shareReference;
 		}
 		FB.ui(obj, function(response) {
 			$scope.track('Share ' + type);
@@ -122,7 +124,21 @@ var VoteCtrl = ['$scope', function($scope){
 	, $scope.registerObj.ref = $scope.ref
 	, $scope.registerObj.gender = 'male'
 	, $scope.glob.mode='pop';
-	$scope.register = function(){
+	$scope.register = function(form){
+		//validation
+		var reqList = form.$error.required
+		, errors = 0
+		, elmName = '';
+		for (var i=0; i< reqList.length;i++){
+			elmName = reqList[i].$name;
+			if (elmName === 'slogan' || elmName === 'name' || elmName === 'email' || elmName === 'age' || elmName === 'phone') {
+				var elm = document.getElementById(reqList[i].$name);
+				elm.className = elm.className + " forcedError";
+			}
+		}
+
+		if (form.$invalid === true)
+			return;
 		$scope.Voters.save({}, $scope.registerObj, function(resp){
 			$scope.vId = resp._id;
 			$scope.Users.save({user:$scope.registerObj.voted_user, vote: 'votes'}, {voterId: $scope.vId}, function(resp){
@@ -158,4 +174,14 @@ var ThankyouCtrl = ['$scope', function($scope){
 	$scope.close = function(id){
 		$scope.shareFB(id);
 	}
+	var fb_param = {};
+	fb_param.pixel_id = '6006581314569';
+	fb_param.value = '0.00';
+	(function(){
+		var fpw = document.createElement('script');
+		fpw.async = true;
+		fpw.src = (location.protocol=='http:'?'http':'https')+'://connect.facebook.net/en_US/fp.js';
+		var ref = document.getElementsByTagName('script')[0];
+		ref.parentNode.insertBefore(fpw, ref);
+	})();
 }];

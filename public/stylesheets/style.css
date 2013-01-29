@@ -55,6 +55,7 @@ a#legal{bottom:0;position:absolute;right:10px;}
 #voteForm .radios .radio#suspense input.radioInput[type="radio"]:checked+label{background:transparent url(../images/star_suspense_btn_voted.png) no-repeat center center !important;}
 #voteForm .radios .radio#comedy input.radioInput[type="radio"]:checked+label{background:transparent url(../images/star_comedy_btn_voted.png) no-repeat center center !important;}
 #voteForm input{border:transparent solid 1px;background:transparent;color:white;direction:rtl;display:block;line-height:24px;padding:0 5px;position:absolute;width:123px;height:24px;}#voteForm input.ng-invalid.ng-dirty{background-color:#ffcccc;color:black;}
+#voteForm input.ng-invalid.forcedError{background-color:#ffcccc;color:black;}
 #voteForm input#slogan{left:275px;top:397px;width:377px;}
 #voteForm input#name{left:529px;top:429px;}
 #voteForm input#phone{left:275px;top:461px;}

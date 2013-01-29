@@ -8,6 +8,9 @@ table
 		th name
 		th phone
 		th email
+		th age
+		th gender
+		th marketing
 		th reference
 		th date
 	tr(ng-repeat="vote in voters")
@@ -15,5 +18,8 @@ table
 		td {{vote.name}}
 		td {{vote.phone}}
 		td {{vote.email}}
+		td {{vote.age}}
+		td {{vote.gender}}
+		td {{vote.marketing}}
 		td {{vote.ref}}
 		td {{vote.dateCreated | date}}
