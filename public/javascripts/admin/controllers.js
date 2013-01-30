@@ -75,7 +75,6 @@ var SettingsCtrl = ['$scope', function($scope){
 				//console.log(resp);
 			});
 		else if (action==='toggle') {
-			console.log($scope.settings.modeState);
 			$scope.Settings.update({}, {modeState: !$scope.settings.modeState}, function(resp){
 				//console.log(resp);
 				$scope.settings.modeState = resp.modeState;

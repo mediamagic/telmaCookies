@@ -71,6 +71,8 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 		}
 		$scope.Users.query({}, function(response){
 			var random = Math.floor((Math.random()*3000)/1000)
+			console.log(random);
+			console.log(response);
 			$scope.videoId = response[random].videoId
 			$scope.track(response[random].name + ' Autoplay');
 			$scope.thumbs = response;
