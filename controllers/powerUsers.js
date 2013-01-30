@@ -18,14 +18,15 @@ module.exports = {
 		var id = req.user.id;
 		var data = req.body;
 		db.powerUsers.edit({_id:id}, data, function(err,doc){
-			console.log('done editing user');
 			return res.send(handle(err,doc));
 		});
 	},
 	login: function(req,res,next){
 		var username = req.body.username;
   		var password = req.body.password;
-  		try {
+  		if (username == undefined || password == undefined || username == '' || password == '')
+  			res.send({error: 'password required', errorcode: 531});
+  		else
 	  		db.powerUsers.get({username: username}, function(err,doc){
 	  			if (doc)
 		  			doc.comparePassword(password, function(err,resp){
@@ -38,8 +39,6 @@ module.exports = {
 		  		else
 		  			res.send({error: 'username does not exist', errorcode: 531});
 	  		})
-	  	} catch (e){
-	  		res.send({error: 'password required', errorcode: 531});
-	  	}
+	  		
 	}
 }
