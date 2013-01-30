@@ -92,7 +92,7 @@ var MainCtrl = ['$scope', function($scope){
 	$scope.glob.mode='main';
 	$scope.track('HP');
 	$scope.setVideo = function(index){
-		$scope.videoId = $scope.thumbs[index].videoId;
+		$scope.videoId = $scope.users[index].videoId;
 		$scope.track($scope.thumbs[index].name);
 	}
 }];
