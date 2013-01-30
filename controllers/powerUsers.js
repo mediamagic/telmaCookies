@@ -39,7 +39,7 @@ module.exports = {
 		  			res.send({error: 'username does not exist', errorcode: 531});
 	  		})
 	  	} catch (e){
-	  		res.send({error: 'password required'}, errorcode: 531);
+	  		res.send({error: 'password required', errorcode: 531});
 	  	}
 	}
 }
