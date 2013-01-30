@@ -1,7 +1,12 @@
 .popup
 	a.close(href="#/main")
 	.content#login
-		form
-			input#username(type="text", name="username", placeholder="username", ng-model="username")
-			input#password(type="password", name="password", placeholder="password", ng-model="password")
-			input(type="submit", ng-click="loginSubmit()")
+		#loginWrap(style="width: 160px; background: white; border: #aaa solid 1px; margin: 0 auto; position: relative; top: 200px; padding: 20px; border-radius: 6px;")
+			div login
+			form
+				div
+					input#username(type="text", name="username", placeholder="username", ng-model="username")
+				div
+					input#password(type="password", name="password", placeholder="password", ng-model="password")
+				div
+					input(type="submit", ng-click="loginSubmit()", value="log in")
