@@ -45,7 +45,7 @@ if (cluster.isMaster) {
       , port = (app.get('port') == 80 || app.get('port') ==443) ? '' : ':'+app.get('port');
       if (token && cookie !== token)
         res.cookie('csrf.token', token);
-      res.locals.requested_url = req.protocol + '://' + req.host  +  port + req.path;
+      res.locals.requested_url = req.protocol + '://' + req.host + req.path;
       next();
     });
     app.use(app.router);
