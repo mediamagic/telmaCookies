@@ -11,6 +11,8 @@ a#elm_vote.animated.pulse(href="#/vote", ng-click="track('Vote Now');")
 			a.video(ng-click="setVideo(user._id)") &nbsp;
 			a.share(ng-click="shareFB(user.name);") &nbsp;
 
+#gilogo(style="position: absolute; left: 0; top: 250px;")
+	img(src="images/gilogo.png")
 #main_player
 	#video
 		iframe(width="703", height="399", src="http://www.youtube.com/embed/{{videoId}}?feature=oembed&autoplay=1&rel=0&wmode=transparent",frameborder="0",allowfullscreen)
