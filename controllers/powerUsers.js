@@ -25,17 +25,21 @@ module.exports = {
 	login: function(req,res,next){
 		var username = req.body.username;
   		var password = req.body.password;
-  		db.powerUsers.get({username: username}, function(err,doc){
-  			if (doc)
-	  			doc.comparePassword(password, function(err,resp){
-	  				if (resp) {
-	  					req.session.user_id = doc._id;
-	  					res.send(handle(err,doc))
-	  				} else 
-	  					res.send({error: 'password incorrect', errorcode: 531});
-	  			});
-	  		else
-	  			res.send({error: 'username does not exist', errorcode: 531});
-  		})
+  		try {
+	  		db.powerUsers.get({username: username}, function(err,doc){
+	  			if (doc)
+		  			doc.comparePassword(password, function(err,resp){
+		  				if (resp) {
+		  					req.session.user_id = doc._id;
+		  					res.send(handle(err,doc))
+		  				} else 
+		  					res.send({error: 'password incorrect', errorcode: 531});
+		  			});
+		  		else
+		  			res.send({error: 'username does not exist', errorcode: 531});
+	  		})
+	  	} catch (e){
+	  		res.send({error: 'password required'}, errorcode: 531);
+	  	}
 	}
 }
