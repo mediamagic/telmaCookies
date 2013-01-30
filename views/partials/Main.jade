@@ -7,7 +7,7 @@ a#elm_vote.animated.pulse(href="#/vote", ng-click="track('Vote Now');")
 #elm_message
 
 #thumbs
-	.thumb(ng-repeat="user in users | orderBy:user.dateCreated", id="{{user.name}}", class="item_{{$index}}")
+	.thumb(ng-repeat="user in users | orderBy:user.name", id="{{user.name}}", class="item_{{$index}} item_{{user.name}}")
 			a.video(ng-click="setVideo($index)") &nbsp;
 			a.share(ng-click="shareFB(user.name);") &nbsp;
 
