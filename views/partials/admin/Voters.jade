@@ -1,25 +1,39 @@
-h1 Voters
-
-span download
-	a(href="api/createCSV", download="voters.csv") csv
-table
-	tr
-		th slogan
-		th name
-		th phone
-		th email
-		th age
-		th gender
-		th marketing
-		th reference
-		th date
-	tr(ng-repeat="vote in voters")
-		td {{vote.slogan}}
-		td {{vote.name}}
-		td {{vote.phone}}
-		td {{vote.email}}
-		td {{vote.age}}
-		td {{vote.gender}}
-		td {{vote.marketing}}
-		td {{vote.ref}}
-		td {{vote.dateCreated | date}}
+.page.secondary
+	.page-header 
+		.page-header-content
+			h1 Voters
+				small &nbsp;
+			a.back-button.big.page-back(href="#/main")
+.page
+	.page-region
+		.page-region-content
+			.grid
+				.row
+					.span12
+						h3.padding10.bg-color-greenDark.fg-color-white
+							a(href="api/createCSV", download="voters.csv", style="color: white; font-size: 22px;")
+								i.icon-file-excel
+								span  Download Excel
+						table.bg-color-greenDark.fg-color-white
+							thead
+								tr
+									th sentence
+									th name
+									th phone
+									th email
+									th age
+									th gender
+									th marketing
+									th reference
+									th date
+							tbody
+								tr(ng-repeat="vote in voters")
+									td {{vote.slogan}}
+									td {{vote.name}}
+									td {{vote.phone}}
+									td {{vote.email}}
+									td {{vote.age}}
+									td {{vote.gender}}
+									td {{vote.marketing}}
+									td {{vote.ref}}
+									td {{vote.dateCreated | date}}

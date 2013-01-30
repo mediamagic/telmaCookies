@@ -44,14 +44,14 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 	}
 	$scope.stats = function(metric, type){
 		$scope.Stats.save({type:metric}, {ref: type}, function(response){
-			console.log(response);
+			//console.log(response);
 		});
 	}
 	$scope.track = function(action){
-		console.log('tracking: ' + action);
+		//console.log('tracking: ' + action);
 		var img = new Image;
 		img.onload = function(){
-			console.log('pixel: ' + $scope.dict[action]);
+			//console.log('pixel: ' + $scope.dict[action]);
 			delete this;
 		}
 		img.src = "http://adserver.adtech.de/utrack/3.0/1391/0/0/0/BeaconId="
@@ -123,18 +123,30 @@ var VoteCtrl = ['$scope', function($scope){
 	$scope.registerObj = $scope.glob.lastRegister
 	, $scope.registerObj.ref = $scope.ref
 	, $scope.registerObj.gender = 'male'
+	, $scope.registerObj.voted_user = ''
 	, $scope.glob.mode='pop';
 	$scope.register = function(form){
 		//validation
 		var reqList = form.$error.required
-		, errors = 0
 		, elmName = '';
+		console.log(reqList);
 		for (var i=0; i< reqList.length;i++){
 			elmName = reqList[i].$name;
+			console.log(elmName);
 			if (elmName === 'slogan' || elmName === 'name' || elmName === 'email' || elmName === 'age' || elmName === 'phone') {
 				var elm = document.getElementById(reqList[i].$name);
 				elm.className = elm.className + " forcedError";
 			}
+			if (elmName === 'user' && $scope.registerObj.voted_user == '')
+				var tmpErr = true;
+		}
+
+		if (tmpErr === true) {
+			$scope.vote_error = true;
+			$scope.$watch('registerObj.voted_user', function(n, o){
+				if (n !=o)
+					$scope.vote_error = false;
+			});
 		}
 
 		if (form.$invalid === true)

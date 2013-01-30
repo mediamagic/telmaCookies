@@ -69,7 +69,8 @@ if (cluster.isMaster) {
   //MIDDLEWARE
   function adminAuth(req, res, next){
     req.admin = false;
-    if (!req.session.user_id)
+    console.log(app.settings.env);
+    if (!req.session.user_id && app.settings.env != 'development')
       return res.redirect('/#/login?url='+res.locals.requested_url);
     req.admin = true;
     next();
@@ -87,6 +88,7 @@ if (cluster.isMaster) {
   app.get('/api/videoCheck/:id', Api.videoCheck);
   app.get('/api/createCSV', adminAuth, Api.createCSV);
   app.get('/api/createCSV/:id', adminAuth, Api.createCSV);
+  app.post('/api/upload/:type', adminAuth, Api.upload);
 
   //RESTful RESOURCES
   app.get ('/resources/users', Users.index);

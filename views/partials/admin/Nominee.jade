@@ -1,28 +1,46 @@
-h1 nominee
-
-.image image
-.name {{user.name}}
-.video {{user.video}}
-.votes {{user.votes.length}}
-
-table
-	tr
-		th slogan
-		th name
-		th phone
-		th email
-		th age
-		th gender
-		th marketing
-		th reference
-		th date
-	tr(ng-repeat="vote in voters")
-		td {{vote.slogan}}
-		td {{vote.name}}
-		td {{vote.phone}}
-		td {{vote.email}}
-		td {{vote.age}}
-		td {{vote.gender}}
-		td {{vote.marketing}}
-		td {{vote.ref}}
-		td {{vote.dateCreated | date}}
+.page.secondary
+	.page-header 
+		.page-header-content
+			h1 {{user.name}}
+				small Cookie
+			a.back-button.big.page-back(href="#/nominees")
+.page
+	.page-region
+		.page-region-content
+			.grid
+				.row
+					.span4.bg-color-darken
+						img(ng-src="/images/cookie_{{user.name}}.png")
+					.span4.bg-color-blueDark(style="height: 182px; font-size: 90px; text-align: center; line-height: 182px;") {{user.votes.length}}
+						small votes
+					.span4
+						iframe(height="182", src="http://www.youtube.com/embed/{{user.videoId}}?feature=oembed&autoplay=0&rel=0&wmode=transparent",frameborder="0",allowfullscreen)
+				.row
+					.span12
+						h3.padding5.bg-color-orangeDark
+							i.icon-list
+							span  Results
+							
+						table.bg-color-orangeDark
+							thead
+								tr
+									th slogan
+									th name
+									th phone
+									th email
+									th age
+									th gender
+									th marketing
+									th reference
+									th date
+							tbody
+								tr(ng-repeat="vote in voters")
+									td {{vote.slogan}}
+									td {{vote.name}}
+									td {{vote.phone}}
+									td {{vote.email}}
+									td {{vote.age}}
+									td {{vote.gender}}
+									td {{vote.marketing}}
+									td {{vote.ref}}
+									td {{vote.dateCreated | date}}

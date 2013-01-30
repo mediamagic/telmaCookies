@@ -1,27 +1,48 @@
 doctype 5
 html(ng-app="admin", ng-controller="GlobalCtrl")
 	head
+		meta(name="viewport",content="width=device-width, initial-scale=1.0")
 		title(ng-bind="settings.title") loading...
 		link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en")
+		link(rel='stylesheet', href='/stylesheets/modern.css')
+		link(rel='stylesheet', href='/stylesheets/modern-responsive.css')
 		link(rel='stylesheet', href='/stylesheets/admin.css')
-		script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
 		script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js")
 		script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-resource.min.js")
 		script(src="//code.angularjs.org/1.0.3/angular-cookies.min.js")
 		script(src="/javascripts/admin/app.js")
 		script(src="/javascripts/admin/controllers.js")
-	body
-		ul#nav
-			li
-				a(href="#/main") main
-			li
-				a(href="#/nominees") nominees
-			li
-				a(href="#/voters") voters
-			li
-				a(href="#/settings") settings
-			li
-				a(href="/", target="_blank") application
-			li
-				a(href="/logout") logout
-		#wrapper(ng-view)
+	body.modern-ui
+		.page
+			.nav-bar
+				.nav-bar-inner.padding10
+					span.pull-menu(ng-click="showMenu = !showMenu")
+					a(href="#/main")
+						span.element.brand mediamagic
+					span.divider
+					ul.menu(ng-hide="!showMenu")
+						li
+							a.navigation-text(href="#/main")
+								i.icon-home
+								span  Home
+						li
+							a.navigation-text(href="#/nominees")
+								i.icon-user-2
+								span  Cookies
+						li
+							a.navigation-text(href="#/voters") 
+								i.icon-list
+								span  Voters
+						li
+							a.navigation-text(href="#/settings")
+								i.icon-cog
+								span  Settings
+						li
+							a.navigation-text(href="/", target="_blank")
+								i.icon-new-tab-2
+								span  Go to App
+						li
+							a.navigation-text(href="/logout")
+								i.icon-exit
+								span  logout
+		div(ng-view)

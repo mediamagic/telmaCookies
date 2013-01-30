@@ -1,47 +1,80 @@
-h3 Application settings
-
-.title 
-	h3 general
-	.view
-		div mode: {{settings.modeState}}
-		div application title: {{settings.title}}
-	.edit
-		form(name="settingsTitleForm")
-			.row title:
-				input(type="text", name="title", value="{{settings.title}}", ng-model="settings.title", required)
-				button(ng-click="save('title')", ng-disabled="settingsTitleForm.$invalid") save
-		.row application mode:
-			button(ng-click="save('toggle')") enable/disable 
-			span {{settings.modeState}}
-		form(name="settingsForm")
-			h4 facebook
-			.shareTitle share title:
-				input(type="text", name="shareTitle", ng-model="settings.facebook.shareTitle", required)
-			.shareText share text:
-				input(type="text", name="shareText", ng-model="settings.facebook.shareText", required)
-			.shareRef share reference:
-				input(type="number", name="shareRef", ng-model="settings.facebook.shareReference", required)
-			.save
-				button(ng-click="save('facebook')", ng-disabled="settingsForm.$invalid") save
-
-.title 
-	h3 nominees
-	.user(ng-repeat="user in users")
-		.form(ng-form,name="userForm")
-			.name name:
-				input(type="text", name="name", value="{{user.name}}", ng-model="users[$index].name", required)
-			.video video id:
-				input(type="text", name="videoId", value="{{user.videoId}}", ng-change="formInvalid(userForm, users[$index].videoId)", ng-model="users[$index].videoId", required)
-			.videoPreview
-				iframe(width="480", height="270", src="http://www.youtube.com/embed/{{user.videoId}}?feature=oembed",frameborder="0",allowfullscreen)
-			.description description:
-				textarea(name="description", ng-model="users[$index].description", required) {{user.description}}
-			h4 facebook
-			.shareTitle share title:
-				input(type="text", name="shareTitle", ng-model="users[$index].facebook.shareTitle", required)
-			.shareText share text:
-				input(type="text", name="shareText", ng-model="users[$index].facebook.shareText", required)
-			.shareRef share reference:
-				input(type="number", name="shareRef", ng-model="users[$index].facebook.shareReference", required)			
-			.save
-				button(ng-click="updateUser($index)", ng-disabled="userForm.$invalid") save
+.page.secondary
+	.page-header 
+		.page-header-content
+			h1 Application settings
+				small &nbsp;
+			a.back-button.big.page-back(href="#/main")
+.page
+	.page-region
+		.page-region-content
+			.grid
+				.row
+					.span12
+						h3 general settings
+					.span6
+						//div mode: {{settings.modeState}}
+						h2 current app title: {{settings.title}}
+						form(name="settingsTitleForm")
+							.input-control.text.span3
+								input(type="text", name="title", value="{{settings.title}}", ng-model="settings.title", required)
+							button(ng-click="save('title')", ng-disabled="settingsTitleForm.$invalid") save
+					.span6
+						h2 application mode:
+						form(name="settingsModeForm")
+							label.input-control.switch
+								input(type="checkbox", ng-click="save('toggle')", ng-checked="settings.modeState")
+								span.helper voting mode: {{settings.modeState}}
+							h2 winners file:
+							.input-control.file
+								input(type="file", name="leadersImage", onchange="angular.element(this).scope().setFiles(this)")
+							//button(ng-click="uploadImage()", ng-disabled="settingsTitleForm.$invalid") save
+				form(name="settingsForm")
+					.row
+						.span12
+							h4.bg-color-blueDark.padding10.fg-color-white
+								i.icon-facebook 
+								span  general facebook settings
+					.row
+						.span6
+							div.bg-color-blueDark.fg-color-white.padding10
+								h2.fg-color-white share title:
+								.input-control.text
+									input(type="text", name="shareTitle", ng-model="settings.facebook.shareTitle", required)
+								h2.fg-color-white  share text:
+								.input-control.text
+									input(type="text", name="shareText", ng-model="settings.facebook.shareText", required)
+						.span6.bg-color-blueDark.fg-color-white.padding10
+								h2.fg-color-white  share reference:
+								.input-control.number
+									input(type="number", name="shareRef", ng-model="settings.facebook.shareReference", required)
+								.save
+									button(ng-click="save('facebook')", ng-disabled="settingsForm.$invalid") save
+			
+				.row.form(ng-repeat="user in users", ng-form,name="userForm", style="min-height: 402px; margin: 0 0 25px 0").bg-color-greenDark
+					.span12.padding10
+						h2.fg-color-white {{user.name}} 
+							button(ng-click="updateUser($index)", ng-disabled="userForm.$invalid", style="float: right;") save
+					.span3.padding10(style="min-height: 330px;")
+						h3.fg-color-white share title:
+						.input-control.text
+							input(type="text", name="shareTitle", ng-model="users[$index].facebook.shareTitle", required)
+						h3.fg-color-white share text:
+						.input-control.text
+							input(type="text", name="shareText", ng-model="users[$index].facebook.shareText", required)
+						h3.fg-color-white share reference:
+						.input-control.text
+							input(type="number", name="shareRef", ng-model="users[$index].facebook.shareReference", required)
+					.span3.padding10(style="min-height: 330px;")
+						h3.fg-color-white name:
+						.input-control.text
+							input(type="text", name="name", value="{{user.name}}", ng-model="users[$index].name", required)
+						h3.fg-color-white description:
+						.input-control.textarea
+							textarea(name="description", ng-model="users[$index].description", required) {{user.description}}
+						h3.fg-color-white video id:
+						.input-control.text
+							input(type="text", name="videoId", value="{{user.videoId}}", ng-change="formInvalid(userForm, users[$index].videoId)", ng-model="users[$index].videoId", required)
+					.span5.padding10(style="min-height: 330px;")
+						h3.fg-color-white video preview:
+						iframe(width="440", height="250", src="http://www.youtube.com/embed/{{user.videoId}}?feature=oembed",frameborder="0",allowfullscreen)
+					.clear

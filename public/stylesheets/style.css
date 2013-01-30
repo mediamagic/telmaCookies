@@ -42,6 +42,7 @@ a#legal{bottom:0;position:absolute;right:10px;}
 .dock ul li div.navTitle{display:none !important;color:white;font-size:12px;bottom:-14px;position:absolute;width:78px;}
 .dock ul li:hover div.navTitle{display:block !important;}
 .content#vote{background:transparent url(../images/popup_bg_vote.jpg) no-repeat center center;}
+#voteForm .vote_error{width:465px;height:29px;background:transparent url(../images/vote_error.png) no-repeat center center;position:absolute;top:369px;left:237px;}
 #voteForm .radios .radioInput{display:none;}
 #voteForm .radios .radio{position:absolute;top:185px;}#voteForm .radios .radio label{display:block;height:236px;width:197px;}
 #voteForm .radios .radio#comedy{left:122px;}#voteForm .radios .radio#comedy .cookie{background:transparent url(../images/cookie_comedy.png) no-repeat center center;left:120px;height:178px;position:absolute;top:20px;width:126px;}

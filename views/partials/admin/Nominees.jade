@@ -1,14 +1,31 @@
-h1 Nominees
-
-table
-	tr
-		th image
-		th name
-		th number of votes
-		th link
-	tr(ng-repeat="user in users")
-		td {{user.image}}
-		td {{user.name}}	
-		td {{user.votes}}
-		td() 
-			a(href="#/nominee/{{user._id}}") view
+.page.secondary
+	.page-header 
+		.page-header-content
+			h1 Cookies
+				small &nbsp;
+			a.back-button.big.page-back(href="#/main")
+.page
+	.page-region
+		.page-region-content
+			.grid
+				.row
+					.span12
+						h3.padding5.bg-color-red.fg-color-white
+							i.icon-user-2
+							span  Cookies
+						table.bg-color-red.fg-color-white
+							thead
+								tr
+									th image
+									th name
+									th number of votes
+									th link
+							tbody
+								tr(ng-repeat="user in users")
+									td.padding5(style="width: 50px")
+											img(ng-src="/images/cookie_{{user.name}}.png", width="50")
+									td {{user.name}}	
+									td(style="width: 100px;") {{user.votes}}
+									td(style="text-align: center; width: 30px;")
+										a(href="#/nominee/{{user._id}}", style="color: black; text-align-center;")
+											i.icon-eye.fg-color-black

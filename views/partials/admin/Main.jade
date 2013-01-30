@@ -1,32 +1,50 @@
-h1 Main
+.page
+	.page-header 
+		.page-header-content
+			h1 Cookies admin
+				small &nbsp;
 
+	.page-region
+		.page-region-content
+			.grid
+				.row
+					.span4
+						h3.padding5.bg-color-red
+							i.icon-stats-up
+							span  Cookies
+						table.bg-color-red
+							thead
+								tr
+									th nominee
+									th votes
+							tbody
+								tr(ng-repeat="user in users")
+									td {{user.name}}
+									td {{user.votes}}
 
-.votes 
-	.title total number of votes
-	table
-		tr
-			th nominee
-			th votes
-		tr(ng-repeat="user in users")
-			td {{user.name}}
-			td {{user.votes}}
-
-.shares
-	.title Facebook shares
-	table
-		tr
-			th shared name
-			th total
-		tr(ng-repeat="share in shares")
-			td {{share.ref}}
-			td {{share.count}}
-
-.refs
-	.title ref entries
-	table
-		tr
-			th ref id
-			th total
-		tr(ng-repeat="ref in refs")
-			td {{ref.ref}}
-			td {{ref.count}}
+					.span4
+						h3.padding5.bg-color-blue
+							i.icon-facebook
+							span  Shares
+						table.bg-color-blue
+							thead
+								tr
+									th shared name
+									th total
+							tbody
+								tr(ng-repeat="share in shares")
+									td {{share.ref}}
+									td {{share.count}}
+					.span4
+						h3.padding5.bg-color-green
+							i.icon-share-2
+							span  References
+						table.bg-color-green
+							thead
+								tr
+									th ref id
+									th total
+							tbody
+								tr(ng-repeat="ref in refs")
+									td {{ref.ref}}
+									td {{ref.count}}
