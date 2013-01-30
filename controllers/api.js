@@ -55,13 +55,11 @@ exports.upload = function(req, res){
 		console.log(req.params.type)
 		return res.send(403);
 	}
-	console.log('uploading');
 	var fs = require('fs');
 	fs.readFile(req.files.leadersImage.path, function(err, data){
 		if (err)
 			res.send(500, err);
 		var newPath = global.root + "public/images/popup_bg_leaders.jpg";
-		console.log(newPath);
 		fs.writeFile(newPath, data, function(err){
 			res.send(200, 'image uploaded');
 		});

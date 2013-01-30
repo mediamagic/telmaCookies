@@ -14,7 +14,6 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 	, $scope.Stats = $scope.resource('/resources/stats/:type', {_csrf: $cookies['csrf.token']})
 	, $scope.Api = $scope.resource('/api/:action/:id', {_csrf: $cookies['csrf.token']});
 	$scope.cookies = $cookies;
-	console.log($scope.cookies);
 	$scope.Settings.get({}, function(settings){
 		$scope.settings = settings
 	});
@@ -73,12 +72,12 @@ var SettingsCtrl = ['$scope', function($scope){
 	$scope.save = function(action){
 		if (action==='title')
 			$scope.Settings.update({},{title: $scope.settings.title}, function(resp){
-				console.log(resp);
+				//console.log(resp);
 			});
 		else if (action==='toggle') {
 			console.log($scope.settings.modeState);
 			$scope.Settings.update({}, {modeState: !$scope.settings.modeState}, function(resp){
-				console.log(resp);
+				//console.log(resp);
 				$scope.settings.modeState = resp.modeState;
 			});
 		} else if (action==='facebook')
@@ -90,7 +89,7 @@ var SettingsCtrl = ['$scope', function($scope){
 		var sendObj = $scope.users[index];
 		delete sendObj.votes, sendObj._id, sendObj.hidden;
 		$scope.Users.update({user: sendObj._id}, sendObj, function(resp){
-			console.log(resp);
+			//console.log(resp);
 		});
 	}
 	$scope.videoCheck = function(id, cb){
@@ -104,10 +103,6 @@ var SettingsCtrl = ['$scope', function($scope){
 			formObj.$invalid = resp;
 		});
 	}
-	$scope.uploadImage = function(ob){
-		console.log(ob);
-	}
-
 	$scope.setFiles = function (_element) {
 		$scope.$apply(function ($scope) {
 			for (var i=0;i<_element.files.length;i++){
@@ -116,7 +111,6 @@ var SettingsCtrl = ['$scope', function($scope){
 			}
 		});
 	};
-
 	$scope.prepareUpload = function(_file){
 		var imageType = /image.*/
 		if(!_file.type.match(imageType)){ 
@@ -137,7 +131,6 @@ var SettingsCtrl = ['$scope', function($scope){
 		$scope.fd.append('leadersImage', $scope.file);
 		$scope.fd.append('_csrf', $scope.cookies['csrf.token'])
 		$scope.xhr = new XMLHttpRequest();
-		console.log($scope.cookies);
         $scope.xhr.open("POST", "/api/upload/leaders" , true);
        	$scope.xhr.send($scope.fd);
 	}

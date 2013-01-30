@@ -69,7 +69,6 @@ if (cluster.isMaster) {
   //MIDDLEWARE
   function adminAuth(req, res, next){
     req.admin = false;
-    console.log(app.settings.env);
     if (!req.session.user_id && app.settings.env != 'development')
       return res.redirect('/#/login?url='+res.locals.requested_url);
     req.admin = true;

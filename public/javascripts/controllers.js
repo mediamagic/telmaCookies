@@ -129,10 +129,8 @@ var VoteCtrl = ['$scope', function($scope){
 		//validation
 		var reqList = form.$error.required
 		, elmName = '';
-		console.log(reqList);
 		for (var i=0; i< reqList.length;i++){
 			elmName = reqList[i].$name;
-			console.log(elmName);
 			if (elmName === 'slogan' || elmName === 'name' || elmName === 'email' || elmName === 'age' || elmName === 'phone') {
 				var elm = document.getElementById(reqList[i].$name);
 				elm.className = elm.className + " forcedError";
