@@ -45,7 +45,7 @@ exports.createCSV = function(req,res,next){
 		.from.array( resp )
 		.to(function(data){
 				res.set("Content-type", 'application/csv; charset=utf8');
-				return res.end(data, 'UTF-8');
+				return res.end('\ufeff' + data, 'utf8');
 			});
 	});
 }
