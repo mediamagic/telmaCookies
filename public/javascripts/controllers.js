@@ -11,9 +11,9 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 		lastRegister: {},
 		mode: 'main'
 	}
-	$scope.dict = {'suspense': 15028,'scifi': 15029,'comedy': 15030,'comedy Autoplay': 15031,'suspense Autoplay': 15032,'scifi Autoplay':  15033,'HP': 15036,'Vote Now': 15037,
-					'SEND': 15038,'Results': 15039,'COCOMAN Cookies': 15040,'Awards': 15041,'HOW TO': 15042,'WINNERS': 15043,'FACEBOOK': 15044,'Share comedy': 15045,
-					'Share suspense': 15046,'Share scifi': 15047,'Share vote': 15048};
+	$scope.dict = {'suspense': 'Thriller','scifi': 'Science fiction','comedy': 'Comedy','comedy Autoplay': 'Comedy Autoplay','suspense Autoplay': 'Thriller Autoplay','scifi Autoplay': 'Science fiction Autoplay','HP': 'HP','Vote Now': 'Vote Now',
+					'SEND': 'SEND','Results': 'Results','COCOMAN Cookies': 'Cocoman Cookies','Awards': 'Awards','HOW TO': 'HOW TO','WINNERS': 'WINNERS','FACEBOOK': 'FACEBOOK','Share comedy': 'Share Comedy',
+					'Share suspense': 'Share Suspense','Share scifi': 'Share Science fiction','Share vote': 'share Vote'};
 	$scope.shareFB = function(type){
 		var obj = {
 			method: 'feed'
@@ -54,8 +54,7 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 			//console.log('pixel: ' + $scope.dict[action]);
 			delete this;
 		}
-		img.src = "http://adserver.adtech.de/utrack/3.0/1391/0/0/0/BeaconId="
-		+$scope.dict[action]+";rettype=img;subnid=1;Section=[Please insert Section here]";
+		img.src = "http://adserver.adtech.de/utrack/3.0/1391/0/0/0/BeaconId=15164;rettype=img;subnid=1;Section="+$scope.dict[action];
 		return $window._gaq.push(['_trackPageview', action]);
 	}
 	$scope.Settings.get({}, function(settings){
@@ -93,7 +92,7 @@ var MainCtrl = ['$scope', function($scope){
 	$scope.track('HP');
 	$scope.setVideo = function(index){
 		$scope.videoId = $scope.users[index].videoId;
-		$scope.track($scope.thumbs[index].name);
+		$scope.track($scope.users[index].name);
 	}
 }];
 
