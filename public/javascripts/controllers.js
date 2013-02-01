@@ -126,9 +126,10 @@ var VoteCtrl = ['$scope', function($scope){
 	, $scope.glob.mode='pop';
 
 
-	$scope.setVotedUser = function(index){
+	$scope.setVotedUser = function(index, _id){
 		$('.radioLabel').removeClass('checked');
 		$('#label_'+index).addClass('checked');
+		$scope.registerObj.voted_user = _id;
 	}
 	$scope.register = function(form){
 		//validation
@@ -147,7 +148,7 @@ var VoteCtrl = ['$scope', function($scope){
 		if (tmpErr === true) {
 			$scope.vote_error = true;
 			$scope.$watch('registerObj.voted_user', function(n, o){
-				if (n !=o)
+				if (n!=o)
 					$scope.vote_error = false;
 			});
 		}
