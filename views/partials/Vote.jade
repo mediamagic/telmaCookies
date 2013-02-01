@@ -4,8 +4,8 @@
 		form#voteForm(name="registerForm", novalidate, ng-submit="register(registerForm)")
 			.radios
 				.radio(ng-repeat="user in users", id="{{user.name}}")
-					label(for="user_{{$index}}") &nbsp;
 					input.radioInput(type="radio", name="user", value="{{user._id}}", ng-model="registerObj.voted_user", id="user_{{$index}}", required)
+					label.radioLabel(for="user_{{$index}}", ng-click="setVotedUser($index)", id="label_{{$index}}")
 					.cookie
 			.vote_error(ng-show="vote_error")
 			input#slogan(type="text", name="slogan", id="slogan", ng-model="registerObj.slogan", required)

@@ -15,7 +15,9 @@
 	}
 	.radios {
 		.radioInput {
-			display: none;
+			visibility: hidden;
+			width: 1px;
+			height: 1px;
 		}
 		.radio{
 			position: absolute;
@@ -84,13 +86,13 @@
 			}
 		}
 		.radio {
-			&#scifi input.radioInput[type="radio"]:checked + label {
+			&#scifi .radioLabel.checked {
 				background: transparent url(../images/star_scifi_btn_voted.png) no-repeat center center !important;
 			}
-			&#suspense input.radioInput[type="radio"]:checked + label {
+			&#suspense .radioLabel.checked {
 				background: transparent url(../images/star_suspense_btn_voted.png) no-repeat center center !important;
 			}
-			&#comedy input.radioInput[type="radio"]:checked + label {
+			&#comedy .radioLabel.checked {
 				background: transparent url(../images/star_comedy_btn_voted.png) no-repeat center center !important;
 			}
 		}

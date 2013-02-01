@@ -124,6 +124,12 @@ var VoteCtrl = ['$scope', function($scope){
 	, $scope.registerObj.gender = 'male'
 	, $scope.registerObj.voted_user = ''
 	, $scope.glob.mode='pop';
+
+
+	$scope.setVotedUser = function(index){
+		$('.radioLabel').removeClass('checked');
+		$('#label_'+index).addClass('checked');
+	}
 	$scope.register = function(form){
 		//validation
 		var reqList = form.$error.required
