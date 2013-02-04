@@ -43,7 +43,7 @@ a#legal{bottom:0;position:absolute;right:10px;}
 .dock ul li:hover div.navTitle{display:block !important;}
 .content#vote{background:transparent url(../images/popup_bg_vote.jpg) no-repeat center center;}
 #voteForm .vote_error{width:465px;height:29px;background:transparent url(../images/vote_error.png) no-repeat center center;position:absolute;top:369px;left:237px;}
-#voteForm .radios .radioInput{display:none;}
+#voteForm .radios .radioInput{visibility:hidden;width:1px;height:1px;}
 #voteForm .radios .radio{position:absolute;top:185px;}#voteForm .radios .radio label{display:block;height:236px;width:197px;}
 #voteForm .radios .radio#comedy{left:122px;}#voteForm .radios .radio#comedy .cookie{background:transparent url(../images/cookie_comedy.png) no-repeat center center;left:120px;height:178px;position:absolute;top:20px;width:126px;}
 #voteForm .radios .radio#comedy label{background:transparent url(../images/star_comedy_btn.png) no-repeat center center;cursor:pointer;}#voteForm .radios .radio#comedy label:hover{background:transparent url(../images/star_comedy_btn_over.png) no-repeat center center;}
@@ -52,9 +52,9 @@ a#legal{bottom:0;position:absolute;right:10px;}
 #voteForm .radios .radio#scifi{left:658px;}#voteForm .radios .radio#scifi .cookie{background:transparent url(../images/cookie_scifi.png) no-repeat center center;left:130px;height:178px;position:absolute;top:20px;width:126px;}
 #voteForm .radios .radio#scifi label{background:transparent url(../images/star_scifi_btn.png) no-repeat center center;cursor:pointer;}#voteForm .radios .radio#scifi label:hover{background:transparent url(../images/star_scifi_btn_over.png) no-repeat center center;}
 #voteForm .radios .radio#trailer{display:none;}
-#voteForm .radios .radio#scifi input.radioInput[type="radio"]:checked+label{background:transparent url(../images/star_scifi_btn_voted.png) no-repeat center center !important;}
-#voteForm .radios .radio#suspense input.radioInput[type="radio"]:checked+label{background:transparent url(../images/star_suspense_btn_voted.png) no-repeat center center !important;}
-#voteForm .radios .radio#comedy input.radioInput[type="radio"]:checked+label{background:transparent url(../images/star_comedy_btn_voted.png) no-repeat center center !important;}
+#voteForm .radios .radio#scifi .radioLabel.checked{background:transparent url(../images/star_scifi_btn_voted.png) no-repeat center center !important;}
+#voteForm .radios .radio#suspense .radioLabel.checked{background:transparent url(../images/star_suspense_btn_voted.png) no-repeat center center !important;}
+#voteForm .radios .radio#comedy .radioLabel.checked{background:transparent url(../images/star_comedy_btn_voted.png) no-repeat center center !important;}
 #voteForm input{border:transparent solid 1px;background:transparent;color:white;direction:rtl;display:block;line-height:24px;padding:0 5px;position:absolute;width:123px;height:24px;}#voteForm input.ng-invalid.ng-dirty{background-color:#ffcccc;color:black;}
 #voteForm input.ng-invalid.forcedError{background-color:#ffcccc;color:black;}
 #voteForm input#slogan{left:275px;top:397px;width:377px;}

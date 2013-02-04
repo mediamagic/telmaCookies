@@ -5,7 +5,7 @@
 			.radios
 				.radio(ng-repeat="user in users", id="{{user.name}}")
 					input.radioInput(type="radio", name="user", value="{{user._id}}", ng-model="registerObj.voted_user", id="user_{{$index}}", required)
-					label(for="user_{{$index}}")
+					label.radioLabel(for="user_{{$index}}", ng-click="setVotedUser($index, user._id)", id="label_{{$index}}")
 					.cookie
 			.vote_error(ng-show="vote_error")
 			input#slogan(type="text", name="slogan", id="slogan", ng-model="registerObj.slogan", required)
