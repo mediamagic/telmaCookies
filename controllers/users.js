@@ -19,14 +19,23 @@ module.exports = {
   		});
 	},
 	index: function(req,res,next){
-		db.Users.list({}, function(err,doc){
-				var ndoc = JSON.parse(JSON.stringify(doc));
-				for(var i = 0; i<ndoc.length;i++) {
-				 	ndoc[i]['votes'] = ndoc[i]['votes'].length;
-				}
-				return res.send(handle(err,ndoc));
-			return res.send(handle(err,doc));
+		db.Users.find({},{'__v': 1, '_id': 1, 'description': 1, 'name': 1, 'videoId': 1},{sort:{dateCreated: 1}},function(err,doc){
+			var ndoc = JSON.parse(JSON.stringify(doc));
+			for(var i=0;i<ndoc.length;i++) {
+				ndoc[i].votes = ndoc[i].__v;
+				//if (ndoc[i].name === 'suspense')
+					//ndoc[i]['votes'] = ndoc[i]['votes'] + 100;
+			}
+			return res.send(handle(err,ndoc));
 		});
+		// db.Users.list({}, function(err,doc){
+		// 		var ndoc = JSON.parse(JSON.stringify(doc));
+		// 		for(var i = 0; i<ndoc.length;i++) {
+		// 		 	ndoc[i]['votes'] = ndoc[i]['votes'].length;
+		// 		}
+		// 		//return res.send(handle(err,ndoc));
+		// 	return res.send(handle(err,doc));
+		// });
 	},
 	create: function(req,res,next){
 		var data = req.body;
