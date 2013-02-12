@@ -6,7 +6,6 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
 		when('/main', {templateUrl: '/views/Main.html', controller: MainCtrl, name:'Main'}).
 		when('/chart', {templateUrl: '/views/Chart.html', controller: ChartCtrl, name:'Chart'}).
 		when('/login', {templateUrl: '/views/Login.html', controller: LoginCtrl, name: 'Login'}).
-		when('/vote', {templateUrl: '/views/Vote.html', controller: VoteCtrl, name:'Vote'}).
 		when('/guide', {templateUrl: '/views/Guide.html', controller: StaticCtrl, name:'Guide'}).
 		when('/about', {templateUrl: '/views/About.html', controller: StaticCtrl, name:'About'}).
 		when('/leaders', {templateUrl: '/views/Leaders.html?r='+Math.floor(Math.random()*10000), controller: StaticCtrl, name:'Leaders'}).

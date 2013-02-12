@@ -118,57 +118,6 @@ var ChartCtrl = ['$scope', function($scope){
 	};
 }];
 
-var VoteCtrl = ['$scope', function($scope){
-	$scope.registerObj = $scope.glob.lastRegister
-	, $scope.registerObj.ref = $scope.ref
-	, $scope.registerObj.gender = 'male'
-	, $scope.registerObj.voted_user = ''
-	, $scope.glob.mode='pop';
-
-
-	$scope.setVotedUser = function(index, _id){
-		$('.radioLabel').removeClass('checked');
-		$('#label_'+index).addClass('checked');
-		$scope.registerObj.voted_user = _id;
-	}
-	$scope.register = function(form){
-		//validation
-		var reqList = form.$error.required
-		, elmName = '';
-		for (var i=0; i< reqList.length;i++){
-			elmName = reqList[i].$name;
-			if (elmName === 'slogan' || elmName === 'name' || elmName === 'email' || elmName === 'age' || elmName === 'phone') {
-				var elm = document.getElementById(reqList[i].$name);
-				elm.className = elm.className + " forcedError";
-			}
-			if (elmName === 'user' && $scope.registerObj.voted_user == '')
-				var tmpErr = true;
-		}
-
-		if (tmpErr === true) {
-			$scope.vote_error = true;
-			$scope.$watch('registerObj.voted_user', function(n, o){
-				if (n!=o)
-					$scope.vote_error = false;
-			});
-		}
-
-		if (form.$invalid === true)
-			return;
-		$scope.Voters.save({}, $scope.registerObj, function(resp){
-			$scope.vId = resp._id;
-			$scope.Users.save({user:$scope.registerObj.voted_user, vote: 'votes'}, {voterId: $scope.vId}, function(resp){
-				var voted_user_id = $scope.registerObj.voted_user;
-				delete $scope.registerObj.voted_user;
-				$scope.track('SEND');
-				$scope.users[voted_user_id].votes++;
-				$scope.glob.lastRegister = $scope.registerObj;
-				$scope.location.path('/thankyou');
-			});
-		});
-	}
-}];
-
 var LoginCtrl = ['$scope', '$window' , function($scope, $window){
 	var prevUrl = $scope.location.$$search.url;
 	$scope.glob.mode='pop';

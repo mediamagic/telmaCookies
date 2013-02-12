@@ -7,7 +7,7 @@ a{color:#ffe821;}
 .popup .content{height:663px;left:23px;padding:3px;position:absolute;top:15px;width:978px;z-index:1;}
 @-webkit-keyframes bounce{0%{-webkit-transform:translateY(0);} 100%{-webkit-transform:translateY(-20px);}}@-moz-keyframes bounce{0%{-moz-transform:translateY(0);} 100%{-moz-transform:translateY(-20px);}}#elm_vote{background:transparent url(../images/main_elm_vote.png) no-repeat center center;display:block;height:146px;position:absolute;left:29px;top:5px;width:151px;z-index:40;}
 #elm_ipad{background:transparent url(../images/main_elm_ipad.png) no-repeat center center;height:122px;position:absolute;width:153px;left:143px;top:3px;z-index:30;}
-#elm_message{background:transparent url(../images/main_elm_message.png) no-repeat center center;position:absolute;height:89px;left:300px;top:15px;width:278px;}
+#elm_message{background:transparent url(../images/main_elm_message.png) no-repeat center center;position:absolute;height:101px;left:110px;top:10px;width:427px;z-index:100;}
 #main_player{background:transparent url(../images/main_player.png) no-repeat center center;height:478px;left:36px;position:absolute;top:112px;width:787px;z-index:20;}
 #elm_logo{background:transparent url(../images/main_elm_logo.png) no-repeat center center;bottom:20px;height:94px;right:10px;position:absolute;width:116px;}
 #elm_pack{background:transparent url(../images/main_elm_pack.png) no-repeat center center;bottom:0px;height:127px;left:10px;position:absolute;width:277px;}
