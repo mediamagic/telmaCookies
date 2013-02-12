@@ -97,10 +97,10 @@ if (cluster.isMaster) {
   app.post('/resources/users', adminAuth, Users.create);
   app.put ('/resources/users/:id', adminAuth, Users.load, Users.update);
   app.get ('/resources/users/:id/votes', Votes.index);
-  app.post('/resources/users/:id/votes', Votes.create);
+  //app.post('/resources/users/:id/votes', Votes.create);
   app.get ('/resources/voters', adminAuth, Voters.index);
   app.get ('/resources/voters/:id', adminAuth, Voters.show);
-  app.post('/resources/voters', Voters.create);
+  //app.post('/resources/voters', Voters.create);
   app.get ('/resources/settings', Settings.index);
   app.put ('/resources/settings', adminAuth, Settings.update);
   app.post('/resources/stats/:type', Statistics.create);
