@@ -1,15 +1,13 @@
-//#elm_ipad.animated.bounceInDown
-
-//a#elm_vote.animated.pulse(href="#/vote", ng-click="track('Vote Now');")
+#elm_banner(class="{{videoName}}")
 
 #elm_plane.animated.plane
 
 #elm_message.animated.bounceInDown
 
 #thumbs
-	.thumb(ng-repeat="user in users | orderBy:user.name", id="{{user.name}}", class="item_{{$index}} item_{{user.name}}")
-			a.video(ng-click="setVideo(user._id)") &nbsp;
-			a.share(ng-click="shareFB(user.name);") &nbsp;
+	.thumb(ng-repeat="user in thumbs", id="{{user.name}}", class="item_{{$index}} item_{{user.name}}")
+		a.video(ng-click="setVideo($index)") &nbsp;
+		a.share(ng-click="shareFB(user.name);") &nbsp;
 
 #gilogo(style="position: absolute; left: 21px; top: 280px;")
 	img(src="images/gilogo.png", width="20")

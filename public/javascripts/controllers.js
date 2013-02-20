@@ -69,17 +69,25 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 			return; 
 		}
 		$scope.Users.query({}, function(response){
-			var random = Math.floor((Math.random()*3000)/1000)
-			$scope.videoId = response[random].videoId
-			$scope.track(response[random].name + ' Autoplay');
-			$scope.thumbs = response;
-			var newObj = {}
+			var trailer = false
+			, newObj = {}
 			, totalVotes = 0;
-
-			for(var i=0;i<response.length;i++){
+			for (var i = 0;i<response.length;i++) {
+				if(response[i].name === 'trailer') {
+					trailer = true;
+					var key = i;
+				}
 				newObj[response[i]._id] = response[i];
 				totalVotes = totalVotes + response[i].votes;
-			}
+			} 
+			if (!trailer)
+				var key = Math.floor((Math.random()*3000)/1000);
+
+			$scope.currentVideo = response[key];
+			$scope.videoId = response[key].videoId;
+			$scope.videoName = response[key].name;
+			$scope.track(response[key].name + ' Autoplay');
+			$scope.thumbs = response;
 			$scope.users = newObj;
 			$scope.totalVotes = totalVotes;
 		});
@@ -90,9 +98,27 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 var MainCtrl = ['$scope', function($scope){
 	$scope.glob.mode='main';
 	$scope.track('HP');
+	function replaceArray(oldArray, old, nw){
+		for (var i=0;i<oldArray.length;i++){
+			itm = oldArray[i];
+			if(itm['_id'] == old)
+				var oldPos = i;
+			if(itm['_id']  == nw)
+				var newPos = i;
+		}
+		var oldItem = oldArray[oldPos];
+		var newItem = oldArray[newPos];
+		oldArray[oldPos] = newItem;
+		oldArray[newPos] = oldItem;
+		return oldArray;
+	}
 	$scope.setVideo = function(index){
-		$scope.videoId = $scope.users[index].videoId;
-		$scope.track($scope.users[index].name);
+		var oldId = $scope.currentVideo._id;
+		$scope.currentVideo = $scope.thumbs[index];
+		$scope.thumbs = replaceArray($scope.thumbs, oldId, $scope.thumbs[index]._id);
+		$scope.videoName = $scope.currentVideo.name;
+		$scope.videoId = $scope.currentVideo.videoId;
+		$scope.track($scope.thumbs[index].name);
 	}
 }];
 
