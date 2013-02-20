@@ -19,7 +19,7 @@ module.exports = {
   		});
 	},
 	index: function(req,res,next){
-		db.Users.find({},{'__v': 1, '_id': 1, 'description': 1, 'name': 1, 'videoId': 1},{sort:{name: 1}},function(err,doc){
+		db.Users.find({},{'__v': 1, '_id': 1, 'description': 1, 'name': 1, 'videoId': 1, 'facebook': 1},{sort:{name: 1}},function(err,doc){
 			var ndoc = JSON.parse(JSON.stringify(doc));
 			for(var i=0;i<ndoc.length;i++) {
 				ndoc[i].votes = ndoc[i].__v;
