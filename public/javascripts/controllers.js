@@ -88,6 +88,7 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 			$scope.videoName = response[key].name;
 			$scope.track(response[key].name + ' Autoplay');
 			$scope.thumbs = response;
+			$scope.originalThumbs = angular.copy($scope.thumbs);
 			$scope.users = newObj;
 			$scope.totalVotes = totalVotes;
 		});
@@ -96,6 +97,8 @@ var GlobalCtrl = ['$scope', '$resource', '$location', '$window', '$routeParams',
 }];
 
 var MainCtrl = ['$scope', function($scope){
+	if ($scope.originalThumbs != undefined)
+		$scope.thumbs = $scope.originalThumbs;
 	$scope.glob.mode='main';
 	$scope.track('HP');
 	function replaceArray(oldArray, old, nw){
@@ -131,6 +134,7 @@ var ChartCtrl = ['$scope', function($scope){
 			newObj[response[i]._id] = response[i];
 			totalVotes = totalVotes + response[i].votes;
 		}
+		$scope.thumbs = response;
 		$scope.users = newObj;
 		$scope.totalVotes = totalVotes;
 		for (var user in $scope.users){
